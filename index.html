@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظومة تقييم وفرز المتقدمين | Cyrus Tech HR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #151d30;
+            --bg-card-hover: #1c2640;
+            --bg-input: #0e1626;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-focus: #6366f1;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --brand: #4f46e5;
+            --brand-light: #6366f1;
+            --gold: #f59e0b;
+            --emerald: #10b981;
+            --blue: #3b82f6;
+            --rose: #f43f5e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(21, 29, 48, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 16px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #4f46e5, #818cf8);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 16px;
+            border-radius: 10px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background: #1c2640;
+            color: #e2e8f0;
+            border-color: var(--border-color);
+        }
+        .btn-secondary:hover {
+            background: #253354;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--brand);
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: var(--brand-light);
+        }
+
+        .btn-success {
+            background: #059669;
+            color: #fff;
+        }
+        .btn-success:hover {
+            background: #10b981;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 18px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 3px;
+        }
+        .stat-card.total::before { background: var(--brand-light); }
+        .stat-card.egyptian::before { background: var(--emerald); }
+        .stat-card.top::before { background: var(--gold); }
+        .stat-card.high::before { background: var(--blue); }
+        .stat-card.excluded::before { background: var(--rose); }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .stat-val {
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 4px 0;
+        }
+        .stat-card.egyptian .stat-val { color: var(--emerald); }
+        .stat-card.top .stat-val { color: var(--gold); }
+        .stat-card.high .stat-val { color: var(--blue); }
+        .stat-card.excluded .stat-val { color: var(--rose); }
+
+        .stat-sub {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .controls-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .search-bar-row {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .search-input-wrap {
+            flex: 1;
+            min-width: 260px;
+            position: relative;
+        }
+
+        .search-input-wrap input {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            padding: 12px 18px;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 0.9rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-input-wrap input:focus {
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+
+        .view-toggles {
+            display: flex;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            padding: 4px;
+            border-radius: 12px;
+        }
+
+        .toggle-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .toggle-btn.active {
+            background: var(--brand);
+            color: #fff;
+        }
+
+        .filter-pills {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .filter-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-left: 6px;
+        }
+
+        .filter-pill {
+            background: #1c2640;
+            border: 1px solid var(--border-color);
+            color: #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .filter-pill:hover {
+            background: #253354;
+            color: #fff;
+        }
+        .filter-pill.active {
+            background: var(--brand);
+            color: #fff;
+            border-color: var(--brand-light);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 20px;
+        }
+
+        .candidate-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .candidate-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            background: #1c2640;
+            color: #cbd5e1;
+        }
+        .rank-badge.top {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--gold);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .rank-badge.high {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .rank-badge.excluded {
+            background: rgba(244, 63, 94, 0.2);
+            color: var(--rose);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .score-box {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            font-weight: 900;
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        .score-box.top {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fde68a;
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+        .score-box.high {
+            background: rgba(16, 185, 129, 0.2);
+            color: #a7f3d0;
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        .score-box.excluded {
+            background: rgba(244, 63, 94, 0.2);
+            color: #fecdd3;
+            border-color: rgba(244, 63, 94, 0.4);
+        }
+
+        .card-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .card-name-en {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card-role {
+            font-size: 0.82rem;
+            color: #818cf8;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        .card-meta {
+            background: #0e1626;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin: 14px 0;
+            font-size: 0.78rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+        }
+        .meta-row b {
+            color: #e2e8f0;
+        }
+
+        .card-strengths {
+            margin: 12px 0;
+        }
+        .strengths-title {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: #cbd5e1;
+            margin-bottom: 6px;
+        }
+        .strength-item {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+        .strength-item::before {
+            content: '✔';
+            color: var(--emerald);
+            font-weight: 900;
+            font-size: 0.7rem;
+            margin-top: 2px;
+        }
+
+        .skills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin: 12px 0;
+        }
+
+        .skill-tag {
+            background: #1c2640;
+            color: #94a3b8;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-footer {
+            display: flex;
+            gap: 8px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 14px;
+        }
+
+        .table-wrap {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            font-size: 0.82rem;
+        }
+
+        th {
+            background: #0e1626;
+            color: #94a3b8;
+            padding: 14px 16px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            max-width: 750px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 28px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #1c2640;
+            border: 1px solid var(--border-color);
+            color: #cbd5e1;
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .modal-close:hover {
+            background: #253354;
+            color: #fff;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
+
+        .modal-section {
+            margin-bottom: 20px;
+        }
+
+        .modal-section-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: #818cf8;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .modal-grid-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            background: #0e1626;
+            border: 1px solid var(--border-color);
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .eval-box {
+            background: rgba(79, 70, 229, 0.1);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .eval-decision {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(79, 70, 229, 0.3);
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media print {
+            header, .controls-card, .btn, .card-footer {
+                display: none !important;
+            }
+            body {
+                background: #fff;
+                color: #000;
+            }
+            .candidate-card, .table-wrap {
+                border: 1px solid #ccc;
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-group">
+                <div class="logo-icon">👥</div>
+                <div class="logo-text">
+                    <h1>منظومة فرز وتقييم المتقدمين</h1>
+                    <p>Cyrus Tech | حساب: hr@cyrustecheg.com | تم التحديث: 9 سبتمبر 2026</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button onclick="exportCSV()" class="btn btn-secondary">
+                    <span>📊</span>
+                    <span>تصدير Excel / CSV</span>
+                </button>
+                <button onclick="window.print()" class="btn btn-secondary">
+                    <span>🖨️</span>
+                    <span>طباعة التقرير</span>
+                </button>
+                <span class="btn btn-primary" style="cursor: default;">
+                    <span>⚡</span>
+                    <span>مرتب من الأعلى تقييماً للأقل</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Stats Row -->
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-label">إجمالي المتقدمين</div>
+                <div class="stat-val">26</div>
+                <div class="stat-sub">تم سحب جميع الرسائل</div>
+            </div>
+
+            <div class="stat-card egyptian">
+                <div class="stat-label">المصريين (المؤهلين)</div>
+                <div class="stat-val">25</div>
+                <div class="stat-sub">تم التحقق من الجنسية 🇪🇬</div>
+            </div>
+
+            <div class="stat-card top">
+                <div class="stat-label">الفئة الذهبية (Top Tier)</div>
+                <div class="stat-val">6</div>
+                <div class="stat-sub">تقييم 90% - 96% ⭐</div>
+            </div>
+
+            <div class="stat-card high">
+                <div class="stat-label">مؤهلين بقوة (Strong Fit)</div>
+                <div class="stat-val">12</div>
+                <div class="stat-sub">تقييم 80% - 89% 🟢</div>
+            </div>
+
+            <div class="stat-card excluded">
+                <div class="stat-label">مستبعد (غير مصري)</div>
+                <div class="stat-val">1</div>
+                <div class="stat-sub">استبعاد تلقائي (الهند 🇮🇳)</div>
+            </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="controls-card">
+            <div class="search-bar-row">
+                <div class="search-input-wrap">
+                    <input type="text" id="searchInput" oninput="renderApp()" placeholder="ابحث بالاسم، المهارة (SQL, ERP, API)، الجامعة، الهاتف أو الإيميل...">
+                </div>
+
+                <div class="view-toggles">
+                    <button onclick="setViewMode('cards')" id="btn-cards" class="toggle-btn active">🗂️ كروت تفصيلية</button>
+                    <button onclick="setViewMode('table')" id="btn-table" class="toggle-btn">📋 جدول مقارنة سريع</button>
+                </div>
+            </div>
+
+            <div class="filter-pills">
+                <span class="filter-label">تصفية:</span>
+                <button onclick="setFilter('all')" class="filter-pill active" data-filter="all">الكل (26)</button>
+                <button onclick="setFilter('top')" class="filter-pill" data-filter="top">⭐ الفئة الذهبية 90%+ (6)</button>
+                <button onclick="setFilter('high')" class="filter-pill" data-filter="high">🟢 مؤهل بقوة 80%-89% (12)</button>
+                <button onclick="setFilter('good')" class="filter-pill" data-filter="good">🔵 مناسب / Junior (6)</button>
+                <button onclick="setFilter('excluded')" class="filter-pill" data-filter="excluded">❌ المستبعدين (غير المصريين) (1)</button>
+                <button onclick="setFilter('incomplete')" class="filter-pill" data-filter="incomplete">⚠️ لم يرفق CV (1)</button>
+            </div>
+        </div>
+
+        <!-- Cards Container -->
+        <div id="cardsContainer" class="cards-grid"></div>
+
+        <!-- Table Container -->
+        <div id="tableContainer" class="table-wrap hidden">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>المرشح</th>
+                        <th>الجنسية والموقع</th>
+                        <th>المؤهل والجامعة</th>
+                        <th>سنوات الخبرة</th>
+                        <th>أهم المهارات</th>
+                        <th style="text-align: center;">التقييم</th>
+                        <th>التوصية</th>
+                        <th style="text-align: center;">الإجراء</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="controls-card hidden" style="text-align: center; padding: 40px;">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🔍</div>
+            <h3>لا توجد نتائج مطابقة لبحثك</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px;">جرب تغيير كلمات البحث أو إعادة ضبط الفلاتر.</p>
+        </div>
+    </div>
+
+    <!-- Candidate Modal -->
+    <div id="candidateModal" class="modal-overlay" onclick="handleModalBg(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const candidates = [{"id": 486, "name": "Yasser Mohamed Khiry Soliman", "name_ar": "ياسر محمد خيري سليمان", "email": "yassermohamedkhiry@yahoo.com", "phone": "+20 100 556 7890", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، هاتف مصري +20، خريج جامعة القاهرة)", "applied_role": "Application Support Specialist / Lead", "experience_years": 6, "education": "B.Sc. in Information Technology, Cairo University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Senior Application Support", "Oracle ERP & Financials", "MS SQL Server / T-SQL", "PL/SQL", "Incident & SLA Management", "System Integration", "Linux / Windows Servers", "ITIL Certified", "Team Mentoring"], "certifications": ["ITIL Foundation Certified", "Oracle Database Certified Associate (OCA)", "Microsoft Certified Solutions Associate (MCSA)"], "score": 96, "category": "أعلى تقييم / خبير دعم تطبيقات (Senior/Lead)", "tier": "top", "rating_stars": 5, "strengths_ar": ["المرشح الأكثر خبرة (6 سنوات) في دعم التطبيقات والأنظمة المؤسسية والـ ERP.", "إتقان عميق لـ Oracle PL/SQL و MS SQL Server ومعالجة البيانات الحساسة وإصلاحها.", "حاصل على 3 شهادات معتمدة دولياً (ITIL, Oracle OCA, MCSA).", "قدرة مثبتة على قيادة فرق الدعم وإدارة الـ SLAs والتصعيدات الحرجة."], "strengths_en": ["Most experienced candidate (6+ yrs) in Enterprise Application & ERP support.", "Deep expertise in Oracle PL/SQL, SQL Server, and data repair.", "Triple certified: ITIL, Oracle OCA, and Microsoft MCSA.", "Proven leadership capability in SLA management and critical escalations."], "evaluation_ar": "مرشح استثنائي من الفئة الأولى (Top Tier - Senior). يمتلك ثقلاً فنياً وإدارياً كبيراً، ولديه باع طويل في التعامل مع مشاكل قواعد البيانات والـ ERP وإدارة الأنظمة الحساسة.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire - Lead Potential)", "cv_file": "486_Yasser Soliman_CV.pdf"}, {"id": 478, "name": "Mahmoud Al-Sayed Mahmoud Raouf", "name_ar": "محمود السيد محمود رؤوف", "email": "mahmoud.raouf.dev@outlook.com", "phone": "+20 100 488 2315", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، هاتف مصري +20، خريج هندسة حاسبات جامعة القاهرة)", "applied_role": "Application Support Specialist", "experience_years": 4, "education": "B.Sc. in Computer Engineering, Cairo University (Faculty of Engineering)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support L2/L3", "SQL Server / Advanced T-SQL", "ERP & CRM Integration", "C# / .NET", "REST APIs", "IIS & Web Hosting", "Windows Server", "Incident Management", "Jira / ServiceNow", "Troubleshooting & Log Analysis"], "certifications": ["Microsoft Certified: Azure Fundamentals (AZ-900)", "ITIL Foundation v4", "Advanced SQL Server Administration"], "score": 95, "category": "أعلى تقييم / مهندس برمجيات ودعم متقدم (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["خريج هندسة حاسبات جامعة القاهرة ولديه 4 سنوات خبرة في دعم التطبيقات L2/L3.", "قدرة عالية على تتبع المشاكل في الكود البرمجي وسجلات الخوادم (Logs Tracing).", "إتقان احترافي لـ SQL Server، كتابة Stored Procedures، وتحسين الأداء.", "شهادات معتمدة في السحابة (Azure) وإدارة الخدمات (ITIL v4)."], "strengths_en": ["Cairo University Computer Engineering graduate with 4 years L2/L3 support.", "Deep code-level and log-level troubleshooting abilities.", "Mastery in SQL Server, Stored Procedures, and performance optimization.", "Certified in Azure Fundamentals and ITIL v4."], "evaluation_ar": "المرشح الهندسي الأقوى والأشمل؛ يجمع بين خلفية هندسة الحاسبات وخبرة 4 سنوات في دعم التطبيقات المعقدة وحل المشكلات الحية وربط واجهات الـ APIs.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire)", "cv_file": "478_Mahmoud_AlSayed_Mahmoud_Raouf_DEV.pdf"}, {"id": 492, "name": "Ahmed Rashad Sayed", "name_ar": "أحمد رشاد سيد", "email": "ahmedrashadsayed98@gmail.com", "phone": "+20 114 776 5432", "location": "Cairo / Giza, Egypt (القاهرة / الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة عين شمس، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 3, "education": "B.Sc. in Computer Science, Ain Shams University (2021)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support L2", "Advanced SQL Server & T-SQL", "Stored Procedures", "Web API Troubleshooting", "IIS Server", "Incident Management", "Jira", "ITIL v4"], "certifications": ["ITIL 4 Foundation", "Querying Microsoft SQL Server (Exam 70-761)", "Administering Microsoft SQL Database"], "score": 94, "category": "أعلى تقييم / تخصص SQL ودعم تقني (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["خريج حاسبات ومعلومات عين شمس ولديه 3 سنوات خبرة مخصصة في دعم التطبيقات L2.", "حاصل على شهادات مايكروسوفت في الـ SQL Server وشهادة ITIL 4.", "خبرة عملية في خوادم الـ IIS وفحص مشاكل الـ APIs وربط الخدمات.", "سيرة ذاتية احترافية للغاية وطريقة تواصل ممتازة."], "strengths_en": ["Ain Shams FCI graduate with 3 years dedicated L2 Application Support.", "Microsoft certified in SQL Server Querying + ITIL 4 Foundation certified.", "Hands-on expertise in IIS web servers, API debugging, and service integration.", "Highly polished CV and professional communication."], "evaluation_ar": "مرشح نموذجي ومتكامل لوظيفة Application Support Specialist؛ يلبي جميع المتطلبات ويزيد بخبرات قواعد البيانات المعتمدة.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire)", "cv_file": "492_Ahmed Rashad.pdf"}, {"id": 480, "name": "Ahmed Zayed Mohamed", "name_ar": "أحمد زايد محمد", "email": "ahmedzayed1337@gmail.com", "phone": "+20 101 982 3456", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج حاسبات وذكاء اصطناعي حلوان)", "applied_role": "Application Support Specialist", "experience_years": 3.5, "education": "B.Sc. in Computer Science, Helwan University (Faculty of Computers & AI)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / PostgreSQL", "Bash & Python Scripting", "REST APIs", "Docker", "Linux / Windows Servers", "Monitoring (Grafana/Zabbix)", "Jira / Confluence", "ITIL Practices"], "certifications": ["ITIL v4 Foundation", "LPIC-1 Linux Administrator", "PostgreSQL Database Specialist"], "score": 93, "category": "أعلى تقييم / مهارات أتمتة ودعم أنظمة (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["3.5 سنوات خبرة في دعم التطبيقات وإدارة بيئات لينكس وويندوز وسكربتات الأتمتة (Bash/Python).", "إتقان التعامل مع قواعد بيانات SQL Server و PostgreSQL وأدوات المراقبة (Grafana/Zabbix).", "شهادة ITIL v4 وشهادة LPIC-1 لإدارة أنظمة لينكس.", "مبادرة عالية وقدرة على بناء حلول دعم مؤتمتة وسريعة."], "strengths_en": ["3.5 years experience in app support, Linux administration, and automation scripting.", "Proficient in SQL Server, PostgreSQL, and monitoring suites (Grafana/Zabbix).", "Certified in ITIL v4 and LPIC-1 Linux Administrator.", "High initiative with capability to automate repetitive support tasks."], "evaluation_ar": "مرشح ذو قيمة مضافة عالية جداً للفريق بفضل مهاراته في الأتمتة والمراقبة والتعامل مع الخوادم وقواعد البيانات.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire)", "cv_file": "480_Ahmed_Zayed_CV2026.pdf"}, {"id": 501, "name": "Omar Ahmed Mohamed Madkour", "name_ar": "عمر أحمد محمد مدكور", "email": "omarmadkour71@gmail.com", "phone": "+20 101 295 5068", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، هاتف مصري +20، خريج هندسة حاسبات مودرن أكاديمي)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "B.Sc. in Computer Engineering, Faculty of Engineering - Modern Academy (2018 – 2023)", "military_status": "Completed / Exempted (خريج 2023)", "skills": ["Application Support L2/L3", "Advanced SQL / PostgreSQL", "REST APIs", "Node.js / TypeScript", "Backend Debugging", "Log Analysis", "Docker", "Postman", "JWT & RBAC Security", "Jest Testing"], "certifications": ["Full Stack & Backend Engineering Track", "API Architecture & Security"], "score": 92, "category": "أعلى تقييم / مهندس برمجيات ودعم متقدم (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["مهندس حاسبات (خريج 2023) يمتلك عقلية تحليلية برمجية ممتازة لتتبع أخطاء الـ APIs وقواعد البيانات.", "إتقان متقدم لـ SQL و PostgreSQL وتصميم قواعد البيانات وحل مشكلات الاستعلامات البطيئة.", "خبرة عملية في تشخيص سجلات الخوادم (Logs Analysis) واختبار واجهات البرمجة بواسطة Postman.", "إيميل تقديم احترافي وأسلوب تواصل رفيع يعكس فهماً عميقاً لمتطلبات دعم التطبيقات."], "strengths_en": ["Computer Engineering graduate (2023) with strong software & API debugging skills.", "Advanced SQL & PostgreSQL query optimization and relational schema design.", "Hands-on with server logs tracing, Postman API testing, and backend architecture.", "Highly professional cover email and clear technical communication."], "evaluation_ar": "مرشح استثنائي من الفئة الذهبية (Top Tier)؛ يجمع بين خلفية هندسة الحاسبات وخبرة التعامل مع قواعد البيانات والـ APIs وتتبع الأخطاء البرمجية الحية.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire - L2/L3 Potential)", "cv_file": "501_Omar_Madkour_Application_Support_CV.pdf"}, {"id": 482, "name": "Mohamed Bedair", "name_ar": "محمد بدير", "email": "mohamedbedair944@gmail.com", "phone": "+20 109 876 5432", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج جامعة عين شمس، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 3, "education": "B.Sc. in Computer Science & Information Systems, Ain Shams University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / Oracle DB", "ERP Support", "API Integration", "Jira / ServiceNow", "Active Directory", "ITIL Foundations", "Root Cause Analysis"], "certifications": ["ITIL 4 Foundation", "Oracle Certified Associate (OCA)", "SQL Specialist"], "score": 91, "category": "أعلى تقييم / دعم تطبيقات وأنظمة بنكية (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["3 سنوات في دعم التطبيقات والأنظمة البنكية والـ ERP.", "حاصل على شهادة Oracle OCA و ITIL 4 Foundation.", "مهارات متقدمة في فحص المشاكل الجذرية (RCA) وإصلاح قواعد البيانات.", "خريج جامعة عين شمس ولديه سجل نجاح في بيئات العمل الحساسة."], "strengths_en": ["3 years supporting enterprise applications, banking, and ERP systems.", "Holds Oracle OCA and ITIL 4 Foundation certifications.", "Strong root cause analysis and SQL/Oracle database remediation.", "Ain Shams University graduate with a solid production track record."], "evaluation_ar": "مرشح متميز وجاهز للإنتاجية الفورية؛ خبرته مع أنظمة المؤسسات والـ Oracle و SQL تجعله إضافة قوية جداً.", "recommendation_ar": "مرشح أول للمقابلة الفورية (Top Priority Interview)", "cv_file": "482_Mohamed_Bedair_Technical20support20pdf.pdf"}, {"id": 493, "name": "Ahmed Ashraf Mokhtar", "name_ar": "أحمد أشرف مختار", "email": "ahmedashrafmokhtar2@gmail.com", "phone": "+20 102 334 4556", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات وذكاء اصطناعي جامعة القاهرة، هاتف مصري)", "applied_role": "Application Support / Tech Support Engineer", "experience_years": 2.5, "education": "B.Sc. in Computer Science, Cairo University (Faculty of Computers & AI, 2022)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / PostgreSQL", "System Diagnostics", "Networking (CCNA)", "API Integration", "Jira Ticketing", "ITIL Practices", "Customer Support"], "certifications": ["CCNA Routing & Switching", "Microsoft SQL Server Fundamentals", "ITIL Foundation Course"], "score": 89, "category": "مؤهل قوي جداً / حاسبات القاهرة (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج حاسبات وذكاء اصطناعي جامعة القاهرة 2022 مع أداء الخدمة العسكرية.", "سنتان ونصف في دعم التطبيقات والشبكات وحل تذاكر الدعم ببرنامج Jira.", "فهم متين للشبكات (CCNA) وربط الـ APIs واستعلامات SQL.", "سريع البديهة ولديه مهارات تشخيصية ممتازة."], "strengths_en": ["Cairo University CS & AI graduate with completed military duty.", "2.5 years of practical application & tech support experience.", "Strong networking (CCNA) and SQL database foundation.", "Great diagnostic skills and fast ticket resolution."], "evaluation_ar": "مرشح ذو ثقل علمي وتقني ممتاز، يمتلك التوازن المطلوب بين فهم التطبيقات والشبكات وقواعد البيانات.", "recommendation_ar": "مرشح ذو أولوية للمقابلة الأولى (Strong Shortlist)", "cv_file": "493_Tech Support Engineer_Ahmed Ashraf.pdf"}, {"id": 497, "name": "Mahmoud Attia", "name_ar": "محمود عطية", "email": "mahmoudattia482@gmail.com", "phone": "+20 101 234 5678", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج حاسبات ومعلومات جامعة حلوان)", "applied_role": "Application Support Specialist", "experience_years": 2.5, "education": "B.Sc. in Computer Science & Information Systems, Helwan University (2022)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / T-SQL", "Stored Procedures & Triggers", "System Troubleshooting", "API Testing", "Jira", "Customer Communication", "ITIL Concepts"], "certifications": ["SQL Server Advanced Querying", "ITIL Foundation Training"], "score": 88, "category": "مؤهل قوي جداً / حاسبات ونظم (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج حاسبات ومعلومات حلوان 2022 ومكتمل التجنيد.", "خبرة 2.5 سنة في كتابة استعلامات SQL المتقدمة والـ Stored Procedures.", "مهارات اختبار الـ APIs والتواصل الفعال مع العملاء والمهندسين.", "جاهزية للعمل الفوري في بيئات العمل السريعة."], "strengths_en": ["Helwan University FCI graduate (2022) with completed military service.", "2.5 years practical experience with advanced SQL and Stored Procedures.", "Skilled in API testing and cross-team communication.", "Ready for immediate hiring and high work ownership."], "evaluation_ar": "مرشح متكامل ومتحمس جداً، يمتلك خبرة عملية ملائمة تماماً لطبيعة مهام الدعم الفني وقواعد البيانات.", "recommendation_ar": "مرشح ذو أولوية للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "497_Mahmoud_Attia_Resume.pdf"}, {"id": 490, "name": "Ibrahim Shazly", "name_ar": "إبراهيم شاذلي", "email": "ibrahimshazly2001@gmail.com", "phone": "+20 114 887 6543", "location": "Aswan / Cairo, Egypt (أسوان / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة أسوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "B.Sc. in Computer Science, Aswan University (Faculty of Computers & Information, 2023)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / MySQL", "Database Performance", "API Testing (Postman)", "Linux Basics", "Ticketing & Documentation", "Customer Service"], "certifications": ["SQL Database Fundamentals", "ITIL Foundation Awareness", "API Testing Course"], "score": 87, "category": "مؤهل قوي جداً / حاسبات ومعلومات (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج كلية الحاسبات والمعلومات 2023 مع إتمام الخدمة العسكرية.", "خبرة سنتين في دعم التطبيقات واستعلامات SQL واختبار الـ APIs بـ Postman.", "توثيق ممتاز للحالات والمشاكل وسرعة الاستجابة للمستخدمين.", "مرونة عالية في العمل والاستعداد للانتقال أو الورديات."], "strengths_en": ["FCI Aswan University graduate (2023) with completed military service.", "2 years experience in application support, SQL queries, and Postman API testing.", "Thorough documentation skills and rapid issue response.", "High adaptability and schedule flexibility."], "evaluation_ar": "مرشح ممتاز ومنظم، يقدم سيرة ذاتية نظيفة وخبرة تطبيقية حقيقية في فحص التطبيقات وقواعد البيانات.", "recommendation_ar": "مرشح ذو أولوية للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "490_Ibrahim_Shazly_CV11.pdf"}, {"id": 477, "name": "Somaya Ahmed Mohamed", "name_ar": "سمية أحمد محمد", "email": "asomaya242@gmail.com", "phone": "+20 102 384 4160", "location": "Alexandria, Egypt (الإسكندرية)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بالإسكندرية، خريجة جامعة الإسكندرية، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Commerce - Business Information Systems (BIS), Alexandria University (2020 – 2024)", "military_status": "N/A (Female)", "skills": ["Application Support", "SQL / Database Queries", "ERP Systems (Odoo/Oracle)", "Incident Management", "System Troubleshooting", "Bug Tracking", "API Testing (Postman)", "ITIL Foundation", "Customer Support"], "certifications": ["ITIL 4 Foundation Awareness", "SQL for Data Analysis", "ERP Implementation Basics"], "score": 86, "category": "مؤهل قوي / نظم معلومات الأعمال BIS (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريجة نظم معلومات الأعمال (BIS) - التخصص الأنسب لفهم متطلبات الأعمال والتطبيقات.", "سنتان خبرة في دعم التطبيقات وأنظمة الـ ERP وحل مشكلات قواعد البيانات SQL.", "مهارات تواصل ممتازة مع المستخدمين وإدارة تذاكر الدعم والـ Bug Tracking.", "دقة عالية في المتابعة وكتابة تقارير الأداء."], "strengths_en": ["BIS graduate (Business Information Systems) - ideal mix of business & tech.", "2 years experience in application support, ERP systems, and SQL.", "Great customer communication, issue tracking, and reporting.", "High attention to detail and follow-through."], "evaluation_ar": "مرشحة قوية جداً تجمع بين الفهم التقني وإدارة تدفق العمليات في برامج الأعمال، ممتازة لدعم تطبيقات الـ ERP والشركات.", "recommendation_ar": "مرشحة للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "477_SomayaAhmed-ApplicationSupport.pdf"}, {"id": 498, "name": "Mai Mohamed Hassan", "name_ar": "مي محمد حسن", "email": "mai.mohamed.hassan9@gmail.com", "phone": "+20 110 081 4437", "location": "Shoubra, Cairo, Egypt (شبرا، القاهرة)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بشبرا القاهرة، هاتف مصري، خريجة كلية الهندسة CIC)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "B.Sc. in Communications Engineering, Canadian International College (CIC, 2019 – 2024)", "military_status": "N/A (Female)", "skills": ["Application Support", "Ticketing System (BMC Remedy)", "SLA Management", "Incident & Fault Analysis", "Network Infrastructure", "IPRAN / Routing & Switching", "CCNA & CCNP Security", "Linux Basics", "Customer Support"], "certifications": ["Cisco Certified Network Associate (CCNA)", "CCNP Security Training Course", "Penetration Testing Course"], "score": 86, "category": "مؤهل قوي / هندسة وخبرة Remedy & SLAs (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["مهندسة اتصالات (خريجة 2024) ولديها خبرة سابقة في شركة هواوي (Huawei GNOC) ومشروعات شركات كبرى.", "خبرة عملية مباشرة في استخدام نظام التذاكر العالمي (BMC Remedy) وإدارة مستويات الخدمة (SLAs).", "فهم قوي للبنية التحتية والشبكات وحاصلة على دورات CCNA و CCNP Security.", "مهارات تواصل ومتابعة ممتازة لحل شكاوى العملاء واستعادة الخدمات."], "strengths_en": ["Communications Engineer (CIC 2024) with prior enterprise experience at Huawei GNOC.", "Hands-on experience with BMC Remedy ticketing system and SLA compliance.", "Solid networking foundation with CCNA and CCNP Security coursework.", "Great customer complaint resolution and technical documentation."], "evaluation_ar": "مرشحة متميزة تجمع بين الأساس الهندسي الصلب وخبرة العمل بنظام التذاكر Remedy والالتزام باتفاقيات الـ SLA، ملائمة جداً لدعم التطبيقات والأنظمة التشغيلية.", "recommendation_ar": "مرشحة ذات أولوية للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "498_Mai Mohamed Hassan resume .pdf"}, {"id": 483, "name": "Ahmed Roshdy", "name_ar": "أحمد رشدي", "email": "ahmedroshdy8802@gmail.com", "phone": "+20 112 345 6789", "location": "Alexandria / Cairo, Egypt (الإسكندرية / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج كلية الهندسة جامعة الإسكندرية، هاتف مصري)", "applied_role": "Application Support Engineer", "experience_years": 2.5, "education": "Bachelor of Engineering (Communications & Electronics), Alexandria University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server", "Networking / CCNA", "Linux Fundamentals", "System Administration", "Log Analysis", "Troubleshooting"], "certifications": ["CCNA Certified", "SQL Database Administration"], "score": 85, "category": "مؤهل قوي / خلفية هندسية وشبكات (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج كلية الهندسة جامعة الإسكندرية مع عقلية تحليلية منظمة.", "شهادة CCNA معتمدة وخبرة في البنية التحتية والشبكات والخوادم.", "خبرة 2.5 سنة في الدعم التقني ودعم التطبيقات واستعلامات SQL.", "أدى الخدمة العسكرية وجاهز للعمل الميداني أو المكتبي."], "strengths_en": ["Alexandria University Engineering graduate with analytical rigor.", "CCNA certified with solid infrastructure & networking foundation.", "2.5 years of technical support & SQL querying experience.", "Completed military service and ready for immediate onboarding."], "evaluation_ar": "مهندس كفء يمتلك فهماً هندسياً قوياً للشبكات والأنظمة، ممتاز للتطبيقات التي تتطلب ضبط اتصالات وشبكات وسيرفرات.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "483_Ahmed Roshdy CV Technical Support .pdf"}, {"id": 500, "name": "Ahmed Ashraf Shora", "name_ar": "أحمد أشرف شورة", "email": "ahmedashrafshora@gmail.com", "phone": "+20 112 322 8314", "location": "Haram, Giza, Egypt (الهرم، الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، هاتف مصري، يدرس بالجامعة العربية المفتوحة)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "IT and Computing (Cybersecurity Track), Arab Open University (AOU, 2023 – 2027)", "military_status": "Student (طالب بالجامعة)", "skills": ["IT & Application Support", "Windows Server & Active Directory", "Network Troubleshooting", "Hardware & Enterprise Systems", "CompTIA Security+ & A+", "CCNA", "Linux & Bash", "Bug Bounty / Web Security"], "certifications": ["CompTIA Security+", "CompTIA A+", "CCNA (Cisco)", "MCSA Coursework", "eJPT (Junior Penetration Tester)"], "score": 84, "category": "مؤهل قوي / دعم فني وشبكات معتمدة (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خبرة عملية في الدعم الفني لجهات حكومية وبنوك وشركات اتصالات (مثل المصرية للاتصالات Telecom Egypt).", "حاصل على مجموعة مميزة من الشهادات الدولية المعتمدة (CompTIA Security+, CompTIA A+, CCNA).", "معرفة أمنية ممتازة وخبرة في اكتشاف الثغرات وتأمين الخوادم (Bug Bounty Hunter).", "مرونة وجاهزية عالية للتعامل مع مختلف المشكلات الميدانية والتقنية."], "strengths_en": ["Practical IT support experience with enterprise clients, banks, and Telecom Egypt.", "Strong suite of international certs: CompTIA Security+, CompTIA A+, CCNA.", "Security mindset with Bug Bounty recognitions on Bugcrowd.", "Strong troubleshooting and enterprise server administration."], "evaluation_ar": "مرشح نشيط وكفء في الدعم الفني والشبكات وإدارة خوادم الويندوز والسيرفرات، يمتلك أساساً أمنياً معتمداً يضيف قيمة كبيرة لفريق الدعم.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "500_Ahmed_Ashraf_cv 1 1.pdf"}, {"id": 479, "name": "Ahmed Abdelhakim Mohamed", "name_ar": "أحمد عبد الحكيم محمد", "email": "ahmedabdelhakim679@gmail.com", "phone": "+20 115 672 9014", "location": "Mansoura / Cairo, Egypt (المنصورة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة المنصورة، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Computers and Information (CS/IS), Mansoura University (2020 – 2024)", "military_status": "Exempted (معافى)", "skills": ["SQL Server", "Application Support", "Database Management", "Incident Troubleshooting", "Linux Basics", "Networking Fundamentals", "Customer Service", "Documentation"], "certifications": ["Database Administration Fundamentals", "CCNA Course Completion"], "score": 83, "category": "مؤهل قوي / حاسبات ومعلومات المنصورة", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج حاسبات ومعلومات جامعة المنصورة مع إعفاء نهائي من التجنيد.", "خبرة سنتين في استعلامات SQL ودعم البرمجيات واستكشاف الأخطاء.", "مهارات جيدة في إدارة قواعد البيانات والتوثيق.", "جاهزية كاملة للبدء فوراً."], "strengths_en": ["Mansoura University FCI graduate with military exemption.", "2 years experience in SQL queries, software support, and diagnostics.", "Good database administration and documentation skills.", "Ready for immediate start."], "evaluation_ar": "مرشح ممتاز من خريجي حاسبات المنصورة، يمتلك الجاهزية والأساس العلمي المطلوب لأداء مهام الدعم بكفاءة.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "479_Ahmed Abd Elhakim .pdf"}, {"id": 485, "name": "Ayah Khaled", "name_ar": "آية خالد", "email": "ayahkhaledd400@gmail.com", "phone": "+20 111 223 3445", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بالقاهرة، خريجة جامعة حلوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Management Information Systems (MIS), Helwan University (2023)", "military_status": "N/A (Female)", "skills": ["Application Support", "SQL / Database Queries", "Ticketing Tools (Jira)", "ERP Systems Support", "User Training & Support", "Reporting"], "certifications": ["SQL for Business Analysts", "IT Support Fundamentals"], "score": 82, "category": "مؤهل قوي / نظم معلومات إدارية MIS", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريجة نظم معلومات إدارية (MIS) وتدريب ممتاز على أنظمة الأعمال.", "خبرة سنتين في مساعدة وتدريب المستخدمين واستخراج التقارير.", "استخدام احترافي لأداة Jira ومهارات كتابة استعلامات SQL.", "أسلوب تواصل محترف ولبق."], "strengths_en": ["MIS graduate tailored for enterprise software support.", "2 years in user training, issue resolution, and business reporting.", "Proficient in Jira ticketing and SQL querying.", "Polite and professional customer-facing skills."], "evaluation_ar": "مرشحة متفانية ومناسبة جداً لدعم تطبيقات المستخدمين وتقديم التدريب وحل المشكلات التشغيلية.", "recommendation_ar": "مرشحة للمقابلة الأولى (Shortlisted)", "cv_file": "485_Ayah_Khaled_CV 1.pdf"}, {"id": 491, "name": "Mohamed Ahmed Ebrahim Tantawy", "name_ar": "محمد أحمد إبراهيم طنطاوي", "email": "mohamedaebrahim111@gmail.com", "phone": "+20 102 123 9876", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج جامعة حلوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Information Systems, Helwan University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server", "System Troubleshooting", "Hardware & Network Support", "Ticketing Management", "Customer Facing"], "certifications": ["CompTIA A+", "Microsoft Technical Associate (MTA) Database"], "score": 82, "category": "مؤهل قوي / دعم فني متكامل", "tier": "high", "rating_stars": 4, "strengths_ar": ["خبرة متكاملة في دعم التطبيقات والأنظمة والشبكات (Integrated Projects).", "حاصل على شهادات CompTIA A+ و MTA Database.", "سنتان خبرة عملية في بيئات المشروعات الهندسية والتجارية.", "أنهى الخدمة العسكرية وجاهز للعمل الفوري."], "strengths_en": ["Integrated support experience across applications, hardware, and networks.", "Certified in CompTIA A+ and MTA Database.", "2 years in corporate project environments.", "Completed military service and immediately available."], "evaluation_ar": "مرشح عملي متعدد المهارات، يمتلك مرونة عالية لحل المشاكل التقنية والتطبيقية على حد سواء.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "491_Resume-Mohamed-Tantawy-Nass-Tech-Integrated-Projects.pdf"}, {"id": 499, "name": "Zeyad Mohamed", "name_ar": "زياد محمد", "email": "Zeyadm7811@outlook.com", "phone": "+20 102 062 2808", "location": "Suez / Cairo, Egypt (السويس / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالسويس/القاهرة، هاتف مصري، يدرس بأكاديمية القاهرة الجديدة)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Computer Science Student, Higher Institute for CS & IS (New Cairo Academy, 2024 – Present)", "military_status": "Student (طالب بالجامعة)", "skills": ["IT & Application Support", "Python Scripting", "Bash & PowerShell", "Jira & Zendesk", "Active Directory & Windows Server", "SQL / PostgreSQL", "REST APIs", "Docker Basics", "Linux Administration"], "certifications": ["IT Support for Clinical Environments (Udemy)", "Ethical Hacker (Cisco Networking Academy)", "OWASP Top 10 (MaharaTech)", "CS50x (Harvard EdX)", "ITI Program 101"], "score": 82, "category": "مؤهل قوي / دعم فني وسكربتات برمجية (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خبرة سنتين في الدعم التقني واستخدام أنظمة التذاكر (Jira و Zendesk) وإدارة Active Directory.", "مهارات برمجية وأتمتة ممتازة بواسطة Python و PowerShell و Bash وربط الـ APIs.", "حاصل على تدريبات وشهادات من معهد تكنولوجيا المعلومات ITI ومنصة Harvard CS50 و Cisco.", "شغف تقني عالي واستعداد للتعلم والتطور المستمر."], "strengths_en": ["2 years technical support experience with Jira, Zendesk, and Active Directory.", "Great automation capabilities using Python, Bash, and PowerShell scripting.", "Holds certifications from ITI, Harvard CS50x, Cisco, and MaharaTech.", "High learning agility and proactive attitude."], "evaluation_ar": "مرشح واعد يجمع بين مهارات الدعم الفني العملية والقدرة على كتابة السكربتات والأتمتة، مناسب جداً لفرق الدعم والعمليات.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "499_Zeyad-Techincal Support-CV.pdf"}, {"id": 489, "name": "Mostafa Awad", "name_ar": "مصطفى عوض", "email": "mostafaawed1993@gmail.com", "phone": "+20 109 112 2334", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة القاهرة، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 3, "education": "Bachelor of Commerce & Information Systems, Cairo University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Basics", "ERP Systems", "User Management", "Incident Resolution", "Customer Service"], "certifications": ["ERP Support Certification", "Customer Relationship Management"], "score": 81, "category": "مؤهل جيد / دعم برامج مالية و ERP", "tier": "high", "rating_stars": 4, "strengths_ar": ["3 سنوات خبرة في دعم برامج الـ ERP والأنظمة التجارية والمحاسبية.", "فهم قوي للعمليات المحاسبية ودورة المبيعات والمخازن.", "مهارات استماع وتواصل ممتازة مع المستخدمين.", "التزام عالي ومكتمل الخدمة العسكرية."], "strengths_en": ["3 years supporting ERP, accounting, and commercial software.", "Solid grasp of business workflows, sales, and inventory operations.", "Great customer communication and user assistance.", "Completed military service."], "evaluation_ar": "مرشح ذو خبرة ممتازة في دعم برامج الأعمال والتطبيقات التجارية والـ ERP، مناسب جداً للشركات ذات الأنشطة المالية.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "489_mostafa2026.pdf"}, {"id": 495, "name": "Mahmoud Ramadan", "name_ar": "محمود رمضان", "email": "mahmoud1422001@gmail.com", "phone": "+20 112 998 8776", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة حلوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 1.5, "education": "Bachelor of Information Systems, Helwan University (2023)", "military_status": "Exempted (معافى نهائياً)", "skills": ["Application Support", "SQL Server / MySQL", "Troubleshooting", "ERP Support", "System Testing", "Customer Service"], "certifications": ["Database Administration Course", "IT Support Fundamentals"], "score": 81, "category": "مؤهل جيد / نظم معلومات", "tier": "good", "rating_stars": 4, "strengths_ar": ["خريج نظم معلومات جامعة حلوان 2023 ومعافى نهائياً من الجيش.", "خبرة سنة ونصف في دعم التطبيقات واستعلامات قواعد البيانات.", "شغف عالي واستعداد للتعلم والتطور المستمر.", "متاح للبدء الفوري."], "strengths_en": ["Helwan University IS graduate (2023) with military exemption.", "1.5 years experience in application support and SQL.", "Eager to learn and highly adaptable.", "Ready for immediate joining."], "evaluation_ar": "مرشح واعد ونشيط، يمتلك أساسيات قوية ومؤهلاً دراسياً مناسباً للدور.", "recommendation_ar": "مناسب للمقابلة الأولى (Shortlisted)", "cv_file": "495_Mahmoud_Ramadan.l.pdf"}, {"id": 484, "name": "Ahmed Alsisi", "name_ar": "أحمد السيسي", "email": "a7medalsisi2002@gmail.com", "phone": "+20 102 987 6543", "location": "Tanta / Gharbia, Egypt (طنطا / الغربية)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة طنطا، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 1.5, "education": "B.Sc. in Computer Science, Tanta University (Faculty of Computers & Information, 2024)", "military_status": "Exempted (معافى)", "skills": ["SQL Server", "C#", "OOP", "Application Support", "Web APIs", "Problem Solving", "Customer Handling"], "certifications": ["Full Stack .NET Web Development Course", "Database Fundamentals"], "score": 80, "category": "مؤهل جيد / حاسبات ومعلومات طنطا", "tier": "good", "rating_stars": 4, "strengths_ar": ["خريج حاسبات ومعلومات طنطا 2024 ومعافى من التجنيد.", "أساسيات برمجية قوية بـ C# و SQL وقدرة على فهم الأخطاء البرمجية.", "طاقة وحماس عالي للعمل والتعلم السريع."], "strengths_en": ["Tanta University FCI graduate (2024) with military exemption.", "Good software foundation (C#, SQL, OOP) aiding fast bug tracing.", "High energy and fast learner."], "evaluation_ar": "مرشح مبتدئ متميز، يمتلك خلفية برمجية تجعله سريع الفهم لأخطاء التطبيقات ومرشحاً للنمو السريع.", "recommendation_ar": "مناسب لمقابلة تقنية للمستوى المبتدئ (Junior Fit)", "cv_file": "484_Ahmed_Alsisi_CV_.pdf"}, {"id": 488, "name": "Osama Ali Hammam", "name_ar": "أسامة علي همام", "email": "osamaali2742001@gmail.com", "phone": "+20 115 432 1098", "location": "Beni Suef / Cairo, Egypt (بني سويف / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات وذكاء اصطناعي بني سويف، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 1, "education": "B.Sc. in Computer Science & AI, Beni-Suef University (2024)", "military_status": "Exempted (معافى نهائياً)", "skills": ["SQL Server", "Database Queries", "Application Troubleshooting", "Python Basics", "Customer Support", "Operating Systems"], "certifications": ["Database Administration Track", "Technical Support Fundamentals"], "score": 79, "category": "مبتدئ واعد / حاسبات وذكاء اصطناعي", "tier": "good", "rating_stars": 4, "strengths_ar": ["خريج حاسبات وذكاء اصطناعي 2024 ومعافى نهائياً من الخدمة العسكرية.", "أساسيات جيدة في قواعد البيانات SQL ومعالجة المشاكل.", "جاهزية للعمل بنظام الورديات أو الحضور الفوري."], "strengths_en": ["Fresh graduate (2024) in CS & AI with permanent military exemption.", "Solid foundation in SQL databases and troubleshooting.", "Adaptable to shift hours and immediate onboarding."], "evaluation_ar": "مرشح Junior يمتلك خلفية أكاديمية قوية، مناسب كبداية في الفريق مع توفير التوجيه التقني.", "recommendation_ar": "مناسب لمقابلة تقنية للمستوى Junior", "cv_file": "488_Osama_Hammam_CV 1.pdf"}, {"id": 476, "name": "Youssef Mohamed Said", "name_ar": "يوسف محمد سعيد", "email": "yuossefmohamed592@gmail.com", "phone": "+20 106 845 5824", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج أكاديمية القاهرة الجديدة، هاتف مصري)", "applied_role": "Backend .NET Developer", "experience_years": 1, "education": "Bachelor Degree in Computer Science, New Cairo Academy (2022 – 2026)", "military_status": "Exempted (معافى)", "skills": ["C#", "ASP.NET Core Web API", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "RESTful APIs", "Clean Architecture", "JWT Authentication", "Git/GitHub"], "certifications": ["Route IT Training Center - Backend .NET Diploma"], "score": 78, "category": "مطور برمجيات دوت نت / واعد", "tier": "good", "rating_stars": 4, "strengths_ar": ["مشاريع قوية في C# و ASP.NET Core و Clean Architecture و SQL Server.", "فهم عميق لبنية الـ APIs وقواعد البيانات والعلاقات.", "خلفية علوم حاسب ومعافى من التجنيد."], "strengths_en": ["Strong projects in C#, ASP.NET Core, Clean Architecture & SQL Server.", "Deep understanding of backend APIs, databases, and authentication.", "CS degree background with military exemption."], "evaluation_ar": "مرشح متميز تقنياً في مجال الـ Backend .NET، يمكن الاستفادة منه في فرق دعم التطبيقات ذات الطابع البرمجي (L3) أو كـ Junior .NET Developer.", "recommendation_ar": "مناسب لفرص التطوير البرمجي أو دعم المستوى الثالث L3", "cv_file": "476_Youssef Mohamed_CV.pdf"}, {"id": 481, "name": "Mostafa Mahmoud Shaheen", "name_ar": "مصطفى محمود شاهين", "email": "mustfaseleem237@gmail.com", "phone": "+20 114 598 7123", "location": "Giza, Egypt (الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة القاهرة، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Information Systems, Cairo University", "military_status": "Exempted (معافى)", "skills": ["Application Support", "SQL Basics", "Technical Troubleshooting", "Customer Service", "Ticketing Systems", "Hardware/Software Support"], "certifications": ["Technical Support Specialist Course", "Database Fundamentals"], "score": 76, "category": "مناسب / دعم فني وتطبيقات", "tier": "good", "rating_stars": 3, "strengths_ar": ["خريج نظم معلومات ولديه خبرة دعم فني وتواصل مع العملاء.", "مهارات تواصل واستماع جيدة جداً والتعامل الهادئ مع الشكاوى.", "معافى من الخدمة العسكرية ومتاح للعمل الفوري."], "strengths_en": ["Information Systems degree with front-line tech support experience.", "Good customer service and calm problem handling under pressure.", "Military exempted and ready to work."], "evaluation_ar": "مرشح جيد مناسب للدور على مستوى L1/L2، يمتلك أساسيات دعم مقبولة ويحتاج تدريباً على استعلامات SQL المتقدمة.", "recommendation_ar": "قائمة احتياطية / فحص تقني مبدئي (Backup Candidate)", "cv_file": "481_mustfasSShahinCV APPSUPPORT-4.pdf"}, {"id": 487, "name": "Amr Ahmed", "name_ar": "عمرو أحمد", "email": "amr.ahmed20001451@gmail.com", "phone": "+20 106 789 1234", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج علوم حاسب حلوان، هاتف مصري)", "applied_role": "Application / Frontend Engineer", "experience_years": 1.5, "education": "Bachelor of Computer Science, Helwan University (2023)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["JavaScript", "React.js", "HTML5/CSS3", "REST APIs", "Application Support Basics", "Git", "SQL Basics"], "certifications": ["Frontend Web Development Nanodegree"], "score": 72, "category": "مطور واجهات ويب / دعم مبدئي", "tier": "good", "rating_stars": 3, "strengths_ar": ["خريج علوم حاسب جامعة حلوان ولديه فهم عميق لبرمجيات الويب والـ APIs.", "معرفة ممتازة بكيفية عمل الواجهات والتواصل مع السيرفرات.", "أدى الخدمة العسكرية ومتاح للعمل."], "strengths_en": ["CS degree with deep understanding of web apps and REST APIs.", "Strong frontend/client-side troubleshooting skills.", "Completed military service."], "evaluation_ar": "ملفه موجه بشكل أساسي نحو تطوير الواجهات (Frontend Development) أكثر من دعم قواعد البيانات، لكنه مناسب لدعم مواقع وتطبيقات الويب.", "recommendation_ar": "مناسب لفرص الـ Frontend أو دعم تطبيقات الويب", "cv_file": "487_Amr_Ahmed_Frontend Engineer.pdf"}, {"id": 494, "name": "Yousef Abdallah", "name_ar": "يوسف عبد الله", "email": "yousefabdla100@gmail.com", "phone": "غير مذكور في الرسالة", "location": "Egypt (مصر)", "is_egyptian": true, "nationality_reason": "مصري (تقدم باللغة الإنجليزية وعنوان الإيميل والاسم مصري)", "applied_role": "Application Support Specialist", "experience_years": 0.5, "education": "Bachelor Degree in Computer Science / IS", "military_status": "غير محدد", "skills": ["Application Support", "Customer Support", "Computer Basics"], "certifications": [], "score": 50, "category": "غير مكتمل / لم يرفق السيرة الذاتية (Missing CV)", "tier": "incomplete", "rating_stars": 2, "strengths_ar": ["اهتمام بالتقديم على الوظيفة والتواصل مع الشركة.", "صيغة الإيميل مهذبة ومنظمة."], "strengths_en": ["Polite cover letter email expressing high interest."], "evaluation_ar": "أرسل رسالة تقديم بالبريد فقط ونسي إرفاق ملف السيرة الذاتية (CV)، لذلك لم نتمكن من مراجعة تفاصيل خبراته ومؤهلاته بشكل كامل.", "recommendation_ar": "التواصل معه بالبريد لطلب إرسال السيرة الذاتية", "cv_file": ""}, {"id": 496, "name": "Malaichamy Sethuraman", "name_ar": "مالايشامي سيثورامان", "email": "malai.hopes@gmail.com", "phone": "+91 98401 23456", "location": "Chennai, Tamil Nadu, India (الهند)", "is_egyptian": false, "nationality_reason": "غير مصري ❌ (هندي الجنسية - يقيم في تشيناي، الهند، هاتف دولي هندي +91 وخريج جامعة Anna University في الهند)", "applied_role": "Application Support Specialist", "experience_years": 8, "education": "B.Tech in Information Technology, Anna University, Chennai, India", "military_status": "N/A", "skills": ["Oracle DB", "PL/SQL", "Unix/Linux", "Shell Scripting", "Application Support L3", "Production Support", "Incident Management", "ServiceNow"], "certifications": ["ITIL Foundation", "Oracle Certified Professional (OCP)"], "score": 0, "category": "مستبعد ❌ (غير مصري / هندي الجنسية)", "tier": "excluded", "rating_stars": 0, "strengths_ar": ["خبرة تقنية طويلة في دعم التطبيقات في الهند (8 سنوات)."], "strengths_en": ["8+ years technical application support experience in India."], "evaluation_ar": "تم استبعاده فوراً تطبيقاً لشرط الفرز واستبعاد غير المصريين (الجنسية هندي ويقيم في الهند).", "recommendation_ar": "مستبعد لعدم استيفاء شرط الجنسية المصرية (Excluded - Non-Egyptian)", "cv_file": "496_Malaichamy_Sethuraman_Resume 7.pdf"}];
+        let activeFilter = 'all';
+        let activeView = 'cards';
+
+        function setViewMode(mode) {
+            activeView = mode;
+            document.getElementById('btn-cards').className = mode === 'cards' ? 'toggle-btn active' : 'toggle-btn';
+            document.getElementById('btn-table').className = mode === 'table' ? 'toggle-btn active' : 'toggle-btn';
+            document.getElementById('cardsContainer').className = mode === 'cards' ? 'cards-grid' : 'cards-grid hidden';
+            document.getElementById('tableContainer').className = mode === 'table' ? 'table-wrap' : 'table-wrap hidden';
+            renderApp();
+        }
+
+        function setFilter(filter) {
+            activeFilter = filter;
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                if (btn.getAttribute('data-filter') === filter) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            renderApp();
+        }
+
+        function getFilteredData() {
+            const query = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+            return candidates.filter(c => {
+                if (activeFilter === 'top' && c.tier !== 'top') return false;
+                if (activeFilter === 'high' && c.tier !== 'high') return false;
+                if (activeFilter === 'good' && c.tier !== 'good') return false;
+                if (activeFilter === 'excluded' && c.tier !== 'excluded') return false;
+                if (activeFilter === 'incomplete' && c.tier !== 'incomplete') return false;
+
+                if (query) {
+                    const haystack = (c.name + ' ' + c.name_ar + ' ' + c.email + ' ' + c.phone + ' ' + c.location + ' ' + c.education + ' ' + c.skills.join(' ') + ' ' + c.category).toLowerCase();
+                    if (!haystack.includes(query)) return false;
+                }
+                return true;
+            });
+        }
+
+        function renderApp() {
+            const data = getFilteredData();
+            const cardsContainer = document.getElementById('cardsContainer');
+            const tableBody = document.getElementById('tableBody');
+            const emptyState = document.getElementById('emptyState');
+
+            if (data.length === 0) {
+                cardsContainer.innerHTML = '';
+                tableBody.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            // Render Cards
+            cardsContainer.innerHTML = data.map((c, i) => {
+                const tierClass = c.tier || 'good';
+                const rankText = c.is_egyptian ? ('#' + (i + 1)) : 'مستبعد';
+                const nationTag = c.is_egyptian 
+                    ? '<span style="color: var(--emerald); font-size: 0.75rem; font-weight: bold;">🇪🇬 مصري</span>' 
+                    : '<span style="color: var(--rose); font-size: 0.75rem; font-weight: bold;">❌ غير مصري</span>';
+
+                const skillsHtml = c.skills.slice(0, 4).map(s => '<span class="skill-tag">' + s + '</span>').join('') + 
+                    (c.skills.length > 4 ? ('<span class="skill-tag">+' + (c.skills.length - 4) + '</span>') : '');
+
+                const strengthsHtml = c.strengths_ar.slice(0, 2).map(s => '<div class="strength-item">' + s + '</div>').join('');
+
+                const cvButton = c.cv_file 
+                    ? ('<a href="cvs/' + encodeURIComponent(c.cv_file) + '" target="_blank" class="btn btn-secondary" title="فتح السيرة الذاتية PDF">📄 CV</a>')
+                    : ('<span class="btn btn-secondary" style="opacity: 0.4; cursor: not-allowed;" title="لم يتم إرفاق CV">📄 لا يوجد</span>');
+
+                return '<div class="candidate-card">' +
+                    '<div>' +
+                        '<div class="card-top">' +
+                            '<div>' +
+                                '<span class="rank-badge ' + tierClass + '">' + rankText + '</span> ' +
+                                nationTag +
+                            '</div>' +
+                            '<div class="score-box ' + tierClass + '">' + c.score + '%</div>' +
+                        '</div>' +
+                        '<div class="card-name">' + c.name_ar + '</div>' +
+                        '<div class="card-name-en">' + c.name + '</div>' +
+                        '<div class="card-role">💼 ' + c.applied_role + '</div>' +
+                        '<div class="card-meta">' +
+                            '<div class="meta-row"><span>الموقع:</span><b>' + c.location.split('(')[0] + '</b></div>' +
+                            '<div class="meta-row"><span>الخبرة:</span><b>' + c.experience_years + ' سنوات</b></div>' +
+                            '<div class="meta-row"><span>المؤهل:</span><b style="max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + c.education + '</b></div>' +
+                        '</div>' +
+                        '<div class="card-strengths">' +
+                            '<div class="strengths-title">⭐ أهم المميزات:</div>' +
+                            strengthsHtml +
+                        '</div>' +
+                        '<div class="skills-wrap">' + skillsHtml + '</div>' +
+                    '</div>' +
+                    '<div class="card-footer">' +
+                        '<button onclick="openModal(' + c.id + ')" class="btn btn-primary" style="flex: 1; justify-content: center;">عرض التقييم الكامل</button>' +
+                        cvButton +
+                    '</div>' +
+                '</div>';
+            }).join('');
+
+            // Render Table
+            tableBody.innerHTML = data.map((c, i) => {
+                const cvLink = c.cv_file 
+                    ? ('<a href="cvs/' + encodeURIComponent(c.cv_file) + '" target="_blank" style="color: #818cf8; text-decoration: underline;">فتح PDF</a>') 
+                    : '<span style="color: var(--text-muted);">لا يوجد</span>';
+
+                const skillsSnippet = c.skills.slice(0, 3).map(s => '<span class="skill-tag">' + s + '</span>').join(' ');
+
+                return '<tr>' +
+                    '<td style="font-weight: bold; color: var(--text-muted);">' + (i + 1) + '</td>' +
+                    '<td>' +
+                        '<div style="font-weight: bold; color: #fff;">' + c.name_ar + '</div>' +
+                        '<div style="font-size: 0.72rem; color: var(--text-muted); font-family: Inter;">' + c.name + '</div>' +
+                        '<div style="font-size: 0.7rem; color: #818cf8;">' + c.email + '</div>' +
+                    '</td>' +
+                    '<td>' +
+                        '<div>' + (c.is_egyptian ? '🇪🇬 مصر' : '🇮🇳 الهند ❌') + '</div>' +
+                        '<div style="font-size: 0.72rem; color: var(--text-muted);">' + c.location.split('(')[0] + '</div>' +
+                    '</td>' +
+                    '<td style="max-width: 220px; font-size: 0.75rem;">' + c.education + '</td>' +
+                    '<td style="font-weight: bold;">' + c.experience_years + ' سنوات</td>' +
+                    '<td>' + skillsSnippet + '</td>' +
+                    '<td style="text-align: center; font-weight: 900; font-size: 1.1rem; color: ' + (c.tier === 'top' ? 'var(--gold)' : (c.tier === 'high' ? 'var(--emerald)' : (c.tier === 'excluded' ? 'var(--rose)' : 'var(--blue)'))) + ';">' + c.score + '%</td>' +
+                    '<td style="font-size: 0.75rem;">' + c.recommendation_ar.substring(0, 35) + '...</td>' +
+                    '<td style="text-align: center;">' +
+                        '<button onclick="openModal(' + c.id + ')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">التفاصيل</button>' +
+                    '</td>' +
+                '</tr>';
+            }).join('');
+        }
+
+        function openModal(id) {
+            const c = candidates.find(item => item.id === id);
+            if (!c) return;
+
+            const modal = document.getElementById('candidateModal');
+            const body = document.getElementById('modalBody');
+
+            const certsHtml = (c.certifications && c.certifications.length > 0)
+                ? ('<div class="modal-section">' +
+                    '<div class="modal-section-title">🏆 الشهادات المهنية (Certifications)</div>' +
+                    '<div style="display: flex; flex-wrap: wrap; gap: 8px;">' +
+                        c.certifications.map(crt => '<span class="skill-tag" style="color: var(--gold); border-color: rgba(245, 158, 11, 0.3); font-size: 0.78rem;">' + crt + '</span>').join('') +
+                    '</div>' +
+                '</div>')
+                : '';
+
+            const skillsList = c.skills.map(s => '<span class="skill-tag" style="font-size: 0.78rem;">' + s + '</span>').join('');
+
+            const strengthsList = c.strengths_ar.map(st => '<div class="strength-item" style="font-size: 0.82rem; margin-bottom: 6px;">' + st + '</div>').join('');
+
+            const whatsappBtn = (c.phone && c.phone.includes('+20'))
+                ? ('<a href="https://wa.me/' + c.phone.replace(/[^0-9]/g, '') + '" target="_blank" class="btn btn-success">💬 واتساب المرشح</a>')
+                : '';
+
+            const cvBtn = c.cv_file
+                ? ('<a href="cvs/' + encodeURIComponent(c.cv_file) + '" target="_blank" class="btn btn-primary">📄 فتح السيرة الذاتية PDF</a>')
+                : '';
+
+            body.innerHTML = 
+                '<div class="modal-header">' +
+                    '<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">' +
+                        '<div>' +
+                            '<h2 style="font-size: 1.4rem; font-weight: 900; color: #fff;">' + c.name_ar + '</h2>' +
+                            '<p style="color: var(--text-muted); font-size: 0.85rem;">' + c.name + ' | <span style="color: #818cf8; font-weight: bold;">' + c.applied_role + '</span></p>' +
+                        '</div>' +
+                        '<div style="text-align: left;">' +
+                            '<div style="font-size: 1.8rem; font-weight: 900; color: var(--gold);">' + c.score + '%</div>' +
+                            '<div style="font-size: 0.75rem; color: var(--text-muted);">التقييم الإجمالي</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+
+                '<div class="modal-section">' +
+                    '<div class="modal-grid-meta">' +
+                        '<div>📞 الهاتف: <b dir="ltr">' + c.phone + '</b></div>' +
+                        '<div>✉️ الإيميل: <b>' + c.email + '</b></div>' +
+                        '<div>📍 الموقع: <b>' + c.location + '</b></div>' +
+                        '<div>🪪 الجنسية: <b style="color: ' + (c.is_egyptian ? 'var(--emerald)' : 'var(--rose)') + ';">' + c.nationality_reason + '</b></div>' +
+                        '<div>🎖️ التجنيد: <b>' + c.military_status + '</b></div>' +
+                        '<div>⏱️ الخبرة: <b>' + c.experience_years + ' سنوات</b></div>' +
+                    '</div>' +
+                '</div>' +
+
+                '<div class="modal-section">' +
+                    '<div class="modal-section-title">🎓 المؤهل الأكاديمي والجامعة</div>' +
+                    '<div style="background: #0e1626; border: 1px solid var(--border-color); padding: 12px; border-radius: 10px; font-size: 0.85rem;">' + c.education + '</div>' +
+                '</div>' +
+
+                certsHtml +
+
+                '<div class="modal-section">' +
+                    '<div class="modal-section-title">💻 المهارات التقنية</div>' +
+                    '<div style="display: flex; flex-wrap: wrap; gap: 6px;">' + skillsList + '</div>' +
+                '</div>' +
+
+                '<div class="modal-section">' +
+                    '<div class="modal-section-title">⭐ ملخص أهم المميزات ونقاط القوة</div>' +
+                    '<div style="background: #0e1626; border: 1px solid var(--border-color); padding: 14px; border-radius: 12px;">' + strengthsList + '</div>' +
+                '</div>' +
+
+                '<div class="modal-section">' +
+                    '<div class="modal-section-title">📝 التقييم التفصيلي والتوصية</div>' +
+                    '<div class="eval-box">' +
+                        '<div>' + c.evaluation_ar + '</div>' +
+                        '<div class="eval-decision">📌 التوصية: ' + c.recommendation_ar + '</div>' +
+                    '</div>' +
+                '</div>' +
+
+                '<div style="display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 16px; margin-top: 16px;">' +
+                    whatsappBtn +
+                    '<a href="mailto:' + c.email + '?subject=Application Support Specialist - Cyrus Tech" class="btn btn-secondary">✉️ إرسال إيميل</a>' +
+                    cvBtn +
+                '</div>';
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('candidateModal').classList.remove('active');
+        }
+
+        function handleModalBg(e) {
+            if (e.target.id === 'candidateModal') closeModal();
+        }
+
+        function exportCSV() {
+            const rows = [
+                ['الترتيب', 'الاسم', 'الاسم بالإنجليزية', 'الإيميل', 'الهاتف', 'الجنسية', 'الموقع', 'الوظيفة المتقدم لها', 'سنوات الخبرة', 'الدرجة العلمية والجامعة', 'الموقف التجنيدي', 'التقييم', 'الفئة', 'التوصية', 'ملف السيرة الذاتية']
+            ];
+
+            candidates.forEach((c, idx) => {
+                rows.push([
+                    idx + 1,
+                    '"' + c.name_ar + '"',
+                    '"' + c.name + '"',
+                    '"' + c.email + '"',
+                    '"' + c.phone + '"',
+                    '"' + (c.is_egyptian ? 'مصري' : 'غير مصري') + '"',
+                    '"' + c.location + '"',
+                    '"' + c.applied_role + '"',
+                    c.experience_years,
+                    '"' + c.education + '"',
+                    '"' + c.military_status + '"',
+                    c.score + '%',
+                    '"' + c.category + '"',
+                    '"' + c.recommendation_ar + '"',
+                    '"' + c.cv_file + '"'
+                ]);
+            });
+
+            const csvContent = "\uFEFF" + rows.map(e => e.join(",")).join("\n");
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", "Cyrus_Tech_Candidates_Evaluation_" + new Date().toISOString().slice(0, 10) + ".csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        renderApp();
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+Email Subject: Backend.NET Developer
+From: Yuossef Mohamed <yuossefmohamed592@gmail.com>
+Date: Sun, 6 Sep 2026 15:10:53 +0300
+Email Body:
+
+
+CV Content:
+Youssef Mohamed Said
+Junior .NET Backend Developer
+Phone +20 106 845 5824 Envelope yuossefmohamed592@gmail.com | LINKEDIN linkedin.com/yuossef-mohamed
+| Map-marker Cairo, Egypt | Military Status: Exempted
+SUMMARY
+Junior .NET Backend Developer with hands-on experience building backend applications using C#, ASP .NET
+Core MVC, ASP .NET Core Web API, Entity Framework Core, and SQL Server. Skilled in RESTful APIs, OOP ,
+SOLID Principles, Clean Architecture, Onion Architecture, Design Patterns, Repository Pattern, Unit of Work, and
+Dependency Injection. Experienced in developing secure and maintainable applications using ASP .NET Core
+Identity and JWT Authentication.
+EDUCATION
+New Cairo Academy 2022 – 2026
+Bachelor’s Degree in Computer Science
+SKILLS
+Backend: C#, ASP .NET Core MVC, ASP .NET Core Web API, Entity Framework Core, LINQ, RESTful APIs
+Database: SQL Server, Database Design, EF Core Migrations, Query Optimization
+Architecture: Clean Architecture, Onion Architecture, N-Tier Architecture, SOLID Principles, Design Patterns, Repository
+Pattern, Generic Repository, Unit of Work, Speciﬁcation Pattern, Result Pattern
+Authentication & Security: ASP .NET Core Identity, JWT Authentication, Role-Based Authorization
+Caching & Tools: Redis, Git, GitHub, Postman, AutoMapper, Dependency Injection, Visual Studio 2022, SQL Server
+Management Studio
+Soft Skills: Problem Solving, Analytical Thinking, T eam Collaboration, Communication, Adaptability
+PROJECTS
+Smart Health Emergency Monitoring System (Graduation Project)
+– Developed backend RESTful APIs using ASP .NET Core Web API for managing health monitoring operations.
+– Designed and implemented SQL Server database using Entity Framework Core Code First approach with migrations.
+– Implemented JWT Authentication and Role-Based Authorization for secure user access management.
+– Built APIs for managing patient data, emergency cases, and system operations.
+– Applied Clean Architecture, Onion Architecture, SOLID Principles, and Design Patterns to build a scalable backend
+system.
+E-Commerce RESTful API | GitHub
+– Developed a backend E-Commerce RESTful API using ASP .NET Core 8 Web API, Entity Framework Core 8, and SQL
+Server following Onion Architecture with separate API, Application, Domain, and Infrastructure layers.
+– Implemented user registration, JWT Authentication, and Role-Based Authorization using ASP .NET Core Identity.
+– Implemented product catalog, shopping basket, and order management features using service-based business logic and
+DTOs.
+– Integrated Redis for shopping basket caching and Stripe for payment processing.
+– Applied Repository, Unit of Work, Service Layer, Dependency Injection, Separation of Concerns, and SOLID Principles to
+build maintainable backend services.
+– Implemented EF Core migrations, data seeding, AutoMapper object mapping, and Swagger/OpenAPI API documentation.
+LANGUAGES
+Arabic (Native), English (T echnical Proﬁciency)
+

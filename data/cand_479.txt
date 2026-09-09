@@ -1,0 +1,69 @@
+Email Subject: Application Support Sepcialist
+From: Ahmed Abdelhakim <ahmedabdelhakim679@gmail.com>
+Date: Sun, 6 Sep 2026 15:51:27 +0300
+Email Body:
+Dear Hiring Manager
+Hope you are well
+
+I am interested at the position you hire for and avaliable to get in touch
+with you.
+
+Best Regards
+​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+[image: bdc44403014bab0487b2a5e3dbd9cf393e6f6faa]
+
+CV Content:
+Ahmed Mahmoud
+CRM Admin
++201121148790jahmedabdelhakim679@gmail.comjlinkedin.com/in/ahmedmahmoud22
+SUMMARY
+Results-driven IT professional with a basic foundation in DevOps practices, software support, and system
+deployment. knowledge in CI/CD processes, version control with Git, Docker, and Jira-based workow
+management. Demonstrated ability to support and implement ERP systems, perform UAT, and analyze system
+logs for continuous improvement. Adept at bridging the gap between development and operations teams, with
+practical knowledge of Linux, SQL, and security awareness tools. Brings a security-conscious mindset with
+hands-on exposure to malware analysis and threat intelligence basics.
+EXPERIENCE
+T ag Pharma Mar 2025 - Present
+CRM Admin
+{Provided support to users, eectively resolving technical inquiries and issues.
+{create new accounts regardless of their permissions needed.
+{Upload new Sheets and remove old data.
+{Export reports for executives to enhance performance and quality.
+dPhish Oct 2024 - Nov 2024
+Technical Support Specialist
+{Provided support to clients, eectively resolving technical inquiries and issues.
+{Designed and deployed phishing simulation pages and techniques for training and security awareness.
+{Conducted UAT to ensure quality and reliability before deployment production.
+{Monitor JIRA workows, assigning tasks and coordinating activities for the team.
+{Analyzed server logs to identify and diagnose incidents.
+{Collaborate with internal teams to drive product enhancements based on client needs.
+Data Management SystemsOct 2021 - May 2024
+Application Specialist
+{Conducted gap analysis, setup, implementation, and conguration of ERP Modules and Toad Database according to
+business standards and client needs.
+{Support the rollout of new releases, performing tests and evaluations.
+Sana Soft Apr 2019 - Feb 2020
+ITSM Implementation Specialist
+{Implement IT workows, processes using "ManageEngine" products according to ITIL standards to ensure automation
+and quality improvement for customer needs and satisfaction.
+{Onboard new clients and provide training on product services for internal departments and end users.
+EDUCATION
+Ahram Canadian University- Jun 2018
+Bachelor's Degree of Computer Science
+SKILLS
+V ersion Control & CI/CD: Git Version ControljUnderstanding of software development process such as
+CI/CD
+Containers & Deployment: Docker
+T esting & Support: User Acceptance TestingjJIRA Service Desk
+Databases & Querying: SQL Query
+Operating Systems: Knowledge of linux as end user
+Business & Process: Convergence between client requirements and company policies & procedures
+Security Analysis: Malware Static & Dynamic AnalysisjBasics of Threat HuntingjBasics of Dark Web
+Operations & Threat IntelligencejOperational Security Concepts & Open Source IntelligencejBasics of
+Detection Engineering (Yara, Suricata , Sigma)jIDA PRO, X64 debugger, Procmon, PE Studio
+CERTIFICATIONS
+Introduction to Dark Web Operations🔗,
+Introduction to OSINT🔗,
+Introduction to Threat Hunting🔗,
+

@@ -1,0 +1,59 @@
+Email Subject: Application support specialist
+From: ahmed alsisi <a7medalsisi2002@gmail.com>
+Date: Sun, 6 Sep 2026 22:39:08 +0300
+Email Body:
+
+
+CV Content:
+AHMED WAEL ALSISI  
+Cairo, Egypt | +20 115 361 3331 | a7medalsisi2002@gmail.com | linkedin.com/in/ahmed-alsisi 
+P R O F E S S IO N A L  S UM M AR Y 
+Software Engineering graduate with experience across five internship and training programs in IT and technology environments. Skilled in 
+full-stack web development, object-oriented programming, and relational database design using Java, Python, PHP, JavaScript, and SQL. 
+Built an AI-powered legal technology platform as a graduation project. Seeking an entry-level or internship role in software development, 
+web development, or IT. 
+E D U C A TI O N 
+Arab Academy for Science, Technology & Maritime Transport, Cairo Sep 2022 - 2026 
+Bachelor of Computer Science, Major in Software Engineering 
+Relevant Coursework: Data Structures and Algorithms, Object-Oriented Programming, Artificial Intelligence, Database Systems, Software 
+Engineering and Requirements, Operating Systems, Web Development, Project Management, Cybersecurity. 
+T E C H NI C A L  SK I LL S 
+Languages: Java, C/C++, Python, PHP, JavaScript, Kotlin, R 
+Web: HTML5, CSS3, Bootstrap, React, Java J2EE (Servlets, JSP), MVC Architecture 
+Databases: SQL, MySQL, Oracle SQL, PL/SQL, Database Design and Management 
+Tools and Concepts: Power BI, Figma, Git, R Studio, RAG, OCR, CCNA Networking Fundamentals, Data Analysis 
+Soft Skills: Communication, Teamwork, Problem Solving, Critical Thinking, Adaptability, Time Management, Leadership 
+P R O J E C T S 
+KnowLaw - AI Legal Technology Platform (Graduation Project)  
+• Developed a full-stack AI platform giving Egyptian citizens accessible, verified legal guidance across 18 domains of Egyptian law, in 
+both Arabic and English. 
+• Built a Retrieval-Augmented Generation (RAG) chatbot, an OCR document analyzer, an automated contract generator, and a secure 
+Legal Vault for document storage. 
+Book Store Website  
+• Developed a responsive online bookstore with dynamic user interaction using HTML, CSS, and JavaScript; migrated server-side logic 
+from PHP to Java J2EE for scalability. 
+• Re-architected user session handling and data management, improving application performance. 
+Healthcare Management System  
+• Built a Java system for patient records, appointments, and staff coordination, applying object-oriented design for modularity and 
+persistent data handling. 
+E X PE R I E N CE 
+Winter Internship Trainee - Information Technology Institute (ITI), Cairo Jan 2026 
+IT Trainee - Elhazek Construction Group, Cairo Jul 2025 
+Summer Internship Trainee - ICT Hub Egypt, Cairo Jul 2024 
+• Completed intensive training in SQL, Power BI, and data analysis; awarded Best Project in Software 
+Engineering for the capstone project. 
+Summer Internship Participant - Bright Network, Remote Jun 2024 
+Trainee - General Authority for Investment and Free Zones (GAFI), Cairo Aug 2023 
+• Completed Kaspersky cybersecurity training covering threat awareness, endpoint protection, and 
+secure practices. 
+C E R T I FI C A TI O N S  A N D  A W AR D S 
+Best Project Award, Software Engineering - Arab Academy for Science and Technology (2024) | Data Analysis Skills, SQL, and Power BI - ICT 
+Hub Egypt (2024) | Kaspersky Cybersecurity Training - GAFI Free Zone (2023) 
+L E A DE R S H I P  A N D  V O LU N TE E R  E X PE R I E N CE 
+Public Relations Member - Enactus AAST, Cairo 2023 - 2025 
+• Coordinated external communication and outreach for entrepreneurship and social impact initiatives. 
+Organizer, Mentor Area - StarHub, Cairo 2026 
+• Managed the mentor area, coordinating between mentors and participants throughout the event. 
+L A N G U A G E S 
+Arabic (Native) | English (Professional Working Proficiency) 
+

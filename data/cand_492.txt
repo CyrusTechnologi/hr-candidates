@@ -1,0 +1,121 @@
+Email Subject: Application Support Specialist
+From: Ahmed Rashad <ahmedrashadsayed98@gmail.com>
+Date: Mon, 7 Sep 2026 08:47:41 +0300
+Email Body:
+Dear HR,
+
+I hope this message finds you well
+
+My name is Ahmed Rashad
+
+I have experience working with tools and technologies such as SQL, Excel,
+databases, and technical support. I’ve applied these skills in real-world
+situations, including troubleshooting technical issues, analyzing data, and
+supporting users to resolve problems efficiently.
+
+If there is a current opportunity for the Application Support Specialist
+position, I would be very grateful to be considered
+
+Please find my CV attached for your review.
+
+Thank you for your time and consideration, and I look forward to the
+opportunity to connect.
+
+Best regards,
+
+Ahmed Rashad
+
+
+
+[image: Mailsuite] Sender notified with Mailtrack  ·  Opt out
+<https://u.list-prefs.com/en/privacy/opt-out/unsubscribe/f27e17f3b6fcda25918f567f075790f57fc36063/b7d3b954ea6b36042289f5eaeb99b4073a19afc49f2d492a23152ecbb2887bb1d16d1f3cdbcc14836e1b485c917d51f3dd657cd7b1141268bd9d1805674e07c0>
+09/07/26, 08:46:31 AM
+
+CV Content:
+Ahmed Rashad Sayed
+Data Analysis | Power BI Developer | Business Intelligence
+AhmedRashadSayed98@gmail.com
+ 
++201090398634
+ 
+Cairo, Egypt
+ 
+Ahmed Rashad
+ 
+Ahmed Rashad 102
+ 
+Ahmed Rashad 1714
+ 
+Profile
+Analytical and detail-oriented Data Analyst with hands-on experience in data cleaning, transformation, and 
+visualization using Excel, SQL, Power BI, Tableau. Skilled in building efficient data models, writing optimized 
+queries, and creating interactive dashboards to support data-driven decision-making. Passionate about 
+uncovering insights from data and presenting them in a clear and meaningful way. Strong understanding of 
+relational databases, business intelligence concepts, and real-world data challenges.
+Professional Experience
+Technical Support And Data Report, Sahm 01/2026 – 07/2026  | Nasr City,Egypt
+•Prepared and analyzed operational data and periodic reports using Excel.
+•Ensured data accuracy, performed data validation, and monitored reporting requirements.
+Product management and Data entry, Grand Food 04/2024 – 10/2024  | Asyut, Egypt
+Managing accounts and invoices at El-Motahda Food Products Company using Excel and ERP System.
+Education
+Bachelor of Computer and Information Technology
+Egyptian E-Learning University
+09/2018 – 06/2022  | Asyut, Egypt
+GPA: 3.56 Graduation Projectʼs Grade is Excellent
+Skills
+Programming Skills
+SQL, Python
+Database Skills
+SQL, SQL Server, SSIS, SSAS, SSRS, ETL
+Interpersonal Skills
+Teamworker, Presentable, Time Management, 
+Problem Solver, Analytical Thinking
+Presentation Skills
+Excel, Power BI, DAX, Tableau
+Version Control
+Git, Github
+Languages Skills
+Arabic(Native), English(Intermediate for work)
+Internships
+Intensive Code Camp ITI, Power BI Development 03/2025 – 07/2025  | Sohag, Egypt
+Trainee to use SQL and SQL servers to Design Database and implement data, and learn ETL data warehousing 
+tools such as SSIS, SSAS, SSRS, use data to visualization by using Tools Power BI and Tableau to find question 
+Serves business and makes decisions that help decision makers
+Projects
+SkyLine Real Estate, Github
+Tools: Excel, SQL, SSIS, SSAS, SSRS, Power BI, Tableau The project aimed to build a complete data analytics 
+pipeline for the real estate domain. We started with raw transactional data stored in Excel and imported it into 
+a structured SQL Server OLTP database. Using SSIS, we transformed and loaded the data into a dimensional 
+data warehouse (OLAP) following the galaxy schema model. Then used SSAS to design multidimensional 
+cubes for advanced analytical processing, and SSRS to generate detailed operational reports. To provide rich 
+visual insights and dashboards, we leveraged both Power BI and Tableau, helping stakeholders explore 
+property sales, commissions, and trends for better business decision
+SuperStore, Tableau Public
+Tools: Excel, Tableau Conducted a comprehensive analysis of Superstore sales data using Tableau, focusing on 
+regional performance, product profitability, and customer segmentation. Built an interactive dashboard and 
+story to visualize key insights such as monthly sales trends, top-performing products, and geographic sales 
+distribution. Leveraged filters, KPIs, and drill-down features to support strategic decision-making and enhance 
+business understanding
+Adidas Sales, Github
+Tools: Excel, Power BI I analyzed Adidas sales data using Excel and Power BI by cleaning and preparing the 
+dataset, then building an interactive data model to track key metrics like total sales, profit, and average 
+margin. I designed a Power BI dashboard showing performance by region, state, store, and product. The 
+analysis included comparing sales channels (Online, Local, Outlet) and identifying monthly trends. This 
+project provided valuable insights to support data-driven marketing and business decisions.
+Bike Store, Github
+Tool: Excel Analyze Bike Store sales data by performing data cleaning, filtering, and summarization through 
+pivot tables and formulas. Created dynamic dashboards to visualize key metrics such as total Product, top-
+selling products, and sum of orders, total quantity. Utilized advanced Excel functions and use slicer to filter 
+data.
+E-Commerce Database, Github
+Tool: SQL Defacto is a popular clothes brand that wants to expand by launching an e-commerce website, the 
+website has many categories such as men, women and kids with a variety of clothes choices in many occasions
+Certificates
+HackerRank SQL (Basic, 
+Intermediate)
+Associate Data Engineer in SQL
+DataCamp
+Database Fundamental
+Mahara-Tech
+

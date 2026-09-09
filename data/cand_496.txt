@@ -1,0 +1,219 @@
+Email Subject: Application: Application Support Specialist – Malaichamy Sethuraman – Immediate Joiner
+From: Malaichamy Sethuraman <malai.hopes@gmail.com>
+Date: Mon, 7 Sep 2026 17:18:00 +0530
+Email Body:
+Dear Hiring Team,
+
+I am writing to express my interest in the *Application Support Specialist*
+role at Cyrus Technology. With substantial experience across application
+production support, database querying, and root-cause troubleshooting, I
+bring strong hands-on problem-solving skills to help stabilize customer
+workflows and maintain high service standards.
+
+Following an organizational restructuring, my last working day was July 24,
+2026. As an *immediate joiner* with zero notice period, I am available to
+start right away. I am also fully flexible and prepared to support *24/7
+rotational shifts, weekend coverage, and on-call schedules* whenever
+required.
+
+*Key Qualifications & Value Brought to Cyrus Technology:*
+
+   -
+
+   *Technical Troubleshooting & RCA:* Deep experience analyzing application
+   behavior, reviewing error logs, reproducing bugs, and providing
+   comprehensive documentation to engineering and development squads.
+   -
+
+   *SQL & Data Analysis:* Strong proficiency in writing relational SQL
+   queries (filtering, aggregations, multi-table JOINs) to inspect database
+   records, validate backend integrity, and troubleshoot data discrepancies.
+   -
+
+   *Data Validation & Reporting:* Highly skilled in data manipulation and
+   validation using advanced Excel techniques (lookups, formulas, data
+   filtering, and Pivot Tables) alongside ticketing and tracking workflows.
+   -
+
+   *Incident Management & Customer Focus:* Proven ability to translate
+   complex technical issues into clear updates for non-technical users while
+   managing ticket lifecycles strictly within SLA thresholds.
+
+My resume is attached for your detailed review. I would welcome the
+opportunity to discuss how my technical expertise and immediate
+availability can support your application operations and customer success.
+
+Thank you for your time and consideration.
+
+-- 
+Thanks,
+Malaichamy
+9894417693 | 9047872021 | 8939767919
+malai.hopes@gmail.com | malai.kpb@gmail.com
+
+CV Content:
+MALAICHAMY SETHURAMAN
+Application/Production Support
++91 9894417693 | +91 9047872021 | malai.hopes@gmail.com | Coimbatore, Tamil Nadu, India (open to relocate)
+SUMMARY
+15.3 years of IT experience including 8+ years leading production support, SRE, and AI/ML operations for mission-critical, regulated 
+platforms at Citi Bank, Standard Chartered, WEX Inc., FIS, Nets (Nexi Group), Johnson & Johnson, AT&T, and British Telecom, as a 
+Support Delivery Manager (SDM) and Application/Production Support leader. Acts as single point of accountability for end-to-end 
+Application Support / AI-ML Ops service delivery, owning SLA/OLA/KPI performance, chairing weekly, monthly, and quarterly  
+service reviews, and publishing executive dashboards, service matrices, and trend reporting. Provides L2/L3 production support  
+for Kubernetes/AWS microservices and AWS SageMaker model endpoints, using Python for automated debugging, log analysis,  
+model deployment validation, and synthetic payload testing; designs Prometheus, Grafana, Splunk, and AWS CloudWatch  
+observability to track model inference latency, API throughput, data drift, and model output degradation, reducing mean-time-to-
+detect (MTTD) for AI operational risk.
+Proven Major Incident Manager chairing P1/P2 bridges as primary escalation point across L1, L2/L3, QA, Infrastructure, Security, 
+and Vendor teams, driving Incident, Problem, Change, and Release Management aligned with ITIL v4, RCA, and Post Incident  
+Reviews (PIR). Leads globally distributed 24x7 support organizations (L1 Support Engineers, L2/L3 Developers, QA Engineers),  
+owning workforce planning, shift rosters, and on-call coverage. Experienced leading end-to-end service transition — Knowledge  
+Transfer, Shadow/Reverse Shadow, Hypercare, and Operational Readiness — and governing SOPs, runbooks, KEDB/KMDB, and  
+escalation matrices. ITIL-certified SRE (DevOps Institute/PeopleCert) driving AIOps and GenAI-assisted incident triage (ChatGPT,  
+Claude, Prompt Engineering) to improve MTTR and First Contact Resolution (FCR). Track record: 99% uptime, 95%+ SLA-compliant 
+resolution, 98% change success rate, 20% YoY reduction in failures, and CSAT consistently above 4.3/5.
+CORE COMPETENCIES
+• Service Delivery & Governance — SLA/OLA/KPI Management, Executive Dashboards & Reporting, Service Matrices & Trend 
+Reporting, CAB Governance, Vendor & Stakeholder Management
+• AI/ML Production Support — AWS SageMaker Endpoints, Model Performance & Data Drift Monitoring, MTTD Reduction for 
+AI Operational Risk
+• Major Incident, Problem & RCA Management — P1/P2 Bridge Ownership, Escalation Point of Contact, Post Incident Review 
+(PIR), ITIL v4-Aligned Practices
+• Service Transition & Knowledge Management — Knowledge Transfer (KT), Shadow/Reverse Shadow, Hypercare, Operational 
+Readiness, SOPs, Runbooks, KEDB/KMDB
+• Observability & Health Monitoring — Prometheus, Grafana, Splunk Dashboards & Alerting, AWS CloudWatch/CloudTrail,  
+Event-Correlation Dashboards, SLO/SLA Management
+• Python Scripting & Automation — Debugging, Log Analysis, Deployment Validation, Synthetic Payload Testing, Pipeline  
+Health Scripts
+• Secure MLOps & Change Release Management — CAB-Governed Releases and Rollback for Containerized Services on AWS 
+EKS/Kubernetes
+• Workforce & 24x7 Operations — Shift Roster & On-Call Planning, L1/L2/L3 Team Leadership, 1:1s & Performance Reviews,  
+Cross-Functional Coordination
+• AI, Automation & AIOps — AIOps Strategy, GenAI-Assisted Triage (ChatGPT, Claude, Prompt Engineering), Self-Healing  
+Automation, Anomaly Detection, MLOps-Adjacent Monitoring
+• Cloud & AI Platforms (AWS) — EC2, EKS, Lambda, S3, SageMaker, AuroraDB, CloudWatch; working awareness of Azure
+• Disaster Recovery & Business Continuity — Multi-AZ DR/BCP Planning and Drills for Critical AI & Platform Workloads
+• Regulatory, Data Privacy & Audit Compliance — GDPR, Audit Logging, Data Governance & Lineage, IAM, Model Risk  
+Management (MRM) Awareness
+• Metrics & Continuous Improvement — MTTA, MTTR, Resolution SLA, Backlog & Ticket Aging, First Contact Resolution (FCR), 
+CSAT
+SKILL SET
+• AI/MLOps: AWS SageMaker & SageMaker Endpoints, Model Performance & Data Drift Monitoring, Model Deployment  
+Validation, Model Registry Awareness, MLOps Tooling Landscape (MLflow, Azure ML)
+• Service Delivery / SDM & ITSM: SLA/OLA/KPI Governance, Service Reviews, ServiceNow, Jira, Remedy, ITIL v4 (Incident,  
+Problem, Change, Release), Confluence
+• Scripting & Ops: Python (automated debugging, log analysis, deployment validation, synthetic payload testing), Docker,  
+Kubernetes (EKS)
+• Observability: Prometheus, Grafana, Splunk Dashboards & Search Queries, AWS CloudWatch, CloudTrail Awareness,  
+Datadog, Metrics & Alerting
+• Cloud & AI Platforms (AWS): EC2, EKS, Lambda, S3, SageMaker, AuroraDB, CloudWatch; working awareness of Azure cloud 
+services
+• CI/CD & MLOps Release: uDeploy, CAB-Governed Release Management, Secure Rollback for Containerized AI Services (EKS), 
+DevSecOps Practices, awareness of Jenkins, GitHub Actions, AWS CodePipeline/CodeBuild/CodeDeploy
+• Data & Integration: SQL/PL-SQL (Oracle 19c), Batch & Real-Time Processing (Control-M, Autosys), REST APIs, Data Pipeline  
+Validation & Data Quality Checks
+• Security, Identity & Governance: IAM, AWS KMS & Secrets Manager awareness, VPC Security (Subnets, NACLs, Security  
+Groups), GDPR, Audit Logging, Data Governance & Lineage, DR/BCP (Multi-AZ)
+• Workforce & Operations Leadership: 24x7 Shift Roster & On-Call Planning, L1/L2/L3 Team Management, 1:1s & Performance 
+Reviews, KT/Shadow-Reverse Shadow/Hypercare
+• AI & Automation: ChatGPT, Claude, Prompt Engineering, GenAI-Assisted Incident Triage & Workflow Automation, AIOps  
+Strategy
+• Frontend: React, TypeScript
+PROFESSIONAL EXPERIENCE
+Project Manager – Information System Management (Production Support / SDM) | WEX Inc. Apr 2024 – Jul 2026
+• Acted as single point of accountability for end-to-end Application Support and AI/ML Ops service delivery across a 24x7  
+Kubernetes-based microservices platform on AWS alongside AWS SageMaker model endpoints, owning SLA/OLA/KPI  
+performance and chairing daily and weekly service reviews with clients and cross-functional teams for the International Fleet 
+Control System (IFCS) platform.
+• Provided L2/L3 production support using Python for automated debugging, log analysis, model deployment validation, and  
+synthetic payload testing; designed Prometheus metrics and Grafana dashboards to monitor model inference latency, API  
+throughput, system resource utilization, and operational health.
+• Implemented monitoring alerts via Prometheus and AWS CloudWatch to track data drift, model output degradation, and  
+pipeline execution failures, reducing mean-time-to-detect (MTTD) for AI operational risk.
+• Led Major Incident (P1/P2) bridges as primary escalation point across L1, L2, L3, QA, Infrastructure, and Vendor teams, driving 
+RCA and Post Incident Reviews (PIR) to eliminate recurring issues, sustaining 95% SLA-compliant delivery with a 20% reduction 
+in resolution time.
+• Governed change, release, and rollback for containerized AI microservices on AWS EKS through CAB, applying risk-assessed  
+deployment decisions to sustain a 98% change success rate, and executed multi-AZ Disaster Recovery (DR) and business  
+continuity drills with 100% drill success.
+• Devised and executed an AIOps strategy and automation roadmap — embedding GenAI (ChatGPT, Prompt Engineering) into 
+incident triage, rolling out ServiceNow-integrated ITSM automation, and introducing self-healing routines for batch/health-
+check operations (Control-M).
+• Built and maintained executive dashboards, service reports, matrices, and trend reporting tracking MTTA, MTTR, backlog,  
+ticket aging, FCR, and CSAT for leadership and clients.
+• Owned workforce planning, shift rosters, and on-call scheduling for a 24x7 support organization spanning L1 Support  
+Engineers, L2/L3 Developers, and QA Engineers; conducted 1:1s and performance reviews while sustaining 99% uptime and a 
+20% YoY reduction in batch failures.
+• Led end-to-end service transition workstreams (Knowledge Transfer, Shadow/Reverse Shadow, Hypercare) and established  
+SOPs, runbooks, knowledge base, KEDB/KMDB, and escalation matrices, raising delivery predictability while sustaining CSAT 
+above 4.3/5.
+• Partnered with Engineering, Data Science, Risk, and Compliance on secure deployment governance, monitoring, audit logging, 
+and GDPR/regulatory audit readiness, and identified automation and cost-optimization opportunities across AWS compute, 
+storage, and monitoring.
+Project Lead – L2 Production/Technical Support Team Manager | Nets (Nexi Group) Dec 2021 – Apr 2024
+• Led a geographically dispersed L2/L3 support team delivering 24x7 coverage for cross-border payments clearing and  
+settlement platforms for Nexi Group, a leading European payments/fintech company, serving as primary Escalation Point of 
+Contact for P1/P2 incidents.
+• Owned service delivery governance — chairing daily, weekly, monthly, and quarterly service reviews with clients, partnering 
+on resource/shift planning, and leading SLA/SLO/OLA governance discussions.
+• Built custom Splunk dashboards, search queries, and alerts for real-time log ingestion, auditing model inference requests,  
+tracking API failures, and ensuring GDPR and regulatory audit readiness; built ServiceNow event-correlation reporting to  
+reduce recurring alerts.
+• Developed Python automation scripts to replace manual health checks, automate batch data pipeline validation, and scrape 
+operational metrics into centralized monitoring tools; stood up Control-M-based orchestration for large-scale financial batch 
+and file-transfer processing.
+• Instituted DR failover/switchover procedures across the Nordics region, achieving 100% drill success, and governed end-to-
+end Change Management (CAB) with development and infrastructure teams for zero-disruption hotfix deployment.
+• Led application transition from incumbent teams into steady-state operations, owning Knowledge Transfer, Shadow/Reverse 
+Shadow, and Hypercare, and maintaining SOPs, runbooks, KEDB/KMDB, and escalation matrices.
+• Led L2/L3 incident response and RCA for data pipeline stalls and model invocation timeouts, sustaining zero compliance  
+breaches and 99% uptime, with a 20% MTTR reduction and zero repeat incidents.
+• Directed daily task allocation, workforce and shift-roster planning, and weekly RCA/problem-management reviews across  
+L1/L2/L3, QA, and Support Engineers, sustaining 99% on-time delivery, stakeholder satisfaction above 4.3/5, and cutting  
+delivery failures 20% YoY.
+Production Support Manager | Johnson & Johnson Dec 2020 – Dec 2021
+• Delivered L2 production support for Guiding Care integration and healthcare applications, chairing daily/weekly/monthly  
+service reviews with clients and cross-functional teams and meeting SLA/OLA commitments on incident, service, problem,  
+and change tickets.
+• Acted as escalation point for P1/P2 issues, coordinating across Development, QA, Infrastructure, and Vendor teams to drive 
+RCA and Post Incident Reviews, and debugging API calls, middleware logs, and SQL data issues.
+• Partnered with Development and QA on hotfix and release delivery (C#/.NET), managing change and release through CAB and 
+coordinating secure deployment and rollback across environments.
+• Supported service transition and Operational Readiness, including Knowledge Transfer and Hypercare during application  
+onboarding, maintaining SOPs, runbooks, and knowledge base articles for L1/L2 handoff.
+• Participated in 24x7 on-call rotation and shift planning, tracking SLA compliance, ticket aging, and CSAT metrics in weekly  
+reporting, and supporting DR/BCP planning and GDPR compliance.
+Production Support Manager | Citi Bank Dec 2018 – Nov 2020
+• Managed delivery, access governance, and audit-compliant operations across core banking production platforms, chairing  
+weekly and on-demand stakeholder status meetings and tracking operational metrics (MTTA, MTTR), dependencies, and  
+regulatory compliance requirements.
+• Deployed ITRS Geneos-based monitoring and configured Autosys job scheduling with self-healing retry logic to curtail manual 
+intervention on batch failures; analyzed Oracle 19c data via SQL/PL-SQL to isolate root causes and drive Problem  
+Management.
+• Coordinated emergency fixes and change requests via uDeploy, managing deployment, release, and rollback across  
+environments in compliance with change governance, audit, and financial regulatory standards.
+• Led trend analysis and RCA on recurring batch and application incidents, participated in 24x7 on-call rotation as escalation  
+point across L1, L3/Development, Infrastructure, and Vendor teams, and sustained 99% uptime with 95% SLA-compliant  
+incident resolution.
+Support Lead (E Grade) | Standard Chartered Global Business Services Jan 2017 – Nov 2018
+• Established ITIL-aligned incident and change management workflows and structured production support processes,  
+introducing batch-monitoring and RCA-reporting routines that contributed to a 20% YoY reduction in delivery/batch failures.
+• Managed critical incidents and escalations end-to-end as part of the Incident Management Team, directed daily task  
+allocation and shift coverage, and chaired weekly RCA and service review meetings, sustaining stakeholder satisfaction above 
+4.3/5, 99% uptime, and 95% SLA-compliant resolution.
+Senior Software Engineer (P3) | FIS — Financial Technology Jul 2015 – Dec 2016
+• Delivered 2nd-line product support and Incident Management Team activities for a financial-transaction/AML monitoring  
+platform in a regulated environment, managing client issues via ServiceNow and CMS through to resolution and tracking SLA 
+and ticket aging.
+• Built custom SQL-based reporting and shell-script automation for client status reporting, coordinating requirements, testing, 
+and delivery timelines with stakeholders while sustaining 99% uptime and 95% SLA-compliant resolution.
+Software Engineer (U2) | Tech Mahindra Ltd, Chennai Apr 2011 – Jun 2015
+• Supported delivery of monitoring capability for IBM DataStage ETL jobs on AT&T's customer data pipeline, established defect-
+tracking workflows within Clarify CRM, and coordinated requirements and testing with technical stakeholders — early  
+exposure to log-based monitoring and data pipeline observability.
+CERTIFICATIONS & EDUCATION
+• DevOps Institute Certified SRE Foundation (PeopleCert) — #GR558002804MS, Effective 20 Nov 2025, Renew by 20 Nov 2028
+• B.E. (Computer Science & Engineering) — Mohamed Sarthak Engineering College, Anna University, Chennai, 2010 (76%,  
+Distinction)
+

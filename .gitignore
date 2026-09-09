@@ -1,0 +1,4 @@
+﻿*.py
+*.log
+.system_generated/
+scratch/

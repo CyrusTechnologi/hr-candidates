@@ -1,0 +1,53 @@
+Email Subject: Application Support Specialist
+From: Aya Khaled <ayahkhaledd400@gmail.com>
+Date: Sun, 6 Sep 2026 22:50:44 +0300
+Email Body:
+
+
+CV Content:
+AYAH KHALED MUHAMMED
+ayahkhaledd400@gmail.com  |  01062046014  |  Cairo, Egypt
+linkedin.com/in/aya-khaled400
+SUMMARY
+Systems and Computer Engineering graduate with a strong foundation in Networking and Defensive Security Solutions. Gained 
+practical experience working with Windows environments and currently developing hands-on skills in Application Deployment, 
+Linux administration, and troubleshooting. Eager to leverage this combined technical background to contribute to secure, 
+reliable, and efficient IT environments.
+EDUCATION
+B.Sc. in Systems and Computer Engineering
+Al-Azhar University – Faculty of Engineering  |  2020 – 2025
+• GPA: 3.24 / 4.0 (B+)
+• Graduation Project: DualNet Bridge using MPLS — Grade: A
+CERTIFICATIONS
+• Fortinet NSE 4 – FortiGate
+• Fortinet NSE 5 – FortiManager
+WORK EXPERIENCE & INTERNSHIPS
+Application Deployment Intern — DataGear (AML/CFT Solutions) Aug 2026 – Present
+• Assist in deploying and configuring Java applications across Windows and Linux environments, using application servers such 
+as Apache Tomcat.
+• Support database connectivity, application troubleshooting, and deployment-related issues across different database 
+environments.
+On-site Network and Security Trainer — WE Applied Technology Schools Sept 2025 – Apr 2026
+• Delivered on-site training for high school students on networking and security topics, covering CCNA and FortiGate curricula.
+• Supervised practical labs using real network devices and Cisco Packet Tracer, ensuring hands-on learning.
+Network Security Services Intern — Optima Professional Services Aug 2025
+• Attended vendor-focused technical sessions delivered by leading network security solution providers.
+• Gained hands-on experience with network and network security solutions through practical exercises.
+• Participated in a real-life CTF simulation replicating a company's day-to-day security operations.
+PROGRAMS
+NTI Hire Ready Scholarship — Defensive Security Solutions Apr – Jun 2026
+• Studied CCNA and CCNA Security fundamentals, covering networking, routing, switching, network security, and 
+troubleshooting.
+• Gained hands-on experience with FortiGate firewall configuration, including security policies, NAT, IPsec VPN, SSL VPN, and 
+security controls.
+Digital Egypt Pioneers Initiative (DEPI) — Cisco Network Administration Apr – Oct 2024
+• Gained practical experience in CCNA networking, including routing, switching, and security fundamentals.
+TECHNICAL SKILLS
+• Application Deployment: Java Applications, Apache Tomcat, WAR Files, Deployment Troubleshooting, PowerShell Scripting
+• Network Security: Firewall Policies, NAT, IPsec & SSL VPN, FortiGate, Network Security Fundamentals
+• Networking: IPv4/IPv6, VLANs, Routing & Switching, Network Troubleshooting
+• Platforms & Tools: Cisco Packet Tracer, GNS3, VMware, Red Hat Enterprise Linux (In Progress)
+LANGUAGES
+• Arabic — Native
+• English — Upper Intermediate
+

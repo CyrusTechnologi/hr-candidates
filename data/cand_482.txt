@@ -1,0 +1,100 @@
+Email Subject: Application Support specialist
+From: Mohamed Bedair <mohamedbedair944@gmail.com>
+Date: Sun, 6 Sep 2026 21:46:01 +0300
+Email Body:
+Dear Hiring Team,
+
+I am writing to apply for the Application Support Specialist position at
+Cyrus Technology.
+
+I currently work as a Technical Support Engineer, providing L2/L3
+application support for enterprise ERP systems across Qatar and the UAE. My
+experience includes troubleshooting application issues, investigating
+database records using SQL Server and PostgreSQL, analyzing incidents,
+performing Root Cause Analysis, supporting REST/SOAP API integrations, and
+administering Microsoft IIS applications.
+
+I also have hands-on experience with SLA-based ticket handling, customer
+communication, UAT, technical escalations, and coordinating with
+development and technical teams to resolve complex issues.
+
+I believe my background closely matches the requirements of this role, and
+I would be glad to discuss how my experience could contribute to your team.
+
+Please find my updated CV attached for your consideration.
+
+Best regards,
+Mohamed Bedair
++20 1008610359 <+20%201008610359>
+mohamedbedair944@gmail.com
+LinkedIn: linkedin.com/in/mohamed-bedair-89710a239
+
+CV Content:
+MOHAMED BEDAIR 
+Technical Support Engineer   
+Cairo, Egypt   |   +20 1008610359   |   mohamedbdear@std.mans.edu.eg   |   
+ linkedin.com/in/mohamed-bedair-89710a239 
+PROFESSIONAL SUMMARY 
+Application and Technical Support Engineer with 3+ years of experience delivering L2/L3 support for ERP 
+systems (Payroll & Time and Attendance) and ELV security solutions. Experienced in supporting enterprise 
+Companies in Qatar and UAE  
+Deep expertise in SQL Server, PostgreSQL, Oracle integration , IIS administration, REST and SOAP API 
+integration, and incident management. A background spanning ELV/security systems and enterprise ERP 
+software has built a versatile technical foundation — combining deep field knowledge with strong application 
+support and systems integration skills. Certified Hikvision Trainer with hands -on experience designing and 
+deploying CCTV, Access Control, and Video Intercom solutions.. 
+CORE SKILLS 
+ 
+Databases: SQL Server, PostgreSQL, Oracle, SAP — Query Optimization, Data Validation, Troubleshooting 
+Integration & APIs: REST API, Web Services, Postman, IIS Administration, System Integration, date migration  
+ERP Systems: ERP Support, Time & Attendance (T&A), Payroll Modules, Finance modules , supply shine  
+ELV & Security: CCTV, Access Control, Time Attendance, Video Intercom, Fire Alarm and Parking Systems  
+Support & ITSM: L2/L3 Support, Incident Management, Root Cause Analysis (RCA), SLA Management, UAT, 
+configuration Support, ITIL Framework, Production Support, Log Analysis, Ticketing systems (ZOHO), Odoo, Jira  
+Networking: TCP/IP, DNS, VPN, VLAN Basics, Network Troubleshooting  
+PROFESSIONAL EXPERIENCE 
+ASIS Advanced Solutions  —  Technical Support Engineer        Aug 2025 – Present 
+• Deliver L2/L3 remote support ERP system operations with a primary focus on Time & Attendance (T&A) and 
+Payroll modules for enterprise clients in Qatar and UAE, including Qatar Islamic Bank, beIN Sports, and ASGC, 
+ensuring high availability of critical business systems. 
+• Managed 40+ SLA-bound tickets/month with average P1 resolution under 4 hours, consistently meeting SLA 
+targets across enterprise accounts in Qatar and UAE. 
+• Reduced repeat incidents by 30% through structured Root Cause Analysis (RCA), documenting findings and 
+implementing preventive configuration changes to eliminate recurring failures  
+• Performed database investigations using SQL Server and PostgreSQL to identify data discrepancies, validate 
+payroll calculations, and ensure data integrity across multi-tenant ERP environments. 
+• Troubleshot system integrations and infrastructure, supporting REST APIs and SOAP Web Services integrations 
+tested with Postman, and administering Microsoft IIS applications including application pool management and 
+server-side diagnostics.  
+Hikvision MENA  —  Channel Pre-Sales & Technical Support Engineer        Nov 2024 – Aug 2025 
+• Designed and implemented integrated ELV solutions including CCTV, Alarm systems, Access Control, 
+Parking Systems, and Audio across 10+ commercial and government projects, covering deployments of up to 
+1000 cameras and 500 Access control per site. 
+• Delivered certified product training 20+ partners across Delta Region, distributors (NDs) and dealer partner 
+programs (DPPs) across the MENA region, officially certified as a Hikvision Trainer. Maintained SLA 
+compliance for partner support cases while handling integration and configuration escalations across MENA 
+region.  
+• Collaborated with Hikvision HQ, R&D, and product management teams to relay field feedback, report 
+product issues, and drive improvements aligned with customer needs. • Provided technical support for 
+partners, diagnosing integration issues between Hikvision platform and third party access-control systems via 
+API.. 
+FastEGY  —  Technical Sales & Pre-Sales Engineer        Oct 2022 – Nov 2024 
+• Designed and delivered end-to-end security and ELV solutions including CCTV, Access Control, and 
+Networking infrastructure for enterprise and SMB clients. 
+• Conducted technical demonstrations, product presentations, and presales consultations to identify client 
+needs and propose tailored solutions. 
+• Managed multiple concurrent projects from design through delivery, coordinating with vendors and installation 
+teams to ensure on-time completion. 
+• Specialized in Hikvision product lines and Cisco switching infrastructure, supporting integrations and complex 
+multi-site deployments. 
+EDUCATION 
+Bachelor's Degree in Electronics & Communications Engineering 
+Mansoura University 
+CERTIFICATIONS & TRAINING 
+ 
+• HCSA – CCTV | Hikvision Certificate 
+• Hikvision Certified Trainer — Official Certification, MENA Region 
+• Presales Engineer Certificate 
+• Introduction to Modern AI – Cisco 
+• AWS Educate: Introduction to Generative AI – Amazon Web Services 
+

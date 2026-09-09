@@ -1,0 +1,88 @@
+Email Subject: Application support specialist
+From: Ibrahim Shazly <ibrahimshazly2001@gmail.com>
+Date: Mon, 7 Sep 2026 01:21:39 +0300
+Email Body:
+Hello team ,
+ Kindly find my resume attached below.
+
+Thanks
+Ibrahimshazly2001@gmail.com
+
+CV Content:
+Ibrahim Samir Said 
+El Sheikh Zayed, Egypt | +201018166007 
+ibrahimshazly2001@gmail.com|http://www.linkedin.com/in/ibrahim-shazly-150b89264 | 
+https://github.com/ibrahim -shazly22 
+ 
+PROFILE 
+Communication Engineering graduate with hands-on experience in Microsoft Intune, Azure Active Directory, and 
+endpoint management. Skilled in troubleshooting, escalation handling, with expertise in cloud infrastructure, 
+networking (Cisco/FortiGate), and security operations (SIEM, IDS/IPS). Passionate about solving complex issues, 
+improving user experience, and strengthening security. 
+ 
+EDUCATION 
+ 
+Bachelor of Communication Engineering and Electronics 
+Modern Science and Arts (MSA) University, Cairo, Egypt Sep 2019 – Jun 2024 
+University of Greenwich, London, UK (Dual Degree) Sep 2021 – Jun 2024 
+ 
+• GPA: 3.0/4.0 (Very Good) 
+• Thesis: On-board IoT and satellite communication subsystem for smart farming (real-time 
+monitoring and data optimization). 
+TECHNICAL SKILLS 
+ 
+Cloud s Microsoft Solutions: Azure AD, Microsoft Intune 
+Programming Languages: JavaScript, Python 
+Backend Development: Node.js, Express.js, TypeScript, RESTful APIs 
+SOC Tools: SIEM (Splunk, Chronicle), IDS/IPS, Wireshark, Log Analysis 
+Networking s Security: Cisco Packet Tracer, Kali Linux, FortiGate NSE4, CCNA (Routing, VLANs, ACLs) 
+ 
+COURSES AND CERTIFICATIONS 
+ 
+ 
+• Microsoft Azure Fundamentals (AZ-900) Certification – (Cloud Academy)                                        (2026) 
+• Intune (MDM / MAM) Microsoft training course with HANDS ON – (Udemy) (2025) 
+• The Complete Web Development Bootcamp – (Udemy) (2025) 
+• 100 Days of Python Pro Bootcamp – (Udemy) (2024) 
+• Google Cybersecurity Professional Certificate – (Google) (2024) 
+• Introduction to Network Security – (iti) (2023) 
+• Cisco Certified Network Associate (CCNA) – (Cisco) (2022) 
+Experience 
+ 
+Frontline Engineer (Cloud Tech support Tier III) 
+Concentrix-Microsoft  Feb 2025 – Present 
+• Troubleshoot and resolve Azure AD and Microsoft Intune issues (including device enrollment, policy 
+deployment, and compliance errors). 
+• Configure and manage conditional access, security baselines, and endpoint protection in Intune. 
+• Collaborate with IT teams to optimize Autopilot, MDM/MAM policies, and security 
+configurations. 
+ 
+Cybersecurity Trainee 
+Information Technology Institute (ITI), Cairo, Egypt Aug 2023 – Sep 2023 
+• Performed vulnerability assessments and penetration testing using Kali Linux. 
+• Configured FortiGate firewalls (NSE4) to enforce network security policies. 
+• Designed and simulated secure LAN/WAN networks with Cisco Packet Tracer. 
+Wireless Broadband Transmission Intern 
+Systel Telecommunication, Cairo, Egypt Jan 2022 – Feb 2022 
+ 
+• Optimized wireless network protocols for improved data transmission efficiency. 
+• Assisted in troubleshooting digital communication systems. 
+PROJECTS 
+ 
+FortiGate Firewall Configuration (NSE4) 
+• Deployed FortiGate firewall policies (NAT, VPN, IDS/IPS) to secure a simulated enterprise network. 
+• Enforced application control and monitored threats using Forti Analyzer, reducing attack surface by 30%. 
+ 
+OSPF Routing (Cisco Packet Tracer) 
+• Designed a multi-area OSPF topology with route summarization to optimize traffic flow. 
+• Achieved 99.9% uptime by tuning OSPF metrics (cost) and implementing DR/BDR election. 
+ 
+Google Cybersecurity SOC Projects (Coursera) 
+• SIEM Analysis: Correlated logs using Splunk to detect brute-force attacks, reducing incident response 
+time by 40%. 
+• Phishing Mitigation: Analyzed malicious emails with Wireshark and simulated attacks via Gophish 
+for staff training. 
+Volunteer Experience 
+Lebaladna s Earth Building Charities 
+• Distributed food/supplies to underserved communities and coordinated outreach programs. 
+

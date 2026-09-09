@@ -1,0 +1,115 @@
+Email Subject: Application Support Specialist
+From: Mahmoud Al-Sayed Mahmoud Raouf <mahmoud.raouf.dev@outlook.com>
+Date: Sun, 6 Sep 2026 12:29:21 +0000
+Email Body:
+Hello,
+
+I hope you are doing well.
+
+I am writing to express my interest in the Application Support Specialist position.
+I would appreciate the opportunity to discuss how my skills and experience align with your teams needs.
+
+Please find my CV attached for your review.
+
+Thank you for your time and consideration.
+
+Warm regards,
+Mahmoud Al-Sayed Raouf
+
+CV Content:
+                       Mahmoud Al-Sayed Mahmoud Raouf 
+   01026932898 |         mahmoud.raouf.dev@outlook.com |   LinkedIn    Cairo, Egypt 
+Professional Summary  
+Full-Stack .NET Engineer with experience building scalable ERP systems and workflow-driven 
+applications using ASP.NET Core, Angular, and React. Skilled in designing RESTful APIs and 
+optimizing complex business processes. Committed to clean architecture, performance 
+optimization, and delivering real-world business solutions. 
+Education  
+ 
+Cairo University, Faculty of Engineering Cairo, Egypt 
+Bachelor of Computer Engineering 2018 – July 2023 
+Accumulative GPA: 3.3 — Very Good with Honors 
+Experience  
+ 
+Full-Stack Engineer at Sure Global Technology Company                                          Jan. 2025 – Present 
+• Responsible for designing, developing, and maintaining scalable web applications using a modern tech stack 
+including ASP.NET Core, .NET Web API, Entity Framework, Angular, and Razor Pages. 
+• Additionally, develop and manage custom workflow solutions to streamline business processes and improve 
+operational efficiency. 
+ 
+Backend Software Engineer at T-Tech Company                                                          Oct. 2023 – Dec. 2024 
+• In this position, I contributed to an ERP system featuring Apex Attendance -Leaving and POS modules, built 
+with .NET Core Web API technology. 
+• Provided major support to the Attend-Leaving module by managing core employee data, shift schedules, 
+holidays, and vacation tracking. 
+• Developed an approval system with role-based permissions, supporting sequential approvals for request 
+validation and decision-making. 
+ 
+Fundamentals of Machine learning and Deep Learning Internship Sep 2022 
+Information Technology Institute (ITI) Giza, Egypt 
+• Introduction to Artificial Intelligence. 
+• Statistics for Machine Learning. 
+• Data Preparation and Exploration. 
+• Numerical Optimization for Data Science. 
+• Neural Networks & Deep Learning. 
+• Link to my Certificate. 
+Online Courses and Problem Solving 2020 - 2023 
+• Supervised Machine Learning: Regression and Classification. 
+• Fundamentals of Deep Learning. 
+• Strong problem-solving and debugging skills. 
+Technical Skills  
+ 
+Backend: ASP.NET Core, .NET Web API, Entity Framework, Dapper 
+Frontend: Angular, React, Razor Pages 
+Database: SQL Server 
+Tools: Git, GitHub, Azure DevOps, Docker (Basic) 
+Concepts: Clean Architecture, RESTful APIs, JWT Authentication, Workflow Systems  
+
+Projects                        
+Zayed (Online Auction & Tender Management Platform) | C#, .NET Core, SQL Server, React      
+• Designed and developed a workflow system covering auction/tender lifecycle including creation, approval 
+activation, submission, and closing stages. 
+• Implemented real-time bidding functionality using SignalR to provide live updates for auctions and tenders 
+across all connected users. 
+• Built a React-based UI for managing auctions, tenders, submitting bids, and handling technical and financial 
+proposals. 
+• Created an admin dashboard for monitoring auctions, tenders, user activities, and submission analytics.                                            MT Super App | C#, SQL, Razor Pages      
+• Developed for the Ministry of Tourism in Saudi Arabia using Razor Pages.  
+• Developed the Hospitality and Reservation dashboards from scratch through integration with the API Gateway 
+using HTTP client calls. 
+• Maintained and enhanced additional dashboards including Gym, Announcements, Surveys, Promotions, and 
+Notifications. 
+• Resolved bugs and system issues to improve stability and performance.  
+ 
+ 
+SBC Initiatives | C#, SQL, Angular 
+• Developed for the Saudi Business Center (SBC) in Saudi Arabia. 
+• Worked on User Management, News, Sectors, and Entities modules.  
+• Built the workflow system for managing technical support reports. 
+• Implemented management of lookup lists using a shared custom Angular component reused across all lookup 
+screens. 
+• Developed features including Initiative Source of Challenge, Initiative Goal, Initiative Impact,  and Approval 
+Matrix. 
+Media Services App | C#, SQL, Angular  
+• Developed for the Ministry of Media in Saudi Arabia. 
+• Implemented an integration service with MinIO Storage to store files on cloud storage instead of local server 
+storage. 
+• Built dashboards for Media Activities, Recommendations, Achievements, and Controls, visualizing key metrics 
+such as activity counts, achievement statuses across government entities, and request statuses using Pie and 
+Bar Charts. 
+• Implemented an email alerts service to notify users of updates on their requests. 
+• Fixed vulnerabilities found in penetration testing to improve application security.  
+Apex ERP | C#, SQL  
+• Developed a web-based project using ASP.NET Core and Angular technologies.  
+• Implemented functionality to process and integrate fingerprint attendance data from biometric machines.  
+• Designed and developed HR and management reports, including Day Status reports and employee lateness 
+summaries to enhance workforce insights. 
+• Built a permission-driven approval system supporting step-by-step request validation and authorization. 
+Aiden | Python  
+• An interface integrated with Spotify APIs to help users perform the actions they’re used to easily.  
+• Detects user’s hand gestures and performs actions based on them.  
+• Recognizes voice commands given by the user & determine the action intended.  
+• The final interface is implemented with web development by React.  
+ 
+
+

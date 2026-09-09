@@ -1,0 +1,91 @@
+Email Subject: Application Support Specialist Application
+From: Ahmed Ashraf <ahmedashrafmokhtar2@gmail.com>
+Date: Mon, 7 Sep 2026 10:16:42 +0300
+Email Body:
+Dear Cyrus Technology Team,
+
+I’m interested in applying for the Application Support Specialist position.
+
+I’m currently working at *Huawei Technologies as a Systems Operations
+Engineer*, supporting enterprise telecom applications. My role involves
+troubleshooting application issues, investigating errors, handling support
+tickets, and using SQL for database troubleshooting and data validation.
+
+My Backend development background has also given me strong knowledge of SQL
+and relational databases, along with experience in C#, .NET, SQL Server,
+and REST APIs.
+
+I’d be happy to bring this combination of Application Support experience
+and Backend knowledge to Cyrus Technology.
+
+Please find my CV attached.
+
+Best regards,
+Ahmed Ashraf
+LinkedIn: linkedin.com/in/ahmed-ashraf-26b355293
+
+CV Content:
+Ahmed Ashraf Mokhtar Refaie
+Technical Support Engineer | Systems Operations | Software Engineering
+ahmedashrafmokhtar2@gmail.com | +20 1044343713 | Cairo, Egypt
+linkedin.com/in/ahmed-ashraf-26b355293 | github.com/AhmedAshraf2222
+Professional Summary
+Computer Engineering graduate with hands-on experience in technical support, production sys-
+tems operations, and database troubleshooting. Currently working as a Systems Operations Engi-
+neer at Huawei, supporting enterprise-scale telecom applications and resolving production incidents
+through monitoring, analysis, and SQL-based troubleshooting. Strong foundation in C#, SQL Server,
+Windows/Linux environments, and software development. Interested in industrial software solu-
+tions, HMI/SCADA systems, and delivering reliable technical support, implementation, and customer-
+focused solutions.
+Experience
+Systems Operations Engineer (CBS Project)Feb 2026 – Present
+Huawei Technologies – Cairo, Egypt
+• Provide technical support for Convergent Billing Systems (CBS), troubleshooting application issues
+and supporting production operations.
+• Analyze incidents, investigate system behavior, and execute SQL queries to validate data and
+identify potential root causes.
+• Monitor system health, alarms, and service availability to maintain operational stability.
+• Handle incidents through ticketing systems, document troubleshooting steps, and collaborate with
+technical teams for issue resolution.
+• Gain practical experience supporting mission-critical enterprise systems in a production environ-
+ment.
+Full Stack (.NET) TraineeOct 2024 – Dec 2024
+AZM Squad (formerly Algoriza) – Cairo, Egypt
+• Developed web applications using C#, ASP .NET Core Web API, Entity Framework Core, and SQL
+Server.
+• Designed database structures, implemented CRUD operations, and optimized queries.
+• Applied software engineering principles including Clean Architecture, SOLID principles, and REST -
+ful API development.
+• Used Git/GitHub for source control and team collaboration.
+Projects
+Smart Exam Management System (Graduation Project)Oct 2024 – Jul 2025
+Designed and developed an exam management system using ASP .NET Core and SQL Server. Built
+database solutions using Stored Procedures, Triggers, and optimized indexing. Developed APIs
+integrated with a Python module for automated grading, improving evaluation efficiency by 70%.
+Technical Skills
+•Technical Support & Operations: Incident Troubleshooting, Production Support, Monitoring, Tick-
+eting Systems, Root Cause Analysis, Documentation.
+1
+•Databases: Microsoft SQL Server, T -SQL, Database Design, Stored Procedures, Triggers, Query
+Optimization, Indexing, Normalization.
+•Programming Languages: C#, SQL, Python, JavaScript, C++ (Basic).
+•Software Development: ASP .NET Core, Web APIs, Entity Framework Core, LINQ, Visual Studio,
+Git.
+•Systems: Microsoft Windows, Linux Administration Basics, Server Monitoring, Basic Shell Script-
+ing.
+Training
+ITI 9-Month Professional Diploma – Web Development & BI-Infused CRMSep 2025 – Present
+Information Technology Institute (ITI) – Ministry of Communications, Egypt
+Intensive training covering .NET Core, ASP .NET MVC, Advanced Database Systems, Computer Net-
+works, Linux Administration, Agile methodologies, and software engineering best practices.
+Education
+Bachelor’s Degree in Computer Engineering and SystemsOct 2020 – Jul 2025
+Faculty of Engineering, Zagazig University
+Grade: Very Good (High) – 82.25%
+Graduation Project: Excellent
+Languages
+•Arabic: Native.
+•English: Upper-Intermediate (B2) – Able to communicate professionally and understand technical
+documentation.
+2
+

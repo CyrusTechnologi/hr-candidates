@@ -1,0 +1,92 @@
+Email Subject: Application Support Engineer
+From: Ahmed Roshdy <ahmedroshdy8802@gmail.com>
+Date: Sun, 6 Sep 2026 22:34:35 +0300
+Email Body:
+
+
+CV Content:
+AHMED HANY ROSHDY 
+ERP Technical Support Specialist  |  Application Support Engineer  |  Junior .NET Developer 
+Alexandria, Egypt   •   01022609331   •   ahmedroshdy8802@gmail.com   •   linkedin.com/in/ahmed-roshdy74 
+ 
+ 
+P R O F E S S IO N A L  S U M M A R Y 
+ 
+ 
+Results-driven ERP Technical Support Specialist with hands-on experience supporting Motkamel Plus ERP — an MS SQL 
+Server-based accounting and operations platform deployed across multiple business sectors in Egypt. Skilled in diagnosing 
+and resolving database, application, and network issues for remote and on-site clients. Proficient in SQL Server, T-SQL, 
+Crystal Reports, and ERP module configuration across accounting, inventory, sales, purchasing, and HR. Software 
+development background in .NET and C# provides a strong advantage in understanding application workflows and 
+escalated technical issues. 
+ 
+C O R E  C O M P E T E N C I E S 
+ 
+ 
+ERP Support & Implementation   —   Motkamel Plus ERP, ERP Configuration, Client Onboarding, User Training, Module 
+Support 
+Database & Reporting   —   SQL Server, T-SQL, Stored Procedures, Query Optimization, SSMS, Crystal Reports 
+Technical Support   —   Incident Management, Troubleshooting, Remote Support, Application Debugging, SLA Handling 
+Development & Tools   —   C#, .NET, ASP.NET MVC, Windows OS, TCP/IP, DNS, Git, GitHub, Postman, REST APIs 
+ 
+P R O F E S S IO N A L  E X P E R I E N C E 
+ 
+ 
+Technical Support Specialist — ERP  |  Ultimate Solutions Oct 2025 – Present 
+Motkamel Plus ERP  |  Alexandria, Egypt 
+ 
+• Provide end-to-end technical support for Motkamel Plus ERP system — an MS SQL Server-based accounting platform 
+— across clients in retail, manufacturing, trading, and services sectors. 
+• Support and troubleshoot ERP modules including Accounting, Inventory, Sales, Purchasing, and HR, ensuring business 
+continuity for client operations. 
+• Investigate and resolve SQL Server database issues using T-SQL — including deadlock diagnosis, query rewriting, stored 
+procedure debugging, and data integrity checks. 
+• Deliver system configuration, client onboarding sessions, and end-user training tailored to each client's business 
+workflow. 
+• Design and customize operational and financial reports using Crystal Reports to meet specific client reporting 
+requirements. 
+• Manage and resolve technical incidents for both remote and on-site clients, maintaining high customer satisfaction 
+and timely follow-up. 
+• Coordinate with the development team to escalate and document recurring bugs, contributing to product quality 
+improvement. 
+ 
+P R O J E C T S 
+ 
+ 
+Graduation Project — Pharos University 2024 – 2025 
+Grade: A+  |  Computer Science — Faculty of AI & Computer Science 
+ 
+• Designed and developed a full-stack web application using ASP.NET MVC, C#, and SQL Server, incorporating role-based 
+access control and a normalized relational database. 
+• Implemented RESTful APIs and integrated third-party services, applying software engineering principles and design 
+patterns throughout the development lifecycle. 
+ 
+Freelance Software & Database Projects Dec 2024 – Present 
+ 
+• Built and managed SQL Server databases for small business clients, including schema design, query optimization, and 
+stored procedure development. 
+• Integrated REST APIs and implemented Git-based version control workflows for backend solutions. 
+• Delivered database maintenance, performance tuning, and documentation as part of ongoing client engagements. 
+ 
+E D U C A T I O N 
+ 
+ 
+B.Sc. Computer Science 2021 – 2025 
+Faculty of Artificial Intelligence & Computer Science  |  Pharos University, Alexandria 
+ 
+• GPA: 3.6 / 4.0 
+• Graduation Project Grade: A+ 
+ 
+T R A I N I N G  &  C E R T I F I C A T I O N S 
+ 
+ 
+Route Academy — .NET Full-Stack Development Diploma 2024 
+C#, ASP.NET MVC, Entity Framework, SQL Server, JavaScript, HTML/CSS 
+RMZ Summer Training — PHP & MySQL Web Development 2023 
+ 
+L A N G U A G E S 
+ 
+ 
+Arabic  —  Native          English  —  Intermediate (Technical Reading & Writing) 
+ 
+

@@ -1,0 +1,85 @@
+Subject: Application for Application Support Specialist Position
+From: Omar Madkour <omarmadkour71@gmail.com>
+Date: Tue, 8 Sep 2026 17:56:40 +0300
+Body:
+Dear Hiring Team,
+
+I hope you are doing well.
+
+I am writing to apply for the Application Support Specialist position at
+Cyrus Technology. I am a Computer Engineering graduate with experience in
+software development, troubleshooting, APIs, databases, and testing.
+
+I have strong analytical and problem-solving skills, including
+investigating application issues, working with SQL and databases, debugging
+backend systems, and identifying and resolving technical problems. I am
+also comfortable learning new tools and technologies and communicating
+technical issues clearly.
+
+I have attached my CV for your consideration. I would appreciate the
+opportunity to discuss how my technical background and problem-solving
+skills could contribute to your support team.
+
+Thank you for your time and consideration.
+
+Kind regards,
+Omar Ahmed Madkour
+01012955068
+GitHub: https://github.com/Omarmadkour71
+LinkedIn: https://linkedin.com/in/omar-madkour-05236337a
+
+
+
+CV Text:
+ 
+ 
+ 
+ 
+  
+ Summary 
+Omar Ahmed Mohamed Madkour 
+Cairo, Egypt | omarmadkour71@gmail.com | 01012955068 
+linkedin.com/in/omar-madkour-05236337a | github.com/Omarmadkour71 
+ 
+ 
+    Software Engineer with hands-on experience building and troubleshooting software applications, working 
+with SQL and NoSQL databases, REST APIs, and automated testing. Strong analytical and problem-solving 
+skills with a methodical approach to debugging, investigating application behavior, validating data, and 
+resolving technical issues. Comfortable learning new tools and technologies and communicating technical 
+concepts clearly. 
+Skills 
+• Programming: JavaScript (ES6+), TypeScript, C++ 
+• Databases: SQL, PostgreSQL, MongoDB, TypeORM, Mongoose 
+• Software Development: Node.js, NestJS, Express.js, React, mongoose, TypeORM 
+• Testing & Tools: Jest, Supertest, Git, Docker, Postman  
+Education 
+B.Sc. in Computer Engineering-Faculty of Engineering, Modern Academy Sept 2018 – May 2023 
+Projects 
+Project Management Workspace (Node.js, TypeScript, NestJS, PostgreSQL, TypeORM, Socket.io) 
+Real-time multi-tenant project management platform supporting secure collaboration and workspace isolation. 
+• Built APIs using NestJS and PostgreSQL with complex relational models for workspaces, boards, tasks, and 
+users. 
+• Implemented JWT authentication, RBAC, and custom Guards for secure multi-tenant access control 
+• Developed real-time task synchronization using Socket.io and applied event-driven architecture for audit 
+logging and modular system design 
+• GitHub Repository: https://github.com/Omarmadkour71/project-management-system 
+ 
+E-commerce Platform – Full RESTful Backend API (Node.js, Express, MongoDB) 
+A production-style backend for an online store with authentication, cart management and payment simulation. 
+• Built REST APIs for products, categories, carts, and order processing with validation and business logic 
+• Integrated Stripe Checkout and webhook workflows with JWT authentication and role-based authorization 
+• Applied security practices including Helmet, rate limiting, and automated testing using Jest and Supertest 
+• GitHub Repository: https://github.com/Omarmadkour71/ecommerce-platform 
+ 
+Natours – Tours Booking RESTful API (Node.js, Express, MongoDB) 
+Backend booking platform with authentication, payments, and advanced API functionality. 
+• Implemented JWT authentication, role-based authorization, password reset workflows, and protected routes 
+• Built API features including filtering, pagination, geospatial queries, aggregation pipelines, and image 
+processing 
+• Integrated Stripe payments and applied backend security practices including Helmet, sanitization, and rate 
+limiting 
+• GitHub Repository: https://github.com/Omarmadkour71/Natours 
+ 
+Languages 
+Arabic (Native), English (Very Good) 
+

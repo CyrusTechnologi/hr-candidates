@@ -1,0 +1,78 @@
+Email Subject: Application Support Specialist
+From: Mahmoud Ramadan <mahmoud1422001@gmail.com>
+Date: Mon, 7 Sep 2026 12:47:54 +0300
+Email Body:
+Dear HR
+Hope this email finds you well. Kindly check my attached CV
+Best Regards
+Mahmoud Ramadan
+
+CV Content:
+Mahmoud Ramadan Metwally
+Software Engineer | Web Development (Angular, ASP.NET Core)
+Mahmoud1422001 @gmail.com
+ 
+01010019942
+ 
+Haram-Giza
+ 
+https://github.com/Mahmoudramadan12
+ 
+https://www.linkedin.com/in/mahmoud-ramadan-5636992a0
+ 
+Professional Summary
+Full-Stack Software Engineer specializing in ASP.NET Core and Angular, with hands-on experience building scalable RESTful APIs and 
+enterprise-level web applications. Strong background in authentication systems, database design, and clean architecture. Passionate 
+about writing maintainable, high-performance code and continuously improving technical skills.
+Education
+Bachelor of Computer and Artificial Intelligence, Cairo University (2018 - 2022)
+•GPA : 3.63 (Excellent with honor)
+•Graduation Project: Excellent
+Professional Experience
+Coding Instructor, Codingal
+•Taught programming fundamentals (C++, Python, OOP concepts) to students.
+•Mentored students in building small-scale software projects.
+Apr 2025 – Present
+Web Development Internship, CodeAlpha
+• Developed responsive web pages using HTML, CSS, JavaScript, and Bootstrap.
+• Collaborated on frontend/ backend integration tasks.
+Oct 2025 – Mar 2026
+• Practiced debugging and API integration techniques.
+ASP. NET internship, Route
+•Built MVC-based applications using ASP.NET Core MVC.
+•Implemented CRUD operations and integrated SQL Server database.
+Apr 2024 – Jan 2025
+Junior Angular developer, Eye Debugger
+•Built responsive UI components using Angular, TypeScript, HTML, CSS, and Bootstrap.
+•Integrated frontend applications with REST APIs.
+Feb 2024 – Dec 2024
+•Improved application performance and fixed UI/ UX issues.
+Projects
+Company MVC Project 
+•A Web application To Develop a secure, role-based Employee, Department, and User Management System with ASP.NET Core MVC, 
+featuring N-Tier Architecture, authentication with ASP.NET Identity, email notifications, and a responsive UI using Bootstrap and 
+jQuery.
+Talabat ASP.NET-Web Api 
+•Built scalable e-commerce REST API using ASP.NET  Core, EF Core, JWT.
+•Implemented authentication, order, basket, and payment modules.
+recipes-app: 
+•An Angular, TypeScript, CSS, and HTML feature-rich app with a highly user-friendly interface that facilitates easy addition, editing, 
+and discovery of recipes.
+fit-app 
+•This fitness app project showcases my proficiency in Angular, HTML, CSS, TypeScript, and Firebase. The combination of a robust 
+front-end framework, responsive design, and data storage enhances the overall fitness experience for users.
+market-store 
+•a comprehensive market store application, integrating Angular, API, Bootstrap, Sass, and HTML.
+•Engineered a user-centric interface to enhance the shopping experience and streamline store management.
+Skills
+Frontend Development — HTML,CSS, JavaScript,TypeScript,Angular, Bootstrap,Sass, Responsive Design
+Backend Development — RESTful APIs, ASP.NET, MVC, LINQ, Entity Framework Core,SQL
+Programming: — Python ,C++,C# ,java
+Computer Science: — Data Structures & Algorithms, Object-Oriented Programming Git, CI/CD, Agile
+COURSES AND TRAINING
+The Web Development Challenger Track, Ministry of Communications and Information Technology, 2022
+Introduction to IT & Cybersecurity, Cybrary, 2022
+Summer Training, Agriculture Research Institute, Ministry of Agriculture, 2022
+Languages
+Arabic, English
+

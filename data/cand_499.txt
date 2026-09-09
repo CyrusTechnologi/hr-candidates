@@ -1,0 +1,116 @@
+Subject: Application Support Specialist
+From: Zeyad Mohamed <Zeyadm7811@outlook.com>
+Date: Mon, 7 Sep 2026 23:04:27 +0000
+Body:
+
+
+
+
+CV Text:
+IT Technical Support Asistant with 2 years of experience in enterprise environments. Skilled in Windows/Linux
+servers, Active Directory, networking, and device troubleshooting. Knowledgeable in Docker, containerization,
+virtualization, and IT security. Currently studying Computer Science with strong programming and full-stack
+development experience (Python, Django, React). Able to resolve user issues quickly, escalate with clear
+technical detail, and collaborate across teams. Known for professionalism, patience, and effective
+communication.
+ Industrial Company - Ain Sokhna District ,Suez
+IT Support Assistant - outsource
+Assisted senior technicians with troubleshooting hardware, software, and user devices. Prepared and
+configured new devices before delivery to employees. Performed Windows diagnostics (e.g., disk
+checks using Sergei Toolkit). Supported network setup by monitoring and assisting technicians during
+physical installations. Managed IT warehouse inventory including cables, access points, racks, and
+related accessories.
+January 2024 - Present
+IT TECHNICAL SUPPORT
+ZEYAD MOHAMED
+PROFESSIONAL EXPERIENCE
+Computer Science Student  
+Higher Institute for Computer Science & Information Systems (New Cairo Academy)
+EDUCATION
+2024 – Present 
+Technical Support & IT Administration
+SKILLS
+Windows OS Troubleshooting
+Device Setup & Support
+Networking Troubleshooting
+Windows Server & Active Directory
+Management
+System Monitoring & Diagnostics (Sergei
+Strelec Toolkit, system logs, disk utilities,
+partitions, backup & restore)
+Cloud Platforms & Services
+Switch Configuration Assistance
+Remote Connections & Remote Desktop Tools
+Software Installation & Support (including issue
+resolution)
+Security Policy Enforcement & Compliance
+Microsoft 365 Administration
+Intune Device Management
+Ticketing Systems: Zendesk, Jira
+Linux Systems
+CONTACT
+LinkedIn: www.linkedin.com/in/zeyad-mohamed-9b5a9a228
+Whatsapp: +201020622808
+Email : Zeyadm7811@outlook.com
+Address: Salam 1, Suez, Egypt
+Github: github.com/Zeyadm8112
+Medium: medium.com/@zeyadm7811
+PROFESSIONAL SUMMARY
+References are available on request.
+Programming
+Python Scripting for automation and
+troubleshooting tasks
+PowerShell & Bash Scripting for system
+administration and automation
+API Integration & Testing (REST APIs,
+status codes, error handling)
+Debugging & Log Analysis (frontend,
+backend, and server logs)
+Full-stack development (Django & NextJS)
+Mobile App Development
+SQL Databases (PostgreSQL, schema design, query
+troubleshooting)
+Git & GitHub Version Control for collaboration and
+documentation
+Agile Development Practices (Scrum, iterative
+delivery, collaboration)
+CERTIFACTIONS
+IT Support & Troubleshooting Tips for
+Clinical Environments | Udemy
+IP Addressing and Subnetting - Zero to
+Hero| Udemy
+Ethical Hacker | Cisco Networking Academy
+OWASP Top 10 (Web) | MaharaTech 
+Malware Analysis Fundamentals | MaharaTech 
+Reverse Code Engineering | MaharaTech
+Google Africa Android Developer Scholarship
+Program | Google Developers.
+CS50x | Harvard Edx 
+ITI Program 101 - Intro to CS | ITI 
+ 
+Soft Skills
+Strong Communication & Active Listening
+Problem-Solving & Analytical Thinking
+Patience & Empathy in User Support
+Team Collaboration & Cross-Department
+Coordination
+Time Management & Task Prioritization
+Documentation-Oriented Approach (rely on
+documentation for consistency in resolving
+issues)
+Adaptability & Fast Learning in New Systems
+Conflict Resolution & Stress Management
+Ability to Explain Technical Concepts to Non-
+Technical Users
+Effective Issue Escalation with Clear Explanations
+to Specialized Teams
+CVE Analysis & Vulnerability Assessment
+Penetration Testing Fundamentals 
+Malware Analysis & Reverse Engineering (Basic)
+VirusTotal File & URL Analysis
+User Security Awareness Training
+Security Policy Implementation Support
+OWASP Top 10 Knowledge
+MITRE ATT&CK Framework Awareness
+Cybersecurity
+

@@ -1,0 +1,92 @@
+Email Subject: Application Support Specialist
+From: Somaya Ahmed <asomaya242@gmail.com>
+Date: Sun, 6 Sep 2026 15:24:29 +0300
+Email Body:
+I’m Somaya Ahmed, a Computer Science graduate and ITI Full Stack .NET
+graduate. I’m interested in the Application Support Specialist position and
+would appreciate your consideration.
+
+
+Please find my CV attached.
+
+
+Best regards,
+
+Somaya Ahmed
+
+CV Content:
+Somaya Ahmed Abdo
+Application Support | SQL | .NET Background
+asomaya242@gmail.com
+ 
+01027476938
+ 
+Cairo
+ 
+github.com/SomayaAhmed1430
+ 
+linkedin.com/in/somaya-ahmed-1130871b7
+ 
+Profile
+Computer Science graduate with a strong technical background in C#, SQL Server, ASP.NET, and database 
+systems. Passionate about troubleshooting, problem-solving, and supporting business applications. Quick 
+learner with strong analytical skills and the ability to investigate issues, work with databases, and 
+collaborate with technical teams to resolve incidents efficiently.
+Work experience
+Freelance Full Stack .NET Developer
+Self-Employed
+03/2025 – Present
+Mosteql Platform
+•Investigated and resolved application issues during development.
+•Worked closely with clients to understand business requirements and provide 
+technical solutions.
+•Executed SQL queries and performed database operations using SQL Server.
+•Debugged and fixed software issues.
+•Tested applications before deployment.
+Internships
+Intensive Training Program (ITI)
+Full Stack .NET Developer Trainee
+03/2025 – 08/2025
+Projects
+Portfolio Website with Admin Dashboard
+•Designed database schema, integrated SQL Server, and optimized database operations.
+•Developed a full-stack portfolio website with a complete admin panel for managing content.
+•Designed and built responsive UI from scratch based on XD design.
+•Integrated frontend with backend ensuring smooth data flow.
+•Built file upload system with loading indicators for better user experience & Improve performance.
+Tech: ASP.NET  Core MVC, C#, SQL Server, HTML, CSS, JavaScript
+Live Demo: https://awsffcs.com  
+GitHub: https://github.com/SomayaAhmed1430/Aws-F-F 
+Responsive Landing Page (UI/UX + Frontend Development)
+•Designed UI/UX from scratch based on client requirements using Adobe XD
+•Developed fully responsive landing page compatible with all devices
+•Implemented clean and modern layout with strong user experience focus
+Tech: HTML, CSS, JavaScript
+Live Demo: https://dralalim.com/ 
+Personal Landing Page Website
+•Designed and developed responsive landing page based on client vision
+•Focused on usability, layout structure, and fast performance
+Tech: HTML, CSS, JavaScript
+Live Demo: https://adviser20.com/ 
+Education
+Bachelor's Degree in Computer Science
+Damanhour University
+08/2019 – 08/2023
+Technical Skills
+•Database Technologies
+     Microsoft SQL Server, SSMS, Entity Framework Core, LINQ
+     MySQL, Solid Experience in Database Design and Optimization and Database Troubleshooting
+•Backend Development
+     C#, .NET Core, .NET Framework, ASP .NET Core MVC, ASP .NET Core Web API
+•Frontend Development
+     HTML5, CSS3, JavaScript, ES6+, TypeScript, Angular 2+, Bootstrap, Razor Pages
+•Additional Technologies
+     Git, GitHub, GitLab, Visual Studio, Visual Studio Code, SQL Server Management Studio
+     WordPress(CMS), Agile Development Basics
+Personal SKILLS
+Excellent communication skills, Adaptability to new tools, languages and frameworks, as well as changes in 
+project scope, requirements, and deadlines, Team work, able to quickly grasp and learn new concepts
+Languages
+Arabic: Mother tongue. English: good command in speaking and reading and writing.
+|
+

@@ -1,0 +1,67 @@
+Email Subject: Application support specialist
+From: Mostafa Mahmoud123 <mustfaseleem237@gmail.com>
+Date: Sun, 6 Sep 2026 19:46:57 +0300
+Email Body:
+Dear
+I'm interested to apply for this job and this is my CV
+BR
+Mostafa Shahin
+
+CV Content:
+                                   Mostafa Shahin    
+                       mustfaseleem237@gmail.com | +201044704128 | Egypt  
+  
+Professional Summary  
+Application Support Engineer with 1 year of experience supporting enterprise applications in production 
+environments. Skilled in incident management, root cause analysis, SQL/PLSQL troubleshooting, 
+application monitoring, log analysis, and production support. Experienced in collaborating with 
+development, infrastructure, and business teams to ensure application availability, reliability, and SLA 
+compliance. Strong knowledge of Linux, APIs, Oracle Database, CI/CD tools, and cloud technologies  
+  
+Education  
+Tanta University, Egypt  
+faculty of Science | 2017.  
+  
+Experience  
+Application Support Engineer  
+CyberMAK  
+• Provided L2 Application Support for Zain Telecom enterprise applications.  
+• Supported Zain operations across Saudi Arabia, Kuwait, Bahrain, Jordan, and Iraq.  
+• Investigated production incidents and performed root cause analysis.  
+• Executed SQL queries for data validation and troubleshooting.  
+• Performed API testing using Postman and analysed application logs.  
+• Worked with development teams to resolve defects and deploy fixes.  
+• Monitored application health and ensured SLA compliance.  
+• Supported enterprise applications including ALM/NEP and participated in production issue resolution.  
+  
+ Software Tester   
+ Dual IT  
+• Supported ERP modules (Finance, HR, Sales) by executing and validating test cases.  
+• Performed API testing with Postman and assisted in defect resolution with developers.  
+• Provided L2 application support by investigating issues and escalating when required.  
+• Documented technical issues and ensured smooth handover to development teams.  
+  
+Technical Skills  
+• Java  
+• SQL (Oracle Database) 
+• Linux  
+• Spring Boot  
+• Spring MVC  
+• Hibernate  
+• API Monitoring (Postman)  
+• MySQL  
+• PostgreSQL   
+• Git  
+• Maven 
+• IntelliJ IDEA  
+  
+Projects  
+• Library Management System (Spring Boot + MySQL)  
+• Built REST APIs and integrated authentication & role-based access.  
+• Supported deployment, testing, and troubleshooting of the system.  
+• Employee Management System (Spring MVC + PostgreSQL)   
+• Developed and maintained CRUD operations for employees and departments.  
+• Ensured application stability by monitoring logs and database queries.  
+  
+  
+

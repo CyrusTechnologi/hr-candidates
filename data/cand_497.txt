@@ -1,0 +1,119 @@
+Email Subject: Application support specialist
+From: Mahmoud Attia <mahmoudattia482@gmail.com>
+Date: Mon, 7 Sep 2026 16:58:20 +0300
+Email Body:
+Dears,
+
+I hope this message finds you well.
+
+I am writing to express my interest in the Data Analyst position at your
+esteemed company.
+As a Computer Engineer with hands-on experience in data analysis using
+Excel, Power BI, SQL, and Python,
+I am eager to contribute my analytical and technical skills to the
+Commercial Excellence Department.
+
+Please find my CV attached for your consideration. I would be grateful for
+the opportunity
+to discuss how my background and passion for data can add value to your
+team.
+
+Thank you for your time and consideration.
+
+Best regards,
+
+CV Content:
+Mahmoud Attia Attia 
+Computer Engineer | Data Analyst 
++20) 1094009564 | Shobra Masr, Cairo, Egypt | mahmoudattia482@gmail.com 
+LinkedIn: https://www.linkedin.com/in/mahmoud-attia 
+CAREER OBJECTIVE 
+Data Analyst and Computer Engineer  with a strong technical foundation in systems operations, 
+programming, and performance optimization. Experienced in data collection, cleaning, and 
+visualization using Python, SQL, Excel, and Power BI , with a proven ability to translate 
+operational data into actionable insights. Demonstrated analytical mindset developed through 
+hands-on field experience in ATM network performance and maintenance , enabling a practical 
+understanding of data -driven decision -making in real -world environments. Passionate about 
+leveraging data to improve efficiency, predict outcomes, and drive strategic growth. 
+ 
+PROFESSIONAL EXPERIENCE 
+Engineer at Raya (Feb 2024 - Present) 
+Worked as a field engineer supporting the stability and performance of ATM networks across 
+Cairo. 
+• Collected and analyzed system performance data to identify downtime patterns and 
+optimize maintenance schedules. 
+• Supported technicians in troubleshooting hardware and software issues using analytical and 
+data-driven approaches. 
+• Prepared daily operational reports and summaries to ensure service quality and resource 
+efficiency. 
+• Collaborated with cross-functional teams to track KPIs related to uptime, error rates, and 
+service response times.
+EDUCATION 
+Modern Academy For Engineering And Technology, Cairo (Oct 2017 - Jun 2022) 
+Bachelor of Computer Engineering 
+GPA: 2.907 | Graduation Grade: B 
+ 
+PROJECTS 
+RC Car 
+Creating and connecting a simple car to a mobile application which is having 2 modes of 
+operation that the user can select from. First mode is manual mode, where the user can control 
+car movements through the GUI using buttons. Second mode is autonomous mode, when 
+selected through GUI by user, in which the car keeps moving, that during the process uses its 
+on-board sensors (IR sensors). 
+Used Car Price Detector  
+Predict the cost of the car by taking a dataset with different variables that describes the 
+different parts of a car. 
+Image Processing Project 
+Creating and developing a user-friendly UI for applying different image processing and filtering 
+techniques to it. 
+Break-out 
+Creating an AI based game where various AI learning algorithms were used to detect the best 
+place, angle and power to hit the ball to destroy the bricks efficiently and quickly. 
+ 
+TRAINING AND CERTIFICATES 
+• Data Analysis Course – Neuro Tech (2025)  
+✓ Covered Excel, Power BI, SQL, and Python for data cleaning, visualization, and reporting. 
+Developed several analytical projects and dashboards. 
+• Machine Learning Training – AMIT Academy (2021) | Grade: A+ 
+✓ Learned data preprocessing, visualization, model training, and optimization using 
+Python. Implemented neural networks and supervised learning models. 
+• Oracle 10g Developer Training – Next Academy (2020) | Grade: A+ 
+✓ Gained practical experience with SQL and PL/SQL, database design, and report 
+generation using Oracle Developer tools. 
+ 
+COURSEWORK 
+• Data Structures 
+• Database Management 
+• Operating Systems 
+• Software Engineering 
+• Artificial Intelligence 
+• Pattern Recognition 
+• Digital Image Processin
+TECHNICAL SKILLS
+• Python 
+• SQL Databases 
+• Excel 
+• Power BI 
+• C 
+• C++ 
+• Embedded C 
+• HTML 
+• CSS 
+• Bootstrap 
+• JQuery 
+• Machine Learning 
+• AVR Microcontroller 
+• Microsoft Office
+ 
+Soft SKILLS
+• Project Management 
+• Presentation Skills 
+• Time Management 
+• Project Planning 
+• Problem-Solving 
+ 
+LANGUAGES 
+Arabic (Native) 
+English (Very Good) 
+Chinese (HSK1) 
+

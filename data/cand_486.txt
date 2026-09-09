@@ -1,0 +1,184 @@
+Email Subject: Application Support
+From: yasser Mohamed <yassermohamedkhiry@yahoo.com>
+Date: Sun, 6 Sep 2026 19:53:58 +0000 (UTC)
+Email Body:
+Dears,
+Kindly find attached my resume for application support role.
+Regards
+
+CV Content:
+YASSER SOLIMAN 
+Application Support Manager | Enterprise Applications & Digital Platforms 
+Yassermohamedkhiry@yahoo.com  
++201127672901|+966540005483 
+LinkedIn 
+Cairo, Egypt| Riyadh, Saudi Arabia & Abu Dhabi, UAE 
+ 
+PROFILE SUMMARY 
+ 
+IT Application Support Manager and Enterprise Solutions Specialist with 10+ years of experience 
+managing mission-critical business applications across insurance, government, banking, and enterprise 
+environments. Proven expertise in application support, service delivery, incident management, and 
+operational excellence, ensuring high availability and performance of enterprise platforms serving 
+thousands of users. 
+Experienced in supporting ERP , CRM, workflow automation, enterprise content management, and 
+integrated business applications while collaborating with business stakeholders, vendors, and technical 
+teams. Strong background in SLA management, problem management, root cause analysis, production 
+support, application monitoring, and continuous service improvement. 
+Demonstrated success in leading cross-functional teams, managing enterprise integrations, driving 
+platform modernization initiatives, and delivering reliable, scalable, and secure application services 
+aligned with business objectives. 
+SKILLS 
+ 
+APPLICATION SUPPORT & SERVICE MANAGEMENT 
+   Application Support Leadership 
+• Incident, Problem & Change Management 
+• SLA & KPI Management 
+• Root Cause Analysis (RCA) 
+• ITIL Service Operations 
+• Service Delivery Management 
+• Escalation Management 
+• Production Support (L2/L3) 
+• Release & Deployment Coordination 
+• Application Performance Monitoring 
+• Business Continuity & Disaster Recovery 
+• Service Improvement & Operational Excellence 
+• Jira Service Management 
+• ITSM Processes 
+ 
+LEADERSHIP & STAKEHOLDER MANAGEMENT 
+  Cross-Functional Team Leadership 
+• Vendor & Third-Party Management 
+• Business Relationship Management 
+• User Training & Knowledge Transfer 
+• Stakeholder Communication 
+• Resource Planning & Coordination 
+• Project & Operational Governance 
+ 
+ENTERPRISE APPLICATIONS & INTEGRATION 
+• ERP & Enterprise Systems Support 
+• Oracle EBS Integration 
+• CRM & Workflow Platforms 
+• REST API Integrations 
+• SAP , Oracle EBS & .NET Systems Integration 
+• Enterprise Integration Patterns 
+• Data Migration & Synchronization 
+ 
+IBM ECM & AUTOMATION 
+• IBM FileNet P8 
+• IBM Content Navigator (ICN) 
+• IBM BAW / BPM 
+• IBM Datacap 
+• IBM RPA 
+• Document Lifecycle Management 
+• Security & Access Control 
+ 
+PLATFORM OPERATIONS & DEVOPS 
+• High Availability & Disaster Recovery 
+• Performance Tuning & Optimization 
+• Jenkins & GitLab CI 
+• Prometheus, Grafana & ELK 
+• Bash & PowerShell Scripting 
+ 
+PROFESSIONAL EXPERIENCE 
+ 
+Tawuniya Insurance – Senior Specialist – Application Support & IT Operations 
+May 2021 – Present | Riyadh, Saudi Arabia 
+ 
+• Lead application support and operational management activities for enterprise content 
+management, workflow automation, and business-critical platforms supporting 2,500+ users 
+across multiple departments. 
+• Manage incident, problem, and change management processes, ensuring timely resolution of 
+issues and maintaining 99.9% service availability. 
+• Coordinate with business stakeholders, vendors, infrastructure teams, and development teams 
+to resolve production issues and deliver application enhancements. 
+• Monitor application health, performance, capacity, and availability using enterprise monitoring 
+solutions, implementing proactive measures to reduce recurring incidents. 
+• Prepare operational reports, service reviews, KPI dashboards, and SLA compliance reports for 
+management and business stakeholders. 
+• Support integrations with Oracle EBS, mobile applications, external entities, and enterprise 
+business systems, ensuring seamless business operations. 
+• Lead application upgrades, releases, disaster recovery exercises, failover testing, and 
+production deployments while minimizing business disruption. 
+• Develop operational procedures, troubleshooting guides, and knowledge base documentation 
+to improve support efficiency and service quality. 
+• Mentor support engineers and technical teams, providing guidance on incident resolution, 
+troubleshooting methodologies, and operational best practices. 
+• Architect and manage IBM FileNet P8, BAW, and Datacap platforms in High Availability and 
+Disaster Recovery environments, ensuring platform stability, scalability, and security. 
+ 
+Ministry of Finance (MOF), UAE – ECM Consultant & IT Specialist 
+Aug 2018 – May 2021 | Abu Dhabi, UAE 
+ 
+• Supported and maintained enterprise applications serving finance, payroll, HR, and 
+government business functions. 
+• Led integration initiatives between IBM FileNet, Oracle EBS, and .NET systems, enabling 
+automated workflows and document governance. 
+• Provided L2/L3 application support, troubleshooting critical production issues and ensuring 
+compliance with operational SLAs. 
+• Collaborated with business users, vendors, and technical teams to identify system 
+improvements and implement application enhancements. 
+• Managed FileNet platform upgrades (v5.2.1 → v5.5.5), improving system stability, scalability, 
+and operational readiness. 
+• Implemented Datacap OCR solutions for bilingual document processing, increasing processing 
+efficiency by 65%. 
+• Defined governance policies, operational procedures, and support standards to improve 
+compliance and service quality. 
+• Coordinated vendors, system upgrades, testing activities, and production releases for critical 
+government platforms. 
+ 
+IBM Egypt – ECM & Automation Consultant 
+• Integrated SAP with IBM Content Engine to automate document approval workflows 
+• Developed business rules automation using IBM ODM Live, reducing manual processes 
+• Streamlined content management workflows to enhance speed and accuracy 
+• Orchestrated cross-system integration between SAP , ECM, and automation platforms 
+ 
+Belastingdienst (Netherlands) – ECM & Datacap Optimization Consultant 
+• Created dynamic, user-configurable Datacap panels for flexible workflow management 
+• Rebuilt and optimized Datacap scanning systems for large-scale government operations 
+• Implemented automated document classification, reducing manual effort by 50% 
+• Provided knowledge transfer and training to local teams, enhancing operational capability 
+ 
+ 
+KEY PROJECTS 
+ 
+Tawuniya Insurance – Enterprise DevOps & Digital Operations Transformation 
+Enterprise FileNet Platform – Tawuniya 
+• Designed full FileNet architecture (HA/DR)  
+• Integrated FileNet with core insurance systems and external entities  
+• Achieved high availability and optimized performance across enterprise 
+Ministry of Finance (MOF), UAE – Government Content Modernization & Automation 
+• Delivered ECM modernization using FileNet + BAW + Datacap  
+• Automated financial and HR workflows  
+• Established governance and compliance frameworks 
+Oman Arab Bank (OAB) – Banking Automation & Enterprise Workflow Governance 
+• Integrated SAP with IBM Content Engine to digitize and automate document approvals. 
+• Implemented business rules automation using IBM ODM Live, reducing dependency on manual 
+validations. 
+• Optimized enterprise content workflows, increasing processing accuracy and speed. 
+Belastingdienst (Netherlands) – Government Workflow Digitalization & Intelligent Scanning 
+• Rebuilt the entire Datacap scanning and classification system, supporting high-volume 
+government operations. 
+• Developed dynamic, user-configurable Datacap panels, giving teams more operational control 
+without code changes. 
+• Implemented automated document classification, reducing manual effort by 50% and improving 
+accuracy. 
+• Integrated Datacap with enterprise systems, enabling smarter inter-department workflows and 
+stronger governance. 
+• Conducted training and capability-building sessions, enhancing internal IT competencies and 
+transformation adoption. 
+EDUCATION 
+ 
+Bachelor’s degree in information systems 
+University of Helwan | September 2008 – September 2013 
+CERTIFICATIONS 
+ 
+• IBM Solution Designer - Datacap Taskmaster Capture V8.1 
+• IBM FileNet Business Process Manager V5.1 
+• IBM Solution Designer - Datacap Taskmaster Capture V9.0 
+• IBM Datacap V9.0 Deployment Professional 
+ 
+REFERENCES 
+ 
+Available upon request. 
+

@@ -1,0 +1,78 @@
+Email Subject: Application | Application Support Specialist
+From: amr ahmed <amr.ahmed20001451@gmail.com>
+Date: Sun, 6 Sep 2026 23:09:31 +0300
+Email Body:
+Dear Hiring Team,
+I am writing to apply for the Application Support Specialist position at
+Cyrus Technology.
+Although my professional background is in Frontend Development, I believe
+my technical experience strongly aligns with the problem-solving and
+troubleshooting nature of this role. I have hands-on experience debugging
+and maintaining web applications, working with APIs, investigating
+application issues, and collaborating with backend developers to resolve
+technical problems and already enhancing the data analysis skill and
+mastered the sql.
+With a B.Sc. in Computer Science and a strong technical foundation, I am
+comfortable learning new systems quickly and approaching issues
+analytically. I am particularly interested in this opportunity because it
+combines technical investigation, problem solving, application
+understanding, and collaboration with development teams.
+Please find my CV attached for your consideration. I would appreciate the
+opportunity to discuss how my technical background could contribute to your
+team.
+Best regards,
+Amr Ahmed
+
+CV Content:
+AMR AHMED 
+Frontend Developer | React.js | Next.js | TypeScript 
+Cairo, Nasr City | 01069111355 | amr.ahmed20001451@gmail.com | Portfolio | LinkedIn | GitHub 
+ 
+PROFESSIONAL SUMMARY 
+ 
+Frontend Developer with hands-on experience building responsive and reusable web interfaces using React.js, Next.js, and 
+TypeScript. Experienced in translating Figma designs into responsive web pages, developing reusable components, 
+integrating APIs, and working with existing applications. Strong focus on clean, maintainable frontend code and creating 
+polished user experiences with Framer Motion and modern frontend technologies. 
+ 
+EXPERIENCE 
+ 
+02/2026 – Present | Frontend Developer 
+Otel-Spider — Cairo 
+● Converted Figma and UI designs into clean, responsive web pages. 
+● Collaborated with designers and backend developers to implement features, enhancing overall user experience. 
+● Created interactive animations using GSAP and Framer Motion libraries. 
+● Fixed bugs and maintained existing web applications to improve stability and usability. 
+● Participated in team meetings, code reviews, and agile processes to support project alignment and development. 
+ 
+PROJECTS 
+ 
+Somatech — Next.js, TypeScript, Tailwind CSS 
+● Developed a scalable multi-dashboard frontend application using Next.js App Router and TypeScript, supporting 
+multiple user roles and workflows. 
+● Built reusable and modular UI components with Tailwind CSS, ensuring consistent design and responsive layouts 
+across devices. 
+● Implemented client-side form handling and validation using Formik and Yup to improve data accuracy and user 
+experience. 
+Hotel Landing Page — React.js, Framer Motion, Tailwind CSS 
+● Developed a modern and fully responsive hotel landing page using React.js and Tailwind CSS. 
+● Created high-end animations and interactive user experiences with Framer Motion. 
+● Optimized responsiveness and performance to deliver a smooth experience across desktop and mobile devices. 
+ 
+TECHNICAL SKILLS 
+ 
+Languages: HTML5 • CSS3 • JavaScript (ES6+) • TypeScript 
+Frameworks & Libraries: React.js • Next.js • Tailwind CSS • Bootstrap • Framer Motion • GSAP • Context API • React 
+Router • Formik • Yup 
+Frontend: Responsive Design • State Management • API Integration • Component Reusability • Server-Side Rendering • 
+Authentication • Performance Optimization 
+Tools: Git • GitHub • Vite • Axios • Debugging • Code Review • Design Collaboration • Agile 
+ 
+EDUCATION 
+ 
+B.Sc. in Computer Science | AAST University, Cairo, Egypt | 2023 
+ 
+LANGUAGES 
+ 
+• Arabic (Native) • English (Professional) 
+

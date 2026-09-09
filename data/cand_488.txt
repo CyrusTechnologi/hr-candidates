@@ -1,0 +1,67 @@
+Email Subject: Application Support Specialist
+From: osama ali <osamaali2742001@gmail.com>
+Date: Mon, 7 Sep 2026 00:39:10 +0300
+Email Body:
+Please find my CV attached
+
+CV Content:
+OSAMA ALIALLAH HAMMAM 
+Junior Network Engineer 
+Cairo, Egypt | +201066328651 
+Osamaali2742001@gmail.com 
+LinkedIn: linkedin.com/in/osama-hammam-62b079178 
+Portfolio: osamahammam-portfolio.netlify.app 
+ 
+SUMMARY 
+Junior Network Engineer with hands-on experience in enterprise network design and 
+simulation. Strong background in routing, switching, VLANs, and troubleshooting. 
+Seeking a role in Network Engineering or NOC. 
+ 
+PROFESSIONAL EXPERIENCE 
+Junior Network Engineer – Freelance | 2024 – 2025 
+• Designed and implemented enterprise network simulations. 
+• Configured VLANs, routing, DHCP, and subnetting. 
+• Built multi-department network infrastructures. 
+• Troubleshot network issues and documented configurations. 
+ 
+COURSES 
+• CCNA (200-301) 
+NETWORKING PROJECTS
+Enterprise Network Design – Cisco Packet Tracer
+• Designed a multi-layer architecture (Access, Distribution, Core). 
+• Implemented OSPF, EIGRP, RIP. 
+• Configured DHCP, NAT, ACLs, and VPN. 
+• Performed testing and troubleshooting. 
+Multi-Branch Network
+• Designed a scalable multi-branch enterprise network. 
+• Configured subnetting and IP addressing. 
+• Implemented static routing across WAN links. 
+• Configured NAT/PAT for internet access. 
+ 
+GRADUATION PROJECT 
+AI-Based Sign Language Translation System 
+• Developed a real-time sign language for the Egyptian voice & text system. 
+• Used Python, MediaPipe, and ML models. 
+• Implemented live camera processing. 
+ 
+EDUCATION 
+Nile University – Bachelor of Electronics & Computer Engineering 
+Graduation: July 2025 
+ 
+ENGINEERING BACKGROUND 
+Systems: Microcontrollers & Embedded Systems, IoT Concepts. 
+Communication Protocols: UART, SPI, I2C. 
+Programming & Languages: Python, C / C++, Software fundamentals, and scripting. 
+ 
+TECHNICAL SKILLS 
+• Networking: Routing & Switching, TCP/IP, VLANs, Subnetting, DHCP, DNS. 
+• Operating Systems: Linux, Windows. 
+• Web & Data: Python, HTML, CSS, JavaScript, PHP, MySQL. 
+ 
+SOFT SKILLS 
+Problem-solving, Analytical thinking, Teamwork, and fast learner. 
+ 
+LANGUAGES 
+Arabic: Native. 
+English: Fluent. 
+
