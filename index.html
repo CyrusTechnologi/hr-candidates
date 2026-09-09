@@ -43,7 +43,7 @@
         .container {
             max-width: 1320px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 16px;
         }
 
         header {
@@ -53,7 +53,7 @@
             position: sticky;
             top: 0;
             z-index: 50;
-            padding: 16px 0;
+            padding: 14px 0;
         }
 
         .header-content {
@@ -61,52 +61,52 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
         }
 
         .logo-group {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
         }
 
         .logo-icon {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, #4f46e5, #818cf8);
-            border-radius: 14px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
+            font-size: 20px;
             box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
         }
 
         .logo-text h1 {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 800;
             letter-spacing: -0.5px;
         }
 
         .logo-text p {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
         }
 
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 9px 16px;
+            gap: 6px;
+            padding: 8px 14px;
             border-radius: 10px;
-            font-size: 0.84rem;
+            font-size: 0.82rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -141,18 +141,26 @@
             background: #10b981;
         }
 
+        .btn-danger {
+            background: #e11d48;
+            color: #fff;
+        }
+        .btn-danger:hover {
+            background: #f43f5e;
+        }
+
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin: 24px 0;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
         }
 
         .stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 18px 20px;
+            padding: 16px 18px;
             position: relative;
             overflow: hidden;
         }
@@ -172,15 +180,15 @@
         .stat-card.excluded::before { background: var(--rose); }
 
         .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
             font-weight: 600;
         }
 
         .stat-val {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 900;
-            margin: 4px 0;
+            margin: 2px 0;
         }
         .stat-card.egyptian .stat-val { color: var(--emerald); }
         .stat-card.top .stat-val { color: var(--gold); }
@@ -188,7 +196,7 @@
         .stat-card.excluded .stat-val { color: var(--rose); }
 
         .stat-sub {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             color: var(--text-muted);
         }
 
@@ -196,20 +204,20 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 24px;
+            padding: 18px;
+            margin-bottom: 20px;
         }
 
         .search-bar-row {
             display: flex;
-            gap: 14px;
-            margin-bottom: 16px;
+            gap: 12px;
+            margin-bottom: 14px;
             flex-wrap: wrap;
         }
 
         .search-input-wrap {
             flex: 1;
-            min-width: 260px;
+            min-width: 240px;
             position: relative;
         }
 
@@ -217,10 +225,10 @@
             width: 100%;
             background: var(--bg-input);
             border: 1px solid var(--border-color);
-            padding: 12px 18px;
-            border-radius: 12px;
+            padding: 10px 16px;
+            border-radius: 10px;
             color: #fff;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-family: inherit;
             outline: none;
             transition: border-color 0.2s;
@@ -234,17 +242,17 @@
             display: flex;
             background: var(--bg-input);
             border: 1px solid var(--border-color);
-            padding: 4px;
-            border-radius: 12px;
+            padding: 3px;
+            border-radius: 10px;
         }
 
         .toggle-btn {
             background: transparent;
             border: none;
             color: var(--text-muted);
-            padding: 8px 14px;
+            padding: 7px 12px;
             border-radius: 8px;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 700;
             cursor: pointer;
             font-family: inherit;
@@ -258,26 +266,26 @@
         .filter-pills {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
-            padding-top: 14px;
+            padding-top: 12px;
             border-top: 1px solid var(--border-color);
         }
 
         .filter-label {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
             font-weight: 700;
-            margin-left: 6px;
+            margin-left: 4px;
         }
 
         .filter-pill {
             background: #1c2640;
             border: 1px solid var(--border-color);
             color: #cbd5e1;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 8px;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 700;
             cursor: pointer;
             font-family: inherit;
@@ -295,42 +303,41 @@
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 18px;
         }
 
         .candidate-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 18px;
-            padding: 22px;
+            border-radius: 16px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-            position: relative;
         }
 
         .candidate-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
         }
 
         .card-top {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .rank-badge {
             display: inline-flex;
             align-items: center;
             gap: 4px;
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 800;
             background: #1c2640;
             color: #cbd5e1;
@@ -352,13 +359,13 @@
         }
 
         .score-box {
-            width: 54px;
-            height: 54px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 900;
             background: rgba(99, 102, 241, 0.15);
             color: #818cf8;
@@ -382,34 +389,34 @@
         }
 
         .card-name {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 800;
             color: #fff;
         }
 
         .card-name-en {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
             font-family: 'Inter', sans-serif;
         }
 
         .card-role {
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             color: #818cf8;
             font-weight: 700;
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .card-meta {
             background: #0e1626;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 10px 14px;
-            margin: 14px 0;
-            font-size: 0.78rem;
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin: 12px 0;
+            font-size: 0.75rem;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 5px;
         }
 
         .meta-row {
@@ -422,16 +429,16 @@
         }
 
         .card-strengths {
-            margin: 12px 0;
+            margin: 10px 0;
         }
         .strengths-title {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 800;
             color: #cbd5e1;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
         .strength-item {
-            font-size: 0.76rem;
+            font-size: 0.74rem;
             color: var(--text-muted);
             margin-bottom: 4px;
             display: flex;
@@ -442,23 +449,23 @@
             content: '✔';
             color: var(--emerald);
             font-weight: 900;
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             margin-top: 2px;
         }
 
         .skills-wrap {
             display: flex;
             flex-wrap: wrap;
-            gap: 5px;
-            margin: 12px 0;
+            gap: 4px;
+            margin: 10px 0;
         }
 
         .skill-tag {
             background: #1c2640;
             color: #94a3b8;
-            font-size: 0.7rem;
-            padding: 3px 8px;
-            border-radius: 6px;
+            font-size: 0.68rem;
+            padding: 2px 7px;
+            border-radius: 5px;
             font-family: 'Inter', sans-serif;
             border: 1px solid var(--border-color);
         }
@@ -466,9 +473,9 @@
         .card-footer {
             display: flex;
             gap: 8px;
-            padding-top: 14px;
+            padding-top: 12px;
             border-top: 1px solid var(--border-color);
-            margin-top: 14px;
+            margin-top: 12px;
         }
 
         .table-wrap {
@@ -482,19 +489,19 @@
             width: 100%;
             border-collapse: collapse;
             text-align: right;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
         }
 
         th {
             background: #0e1626;
             color: #94a3b8;
-            padding: 14px 16px;
+            padding: 12px 14px;
             font-weight: 700;
             border-bottom: 1px solid var(--border-color);
         }
 
         td {
-            padding: 14px 16px;
+            padding: 12px 14px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
 
@@ -502,16 +509,17 @@
             background: rgba(255, 255, 255, 0.02);
         }
 
+        /* Modal Base */
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(8px);
             z-index: 100;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 12px;
             opacity: 0;
             visibility: hidden;
             transition: all 0.2s ease;
@@ -524,32 +532,33 @@
         .modal-box {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            max-width: 750px;
+            border-radius: 18px;
+            max-width: 720px;
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
-            padding: 28px;
+            padding: 24px;
             position: relative;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         .modal-close {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 16px;
+            left: 16px;
             background: #1c2640;
             border: 1px solid var(--border-color);
             color: #cbd5e1;
-            width: 34px;
-            height: 34px;
-            border-radius: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
+            z-index: 10;
         }
         .modal-close:hover {
             background: #253354;
@@ -558,19 +567,19 @@
 
         .modal-header {
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 16px;
-            margin-bottom: 20px;
+            padding-bottom: 14px;
+            margin-bottom: 18px;
         }
 
         .modal-section {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .modal-section-title {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 800;
             color: #818cf8;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -578,38 +587,105 @@
 
         .modal-grid-meta {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 8px;
             background: #0e1626;
             border: 1px solid var(--border-color);
-            padding: 14px;
-            border-radius: 12px;
-            font-size: 0.8rem;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.78rem;
         }
 
         .eval-box {
             background: rgba(79, 70, 229, 0.1);
             border: 1px solid rgba(79, 70, 229, 0.3);
-            border-radius: 12px;
-            padding: 16px;
-            font-size: 0.85rem;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 0.82rem;
             line-height: 1.7;
         }
 
         .eval-decision {
-            margin-top: 10px;
-            padding-top: 10px;
+            margin-top: 8px;
+            padding-top: 8px;
             border-top: 1px solid rgba(79, 70, 229, 0.3);
             font-weight: 800;
             color: var(--gold);
+        }
+
+        /* Dedicated Full-Screen PDF Viewer Modal */
+        .pdf-modal-box {
+            background: #111827;
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            width: 95vw;
+            max-width: 1100px;
+            height: 92vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+            position: relative;
+        }
+
+        .pdf-modal-header {
+            background: #1f2937;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pdf-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #f9fafb;
+        }
+
+        .pdf-modal-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pdf-frame-wrap {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            background: #1f2937;
+            position: relative;
+        }
+
+        .pdf-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
         }
 
         .hidden {
             display: none !important;
         }
 
+        @media (max-width: 768px) {
+            .pdf-modal-box {
+                width: 100vw;
+                height: 96vh;
+                border-radius: 12px;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media print {
-            header, .controls-card, .btn, .card-footer {
+            header, .controls-card, .btn, .card-footer, .modal-overlay {
                 display: none !important;
             }
             body {
@@ -639,11 +715,11 @@
             <div class="header-actions">
                 <button onclick="exportCSV()" class="btn btn-secondary">
                     <span>📊</span>
-                    <span>تصدير Excel / CSV</span>
+                    <span>تصدير Excel</span>
                 </button>
                 <button onclick="window.print()" class="btn btn-secondary">
                     <span>🖨️</span>
-                    <span>طباعة التقرير</span>
+                    <span>طباعة</span>
                 </button>
                 <span class="btn btn-primary" style="cursor: default;">
                     <span>⚡</span>
@@ -727,6 +803,7 @@
                         <th>أهم المهارات</th>
                         <th style="text-align: center;">التقييم</th>
                         <th>التوصية</th>
+                        <th style="text-align: center;">معاينة الـ CV</th>
                         <th style="text-align: center;">الإجراء</th>
                     </tr>
                 </thead>
@@ -742,11 +819,40 @@
         </div>
     </div>
 
-    <!-- Candidate Modal -->
+    <!-- Candidate Profile Details Modal -->
     <div id="candidateModal" class="modal-overlay" onclick="handleModalBg(event)">
         <div class="modal-box">
             <button class="modal-close" onclick="closeModal()">✕</button>
             <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- In-Page PDF Viewer Modal -->
+    <div id="pdfViewerModal" class="modal-overlay" onclick="handlePdfModalBg(event)">
+        <div class="pdf-modal-box">
+            <div class="pdf-modal-header">
+                <div class="pdf-modal-title">
+                    <span>📄</span>
+                    <span id="pdfViewerCandidateName">سيرة ذاتية</span>
+                </div>
+                <div class="pdf-modal-actions">
+                    <a id="pdfDownloadBtn" href="#" download class="btn btn-secondary" style="font-size: 0.75rem; padding: 6px 12px;">
+                        <span>⬇️</span>
+                        <span>تحميل الملف</span>
+                    </a>
+                    <a id="pdfExternalBtn" href="#" target="_blank" class="btn btn-secondary" style="font-size: 0.75rem; padding: 6px 12px;" title="فتح في نافذة خارجية">
+                        <span>↗️</span>
+                        <span>نافذة خارجية</span>
+                    </a>
+                    <button onclick="closePdfViewer()" class="btn btn-danger" style="font-size: 0.75rem; padding: 6px 12px;">
+                        <span>✕</span>
+                        <span>إغلاق</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-frame-wrap">
+                <iframe id="pdfFrame" class="pdf-frame" src="about:blank"></iframe>
+            </div>
         </div>
     </div>
 
@@ -793,6 +899,39 @@
             });
         }
 
+        function openPdfViewer(cvFile, candidateName) {
+            if (!cvFile) {
+                alert('عذراً، هذا المرشح لم يرفق ملف سيرة ذاتية (CV).');
+                return;
+            }
+            const modal = document.getElementById('pdfViewerModal');
+            const frame = document.getElementById('pdfFrame');
+            const nameElem = document.getElementById('pdfViewerCandidateName');
+            const downloadBtn = document.getElementById('pdfDownloadBtn');
+            const externalBtn = document.getElementById('pdfExternalBtn');
+
+            const pdfUrl = 'cvs/' + encodeURIComponent(cvFile);
+            nameElem.textContent = 'سيرة ذاتية: ' + candidateName;
+            downloadBtn.href = pdfUrl;
+            downloadBtn.setAttribute('download', cvFile);
+            externalBtn.href = pdfUrl;
+
+            // Load iframe with PDF
+            frame.src = pdfUrl + '#toolbar=1&navpanes=0';
+            modal.classList.add('active');
+        }
+
+        function closePdfViewer() {
+            const modal = document.getElementById('pdfViewerModal');
+            const frame = document.getElementById('pdfFrame');
+            modal.classList.remove('active');
+            frame.src = 'about:blank';
+        }
+
+        function handlePdfModalBg(e) {
+            if (e.target.id === 'pdfViewerModal') closePdfViewer();
+        }
+
         function renderApp() {
             const data = getFilteredData();
             const cardsContainer = document.getElementById('cardsContainer');
@@ -822,7 +961,7 @@
                 const strengthsHtml = c.strengths_ar.slice(0, 2).map(s => '<div class="strength-item">' + s + '</div>').join('');
 
                 const cvButton = c.cv_file 
-                    ? ('<a href="cvs/' + encodeURIComponent(c.cv_file) + '" target="_blank" class="btn btn-secondary" title="فتح السيرة الذاتية PDF">📄 CV</a>')
+                    ? ('<button onclick="openPdfViewer(\'' + c.cv_file.replace(/'/g, "\\'") + '\', \'' + c.name_ar.replace(/'/g, "\\'") + '\')" class="btn btn-secondary" title="معاينة السيرة الذاتية داخل الصفحة">👁️ عرض الـ CV</button>')
                     : ('<span class="btn btn-secondary" style="opacity: 0.4; cursor: not-allowed;" title="لم يتم إرفاق CV">📄 لا يوجد</span>');
 
                 return '<div class="candidate-card">' +
@@ -857,8 +996,8 @@
 
             // Render Table
             tableBody.innerHTML = data.map((c, i) => {
-                const cvLink = c.cv_file 
-                    ? ('<a href="cvs/' + encodeURIComponent(c.cv_file) + '" target="_blank" style="color: #818cf8; text-decoration: underline;">فتح PDF</a>') 
+                const cvCell = c.cv_file 
+                    ? ('<button onclick="openPdfViewer(\'' + c.cv_file.replace(/'/g, "\\'") + '\', \'' + c.name_ar.replace(/'/g, "\\'") + '\')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.72rem;">👁️ عرض الـ CV</button>') 
                     : '<span style="color: var(--text-muted);">لا يوجد</span>';
 
                 const skillsSnippet = c.skills.slice(0, 3).map(s => '<span class="skill-tag">' + s + '</span>').join(' ');
@@ -879,8 +1018,9 @@
                     '<td>' + skillsSnippet + '</td>' +
                     '<td style="text-align: center; font-weight: 900; font-size: 1.1rem; color: ' + (c.tier === 'top' ? 'var(--gold)' : (c.tier === 'high' ? 'var(--emerald)' : (c.tier === 'excluded' ? 'var(--rose)' : 'var(--blue)'))) + ';">' + c.score + '%</td>' +
                     '<td style="font-size: 0.75rem;">' + c.recommendation_ar.substring(0, 35) + '...</td>' +
+                    '<td style="text-align: center;">' + cvCell + '</td>' +
                     '<td style="text-align: center;">' +
-                        '<button onclick="openModal(' + c.id + ')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">التفاصيل</button>' +
+                        '<button onclick="openModal(' + c.id + ')" class="btn btn-primary" style="padding: 4px 10px; font-size: 0.75rem;">التفاصيل</button>' +
                     '</td>' +
                 '</tr>';
             }).join('');
@@ -911,7 +1051,7 @@
                 : '';
 
             const cvBtn = c.cv_file
-                ? ('<a href="cvs/' + encodeURIComponent(c.cv_file) + '" target="_blank" class="btn btn-primary">📄 فتح السيرة الذاتية PDF</a>')
+                ? ('<button onclick="openPdfViewer(\'' + c.cv_file.replace(/'/g, "\\'") + '\', \'' + c.name_ar.replace(/'/g, "\\'") + '\')" class="btn btn-primary">👁️ معاينة السيرة الذاتية PDF</button>')
                 : '';
 
             body.innerHTML = 
