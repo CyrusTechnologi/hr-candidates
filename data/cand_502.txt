@@ -1,0 +1,85 @@
+Subject: Application Support Specialist
+From: Khaled Shawky <khaledshawky500@gmail.com>
+Date: Thu, 10 Sep 2026 06:07:29 +0300
+Body:
+
+
+
+
+CV Text:
+ 
+ 
+Khaled Shawky 
+DEVOPS ENGINEER  
+Cairo, Egypt | +20 109 534 4552 | khaledshawky500@gmail.com | linkedin.com/in/khaled-
+shawky11 | github.com/SeniorKhaled 
+Objective 
+ 
+Junior DevOps Engineer and Computer Science graduate with hands-on experience in AWS cloud 
+environments, CI/CD automation, GitOps, and infrastructure as code. Experienced with Linux, Docker, 
+Kubernetes, Jenkins, Ansible, and Terraform, with practical experience deploying cloud infrastructure 
+and containerized applications. Strong team player with proven communication, leadership, and 
+organizational skills gained through professional experience and university event coordination.  
+Experience 
+ 
+Digital Analyst | Target State May 2026 – Sep 2026 
+ Reviewed and assessed Saudi government agencies' digital services against the Digital 
+Government Authority (DGA) Digital Transformation Standards (DGA-1-2-1-111), covering 10 
+compliance perspectives 
+ Produced structured compliance reports per perspective — including Strategy & Planning, IT 
+Infrastructure, Cloud Architecture, Digital Services Quality, and Website Efficiency 
+ Analyzed agency-submitted documents and requirements to identify gaps and update reports 
+accordingly 
+ Used Google Lighthouse to audit Saudi government websites for technical performance, 
+accessibility, and best practices — identifying and reporting bugs and non-compliance issues 
+DevOps Engineer Trainee | Digital Egypt Pioneers Initiative (DEPI) Nov 2025 – May 2026 
+ Completed an intensive 6-month government-sponsored DevOps training program covering 
+Ansible, Docker, Kubernetes, Jenkins, Terraform, Prometheus, and AWS 
+ Built a production-grade GitOps CI/CD pipeline on AWS as a graduation project 
+ Applied IAM least-privilege principles, immutable image tagging, and GitOps two-repo separation 
+pattern in a real cloud environment 
+Education 
+ 
+Arab Open University, El Sherouq, Egypt Sep 2021 – Jul 2025 
+Bachelor of Science (B.Sc.), Computer Science 
+Technical Skills 
+ 
+ DevOps & CI/CD: Ansible, Docker, Kubernetes, Jenkins 
+ Cloud Platforms: AWS Fundamentals (EC2, S3) 
+ Operating Systems: Linux Administration, Windows Server Administration, Troubleshooting 
+ Scripting & Coding: Python, Bash, C++, Java, HTML, CSS, JavaScript 
+ Databases: SQL, MySQL, MongoDB 
+ Tools & Version Control: Git, GitHub, Postman, VS Code  
+ Practices & Concepts: Algorithms, Data Structures, OOP, Networking, Virtualization 
+ Frameworks & Libraries: Node.js, Express, Angular, TailwindCSS, Bootstrap 
+Additional Training: CompTIA A+, CompTIA Network+ 
+ 
+ 
+Projects 
+ 
+Secure Notes App — AWS EC2 Deployment 
+ Deployed a Flask/MariaDB web application on an AWS EC2 instance running RHEL 10, 
+configuring security groups, firewall rules, and port access 
+ Provisioned and mounted a 1GB EBS volume as a dedicated backup storage location, 
+implementing a mysqldump backup strategy for database persistence 
+ Managed full Linux server setup including dependency installation, MariaDB configuration, and 
+application process management 
+GitOps CI/CD Pipeline 
+ Provisioned AWS infrastructure (EC2, EKS) using Terraform 
+ Deployed Jenkins on EC2 using Docker Compose 
+ Built CI pipeline with Jenkins to build and push Docker images to DockerHub 
+ Implemented GitOps with ArgoCD on Amazon EKS 
+ Automated deployments via GitHub webhooks 
+Volunteering 
+ 
+Resala Organization May 2017 – Jan 2019 
+ Volunteered to support community initiatives by participating in Et3amgy section food aid 
+distribution program 
+ Worked closely with team members to organize events, demonstrating teamwork, 
+communication, and leadership skills 
+AOU Student Union Sep 2021 – Jul 2025 
+ Worked as an on boarding and event organizer 
+ Served as an organizer for the university’s Red Demon event, a large-scale modified cars 
+exhibition that hosted 25 customized cars, managing logistics, participant coordination, and on-site 
+event execution 
+

@@ -1,0 +1,95 @@
+Subject: Application support specialist - Immediate joiner
+From: Kalam Kalam <kalamali0203@gmail.com>
+Date: Thu, 10 Sep 2026 09:02:14 +0530
+Body:
+Hi Team,
+
+Hope you are doing well.
+
+I have 4 years of experience as a Banking Application Support Engineer (
+Including for Yes Bank, PNB Bank & Dubai Islamic Bank )
+
+Currently, I am supporting banking applications where I handle L1/L2
+support activities, including system monitoring, incident resolution, and
+log analysis, ensuring SLA compliance and smooth operations.
+
+I have hands-on experience in SQL, Linux/Unix, and basic API
+troubleshooting, which helps me in identifying issues quickly and providing
+effective resolutions.
+
+I have also worked on banking-related applications and have good exposure
+to production support processes and incident management.
+
+Please find my resume attached for your review.
+
+Thanks and Regards,
+Kalam Ali
++91 7522033696
+
+
+
+CV Text:
+KALAM ALI
+New Delhi, India | +91 7522033696| kalamali0203@gmail.com
+PROFESSIONAL SUMMARY
+Banking Production Support Engineer with 4 years of experience supporting mission critical CTS, DEM,
+NACH and UPI payment systems in high availability banking environments.
+Extensive hands on experience with CTS, DEM, NACH and UPI payment system in production
+environment.
+Strong expertise in production incident management, root cause analysis, SQL troubleshooting, Linux
+administration, and monitoring banking transaction systems.
+Proven ability to maintain system stability and SLA compliance while supporting banking technology
+environments for Dubai Islamic Bank, BDO Bank, Paytm Payments Bank, Yes Bank and Punjab
+National Bank(PNB).
+TECHNICAL SKILLS
+Category Technologies
+Payments UPI, CTS, DEM and NACH
+Production Support Incident Management, Root Cause Analysis, SLA Compliance
+Banking Operations EOD / BOD Batch Processing, Deployment Support
+Databases Oracle SQL, MySQL
+Operating Systems Linux, Unix, AIX, Windows
+Monitoring Dynatrace, AppDynamics, Grafana
+API Tools Postman, APIGEE
+Messaging and logs IBM MQ, Elastic Search
+Automation/Scripting Bash Shell Scripting
+PROFESSIONAL EXPERIENCE
+Organization : Mindgate Solution Pvt Ltd
+Role : Software Analyst – UPI
+Client: Punjab National Bank (PNB) - India | Sep 2025 – Present
+Responsibilities :
+Provide L1/L2 production support for UPI and Java-based banking applications (BFSI).
+Investigate transaction failures using SQL queries, Linux logs, and monitoring tools.
+Resolve critical incidents (P1/P2) while ensuring SLA compliance and minimal downtime.
+Monitor high-availability systems and perform Root Cause Analysis (RCA).
+Manage batch jobs using Autosys and Cron for smooth processing.
+Support production deployments, release activities, and configuration changes.
+Perform log analysis and troubleshooting to improve system stability and performance.
+Organization : Image info systems Pvt Ltd
+Role : Application Support Executive (CTS | DEM)
+Client : Dubai Islamic Bank, BDO(Philipines Bank), Yes Bank, Paytm Payment Bank, TDCC Bank | Aug
+2022 – Aug 2025
+Responsibilities :
+Provided Application support for Java-based banking applications (CTS) for Dubai Islamic Bank ,Yes Bank
+Paytm payments Bank and BDO Bank.
+Delivered L1/L2 support, resolving P1/P2 incidents using ITIL processes to ensure high availability and
+SLA compliance.
+Performed troubleshooting using SQL, Linux, and Shell scripting; managed batch jobs via Autosys, Cron,
+and Control-M.
+Monitored applications using Dynatrace, conducted log analysis and RCA to improve system stability and
+performance.
+Supported deployments, releases, patching, and DR activities to ensure reliable and continuous
+operations.
+KEY PROJECTS :
+Organization Platform
+Punjab National Bank UPI Payments
+Dubai Islamic Bank CTS, DEM and NACH
+Yes Bank CTS, DEM and NACH
+BDO Bank CTS, DEM and NACH
+Paytm Payments Bank CTS, DEM and NACH
+EDUCATION:
+Bachelor of Technology (Computer Science) – Dr. A.P.J. Abdul Kalam Technical University Lucknow, 2022
+ADDITIONAL INFORMATION :
+Language : English, Hindi
+Nationality: Indian
+Current Location : New Delhi India
+

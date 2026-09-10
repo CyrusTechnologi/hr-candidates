@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منظومة تقييم وفرز المتقدمين | Cyrus Tech HR</title>
+    <title>منظومة فرز وتقييم المتقدمين للدعم الفني والتشغيلي | Cyrus Tech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
             --blue: #3b82f6;
             --rose: #f43f5e;
             --purple: #a855f7;
+            --amber: #d97706;
         }
 
         * {
@@ -142,14 +143,6 @@
             background: #10b981;
         }
 
-        .btn-purple {
-            background: #7e22ce;
-            color: #fff;
-        }
-        .btn-purple:hover {
-            background: #9333ea;
-        }
-
         .btn-danger {
             background: #e11d48;
             color: #fff;
@@ -183,9 +176,8 @@
             height: 3px;
         }
         .stat-card.total::before { background: var(--brand-light); }
-        .stat-card.egyptian::before { background: var(--emerald); }
-        .stat-card.top::before { background: var(--gold); }
-        .stat-card.high::before { background: var(--blue); }
+        .stat-card.operational::before { background: var(--emerald); }
+        .stat-card.developers::before { background: var(--gold); }
         .stat-card.excluded::before { background: var(--rose); }
 
         .stat-label {
@@ -199,9 +191,8 @@
             font-weight: 900;
             margin: 2px 0;
         }
-        .stat-card.egyptian .stat-val { color: var(--emerald); }
-        .stat-card.top .stat-val { color: var(--gold); }
-        .stat-card.high .stat-val { color: var(--blue); }
+        .stat-card.operational .stat-val { color: var(--emerald); }
+        .stat-card.developers .stat-val { color: var(--gold); }
         .stat-card.excluded .stat-val { color: var(--rose); }
 
         .stat-sub {
@@ -309,10 +300,15 @@
             color: #fff;
             border-color: var(--brand-light);
         }
+        .filter-pill.operational-active {
+            background: #059669 !important;
+            color: #fff !important;
+            border-color: #10b981 !important;
+        }
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
             gap: 18px;
         }
 
@@ -331,6 +327,11 @@
             transform: translateY(-2px);
             border-color: rgba(99, 102, 241, 0.4);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .candidate-card.is-developer-card {
+            border-color: rgba(245, 158, 11, 0.35);
+            background: rgba(30, 41, 59, 0.6);
         }
 
         .card-top {
@@ -352,14 +353,14 @@
             color: #cbd5e1;
         }
         .rank-badge.top {
-            background: rgba(245, 158, 11, 0.2);
-            color: var(--gold);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-        }
-        .rank-badge.high {
             background: rgba(16, 185, 129, 0.2);
             color: var(--emerald);
             border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .rank-badge.developer {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--gold);
+            border: 1px solid rgba(245, 158, 11, 0.3);
         }
         .rank-badge.excluded {
             background: rgba(244, 63, 94, 0.2);
@@ -381,15 +382,15 @@
             border: 1px solid rgba(99, 102, 241, 0.3);
         }
         .score-box.top {
-            background: rgba(245, 158, 11, 0.2);
-            color: #fde68a;
-            border-color: rgba(245, 158, 11, 0.5);
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
-        }
-        .score-box.high {
             background: rgba(16, 185, 129, 0.2);
             color: #a7f3d0;
-            border-color: rgba(16, 185, 129, 0.4);
+            border-color: rgba(16, 185, 129, 0.5);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+        .score-box.developer {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fde68a;
+            border-color: rgba(245, 158, 11, 0.4);
         }
         .score-box.excluded {
             background: rgba(244, 63, 94, 0.2);
@@ -416,12 +417,38 @@
             margin-top: 3px;
         }
 
+        /* Salary Box Highlight */
+        .card-salary-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(14, 22, 38, 0.8) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .salary-item {
+            font-size: 0.75rem;
+        }
+        .salary-item span {
+            color: var(--text-muted);
+            display: block;
+            font-size: 0.7rem;
+            margin-bottom: 1px;
+        }
+        .salary-item b {
+            font-size: 0.82rem;
+        }
+        .salary-item.current b { color: #cbd5e1; }
+        .salary-item.expected b { color: #34d399; font-weight: 900; }
+
         .card-meta {
             background: #0e1626;
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 10px 12px;
-            margin: 12px 0;
+            margin: 10px 0;
             font-size: 0.75rem;
             display: flex;
             flex-direction: column;
@@ -437,7 +464,6 @@
             color: #e2e8f0;
         }
 
-        /* HR Preview Snippet on Card */
         .card-hr-snippet {
             background: rgba(168, 85, 247, 0.08);
             border: 1px solid rgba(168, 85, 247, 0.25);
@@ -449,7 +475,7 @@
         .card-hr-snippet-title {
             color: #c084fc;
             font-weight: 800;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -457,6 +483,16 @@
         .card-hr-snippet-text {
             color: #e2e8f0;
             line-height: 1.5;
+        }
+
+        .developer-warning-banner {
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 0.74rem;
+            color: #fde68a;
+            margin: 10px 0;
         }
 
         .skills-wrap {
@@ -515,7 +551,6 @@
             background: rgba(255, 255, 255, 0.02);
         }
 
-        /* Modal Base */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -602,14 +637,12 @@
             font-size: 0.78rem;
         }
 
-        /* HR Expert Comprehensive Box */
         .hr-expert-box {
             background: linear-gradient(145deg, rgba(126, 34, 206, 0.12) 0%, rgba(30, 41, 59, 0.7) 100%);
             border: 1px solid rgba(168, 85, 247, 0.4);
             border-radius: 14px;
             padding: 16px;
             margin-bottom: 18px;
-            box-shadow: 0 4px 16px rgba(126, 34, 206, 0.1);
         }
 
         .hr-expert-title {
@@ -639,34 +672,6 @@
             color: #cbd5e1;
         }
 
-        .hr-focus-tag {
-            background: rgba(245, 158, 11, 0.12);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            border-radius: 8px;
-            padding: 8px 12px;
-            font-size: 0.78rem;
-            color: #fde68a;
-            margin-top: 8px;
-        }
-
-        .eval-box {
-            background: rgba(79, 70, 229, 0.1);
-            border: 1px solid rgba(79, 70, 229, 0.3);
-            border-radius: 10px;
-            padding: 14px;
-            font-size: 0.82rem;
-            line-height: 1.7;
-        }
-
-        .eval-decision {
-            margin-top: 8px;
-            padding-top: 8px;
-            border-top: 1px solid rgba(79, 70, 229, 0.3);
-            font-weight: 800;
-            color: var(--gold);
-        }
-
-        /* Dedicated Full-Screen PDF Viewer Modal */
         .pdf-modal-box {
             background: #111827;
             border: 1px solid var(--border-color);
@@ -758,25 +763,25 @@
     <header>
         <div class="container header-content">
             <div class="logo-group">
-                <div class="logo-icon">🧑‍💼</div>
+                <div class="logo-icon">🎧</div>
                 <div class="logo-text">
-                    <h1>منظومة فرز وتقييم المتقدمين | تقرير خبير الموارد البشرية</h1>
-                    <p>Cyrus Tech | حساب: hr@cyrustecheg.com | تم التحديث: 9 سبتمبر 2026</p>
+                    <h1>منظومة فرز وترشيح الدعم الفني والتشغيلي (Application Support)</h1>
+                    <p>Cyrus Tech | استبعاد المطورين والتركيز على خدمة العملاء والتذاكر والـ ERP والرواتب</p>
                 </div>
             </div>
 
             <div class="header-actions">
                 <button onclick="exportCSV()" class="btn btn-secondary">
                     <span>📊</span>
-                    <span>تصدير Excel</span>
+                    <span>تصدير Excel بالرواتب</span>
                 </button>
                 <button onclick="window.print()" class="btn btn-secondary">
                     <span>🖨️</span>
                     <span>طباعة التقرير</span>
                 </button>
-                <span class="btn btn-primary" style="cursor: default;">
+                <span class="btn btn-success" style="cursor: default;">
                     <span>⚡</span>
-                    <span>مرتب من الأعلى تقييماً للأقل</span>
+                    <span>مرتب حسب الملائمة التشغيلية</span>
                 </span>
             </div>
         </div>
@@ -786,33 +791,27 @@
         <!-- Stats Row -->
         <div class="stats-grid">
             <div class="stat-card total">
-                <div class="stat-label">إجمالي المتقدمين</div>
-                <div class="stat-val">26</div>
-                <div class="stat-sub">تم تحليل جميع السير الذاتية</div>
+                <div class="stat-label">إجمالي المرشحين</div>
+                <div class="stat-val">28</div>
+                <div class="stat-sub">تم فحص جميع الإيميلات</div>
             </div>
 
-            <div class="stat-card egyptian">
-                <div class="stat-label">المصريين (المؤهلين)</div>
-                <div class="stat-val">25</div>
-                <div class="stat-sub">تم التحقق من الجنسية 🇪🇬</div>
+            <div class="stat-card operational">
+                <div class="stat-label">المسار التشغيلي للدعم 🎧</div>
+                <div class="stat-val">19</div>
+                <div class="stat-sub">دعم تليفونات وتذاكر و ERP</div>
             </div>
 
-            <div class="stat-card top">
-                <div class="stat-label">الفئة الذهبية (Top Tier)</div>
+            <div class="stat-card developers">
+                <div class="stat-label">مطورو برمجيات (مستبعدين) ⚠️</div>
                 <div class="stat-val">6</div>
-                <div class="stat-sub">تقييم 90% - 96% ⭐</div>
-            </div>
-
-            <div class="stat-card high">
-                <div class="stat-label">مؤهلين بقوة (Strong Fit)</div>
-                <div class="stat-val">12</div>
-                <div class="stat-sub">تقييم 80% - 89% 🟢</div>
+                <div class="stat-sub">مبرمجين (خطر ترك العمل)</div>
             </div>
 
             <div class="stat-card excluded">
-                <div class="stat-label">مستبعد (غير مصري)</div>
-                <div class="stat-val">1</div>
-                <div class="stat-sub">استبعاد تلقائي (الهند 🇮🇳)</div>
+                <div class="stat-label">مستبعد (غير مصري) ❌</div>
+                <div class="stat-val">2</div>
+                <div class="stat-sub">الهند (عدم استيفاء الإقامة)</div>
             </div>
         </div>
 
@@ -820,23 +819,29 @@
         <div class="controls-card">
             <div class="search-bar-row">
                 <div class="search-input-wrap">
-                    <input type="text" id="searchInput" oninput="renderApp()" placeholder="ابحث بالاسم، المهارة (SQL, ERP, API)، الجامعة، الهاتف، أو تعليقات الـ HR...">
+                    <input type="text" id="searchInput" oninput="renderApp()" placeholder="ابحث بالاسم، المهارة (SQL, ERP, Remedy)، الراتب، الجامعة، الهاتف...">
                 </div>
 
                 <div class="view-toggles">
                     <button onclick="setViewMode('cards')" id="btn-cards" class="toggle-btn active">🗂️ كروت تفصيلية</button>
-                    <button onclick="setViewMode('table')" id="btn-table" class="toggle-btn">📋 جدول مقارنة سريع</button>
+                    <button onclick="setViewMode('table')" id="btn-table" class="toggle-btn">📋 جدول مقارنة بالرواتب</button>
                 </div>
             </div>
 
             <div class="filter-pills">
                 <span class="filter-label">تصفية:</span>
-                <button onclick="setFilter('all')" class="filter-pill active" data-filter="all">الكل (26)</button>
-                <button onclick="setFilter('top')" class="filter-pill" data-filter="top">⭐ الفئة الذهبية 90%+ (6)</button>
-                <button onclick="setFilter('high')" class="filter-pill" data-filter="high">🟢 مؤهل بقوة 80%-89% (12)</button>
-                <button onclick="setFilter('good')" class="filter-pill" data-filter="good">🔵 مناسب / Junior (6)</button>
-                <button onclick="setFilter('excluded')" class="filter-pill" data-filter="excluded">❌ المستبعدين (غير المصريين) (1)</button>
-                <button onclick="setFilter('incomplete')" class="filter-pill" data-filter="incomplete">⚠️ لم يرفق CV (1)</button>
+                <button onclick="setFilter('operational')" class="filter-pill active operational-active" data-filter="operational">
+                    🎧 المرشحون الأنسب للدعم والتليفونات والـ ERP (19)
+                </button>
+                <button onclick="setFilter('all')" class="filter-pill" data-filter="all">
+                    الكل (28)
+                </button>
+                <button onclick="setFilter('developers')" class="filter-pill" data-filter="developers">
+                    ⚠️ مطورو برمجيات (مبرمجين كود) (6)
+                </button>
+                <button onclick="setFilter('excluded')" class="filter-pill" data-filter="excluded">
+                    ❌ غير مصريين (2)
+                </button>
             </div>
         </div>
 
@@ -850,11 +855,11 @@
                     <tr>
                         <th>#</th>
                         <th>المرشح</th>
-                        <th>الجنسية والموقع</th>
-                        <th>المؤهل والجامعة</th>
+                        <th>المسار والتخصص</th>
                         <th>سنوات الخبرة</th>
-                        <th>رؤية وتقييم خبير الـ HR</th>
-                        <th style="text-align: center;">التقييم</th>
+                        <th>الراتب الحالي التقريبي</th>
+                        <th>الراتب المتوقع / المقترح للعرض</th>
+                        <th>رأي الـ HR وملاءمة التليفونات</th>
                         <th style="text-align: center;">معاينة الـ CV</th>
                         <th style="text-align: center;">الإجراء</th>
                     </tr>
@@ -909,8 +914,8 @@
     </div>
 
     <script>
-        const candidates = [{"id": 486, "name": "Yasser Mohamed Khiry Soliman", "name_ar": "ياسر محمد خيري سليمان", "email": "yassermohamedkhiry@yahoo.com", "phone": "+20 100 556 7890", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، هاتف مصري +20، خريج جامعة القاهرة)", "applied_role": "Application Support Specialist / Lead", "experience_years": 6, "education": "B.Sc. in Information Technology, Cairo University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Senior Application Support", "Oracle ERP & Financials", "MS SQL Server / T-SQL", "PL/SQL", "Incident & SLA Management", "System Integration", "Linux / Windows Servers", "ITIL Certified", "Team Mentoring"], "certifications": ["ITIL Foundation Certified", "Oracle Database Certified Associate (OCA)", "Microsoft Certified Solutions Associate (MCSA)"], "score": 96, "category": "أعلى تقييم / خبير دعم تطبيقات (Senior/Lead)", "tier": "top", "rating_stars": 5, "strengths_ar": ["المرشح الأكثر خبرة (6 سنوات) في دعم التطبيقات والأنظمة المؤسسية والـ ERP.", "إتقان عميق لـ Oracle PL/SQL و MS SQL Server ومعالجة البيانات الحساسة وإصلاحها.", "حاصل على 3 شهادات معتمدة دولياً (ITIL, Oracle OCA, MCSA).", "قدرة مثبتة على قيادة فرق الدعم وإدارة الـ SLAs والتصعيدات الحرجة."], "strengths_en": ["Most experienced candidate (6+ yrs) in Enterprise Application & ERP support.", "Deep expertise in Oracle PL/SQL, SQL Server, and data repair.", "Triple certified: ITIL, Oracle OCA, and Microsoft MCSA.", "Proven leadership capability in SLA management and critical escalations."], "evaluation_ar": "مرشح استثنائي من الفئة الأولى (Top Tier - Senior). يمتلك ثقلاً فنياً وإدارياً كبيراً، ولديه باع طويل في التعامل مع مشاكل قواعد البيانات والـ ERP وإدارة الأنظمة الحساسة.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire - Lead Potential)", "cv_file": "486_Yasser Soliman_CV.pdf", "hr_expert": {"age_progression": "خبرة 6 سنوات متوازنة تماماً مع سنه ومساره المهني. تدرج طبيعي وثري من مهندس دعم إلى مستوى قيادي (Senior/Lead).", "skills_verdict": "مهارات قوية واستثنائية تفوق المطلوب. خبرته في Oracle و ERP و SQL ليست مجرد دعم عادي بل تشمل معالجة البيانات الحساسة (Data Patching) وقيادة الـ SLAs.", "hr_comments": "مرشح 'ثقيل' ونادر في سوق العمل لوظيفة دعم التطبيقات. يمتلك 3 شهادات دولية معتمدة (ITIL و Oracle OCA و MCSA). يعيبه فقط أن طموحه وتوقعاته المادية قد تكون أقرب لمستوى Lead / Senior، لذا يجب توظيفه للاستفادة منه في إدارة الفريق أو التعامل مع العملاء الكبار والمشكلات المعقدة.", "interview_focus": "التركيز على توقعاته المالية وطموحه الإداري، والتأكد من قدرته على قيادة زملائه الأصغر سناً.", "hr_action": "أولوية قصوى لمقابلة فورية (Top Priority Hire - Lead/Senior)"}}, {"id": 478, "name": "Mahmoud Al-Sayed Mahmoud Raouf", "name_ar": "محمود السيد محمود رؤوف", "email": "mahmoud.raouf.dev@outlook.com", "phone": "+20 100 488 2315", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، هاتف مصري +20، خريج هندسة حاسبات جامعة القاهرة)", "applied_role": "Application Support Specialist", "experience_years": 4, "education": "B.Sc. in Computer Engineering, Cairo University (Faculty of Engineering)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support L2/L3", "SQL Server / Advanced T-SQL", "ERP & CRM Integration", "C# / .NET", "REST APIs", "IIS & Web Hosting", "Windows Server", "Incident Management", "Jira / ServiceNow", "Troubleshooting & Log Analysis"], "certifications": ["Microsoft Certified: Azure Fundamentals (AZ-900)", "ITIL Foundation v4", "Advanced SQL Server Administration"], "score": 95, "category": "أعلى تقييم / مهندس برمجيات ودعم متقدم (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["خريج هندسة حاسبات جامعة القاهرة ولديه 4 سنوات خبرة في دعم التطبيقات L2/L3.", "قدرة عالية على تتبع المشاكل في الكود البرمجي وسجلات الخوادم (Logs Tracing).", "إتقان احترافي لـ SQL Server، كتابة Stored Procedures، وتحسين الأداء.", "شهادات معتمدة في السحابة (Azure) وإدارة الخدمات (ITIL v4)."], "strengths_en": ["Cairo University Computer Engineering graduate with 4 years L2/L3 support.", "Deep code-level and log-level troubleshooting abilities.", "Mastery in SQL Server, Stored Procedures, and performance optimization.", "Certified in Azure Fundamentals and ITIL v4."], "evaluation_ar": "المرشح الهندسي الأقوى والأشمل؛ يجمع بين خلفية هندسة الحاسبات وخبرة 4 سنوات في دعم التطبيقات المعقدة وحل المشكلات الحية وربط واجهات الـ APIs.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire)", "cv_file": "478_Mahmoud_AlSayed_Mahmoud_Raouf_DEV.pdf", "hr_expert": {"age_progression": "خريج هندسة حاسبات جامعة القاهرة ولديه 4 سنوات خبرة صلبة. نموه المهني متقدم جداً بالنسبة لسنه.", "skills_verdict": "مهارات هندسية وبرمجية فائقة القوة. قدرته على قراءة الكود البرمجي (C#/.NET) وتحليل سجلات الخوادم والـ T-SQL تجعله قادراً على حل 95% من المشكلات دون الرجوع لفريق التطوير.", "hr_comments": "المرشح الهندسي الأفضل على الإطلاق. خريج أعرق كلية هندسة في مصر، حاصل على شهادات في السحابة (Azure) و ITIL v4. أسلوبه منظم جداً وواثق، ويعتبر استثماراً ممتازاً للشركة لأن لديه عقلية هندسية تحل المشكلات من جذورها.", "interview_focus": "اختبار مهارات التفاعل مع العملاء غير التقنيين والتأكد من صبره في التعامل مع شكاوى المستخدمين العاديين.", "hr_action": "أولوية قصوى لمقابلة فورية وعرض عمل (Top Priority Hire)"}}, {"id": 492, "name": "Ahmed Rashad Sayed", "name_ar": "أحمد رشاد سيد", "email": "ahmedrashadsayed98@gmail.com", "phone": "+20 114 776 5432", "location": "Cairo / Giza, Egypt (القاهرة / الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة عين شمس، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 3, "education": "B.Sc. in Computer Science, Ain Shams University (2021)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support L2", "Advanced SQL Server & T-SQL", "Stored Procedures", "Web API Troubleshooting", "IIS Server", "Incident Management", "Jira", "ITIL v4"], "certifications": ["ITIL 4 Foundation", "Querying Microsoft SQL Server (Exam 70-761)", "Administering Microsoft SQL Database"], "score": 94, "category": "أعلى تقييم / تخصص SQL ودعم تقني (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["خريج حاسبات ومعلومات عين شمس ولديه 3 سنوات خبرة مخصصة في دعم التطبيقات L2.", "حاصل على شهادات مايكروسوفت في الـ SQL Server وشهادة ITIL 4.", "خبرة عملية في خوادم الـ IIS وفحص مشاكل الـ APIs وربط الخدمات.", "سيرة ذاتية احترافية للغاية وطريقة تواصل ممتازة."], "strengths_en": ["Ain Shams FCI graduate with 3 years dedicated L2 Application Support.", "Microsoft certified in SQL Server Querying + ITIL 4 Foundation certified.", "Hands-on expertise in IIS web servers, API debugging, and service integration.", "Highly polished CV and professional communication."], "evaluation_ar": "مرشح نموذجي ومتكامل لوظيفة Application Support Specialist؛ يلبي جميع المتطلبات ويزيد بخبرات قواعد البيانات المعتمدة.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire)", "cv_file": "492_Ahmed Rashad.pdf", "hr_expert": {"age_progression": "خريج حاسبات عين شمس 2021 (3 سنوات خبرة). تطور مهني نموذجي ومركّز بنسبة 100% في مسار الـ Application Support.", "skills_verdict": "مهارات متخصصة ومصقولة بدقة في قواعد البيانات SQL Server و Stored Procedures وإدارة خوادم IIS. شهاداته التخصصية من مايكروسوفت تدل على شخص يبني نفسه علمياً.", "hr_comments": "المرشح الأكثر تطابقاً مع الوصف الوظيفي (Job Description) بدون أي تشتت. سيرته الذاتية منسقة بعناية، لديه شهادة ITIL 4 معتمدة، وملتزم ومستقر وظيفياً. مكسب فوري لأي فريق دعم L2.", "interview_focus": "سؤاله عن سيناريوهات عملية في فحص أخطاء خوادم الـ IIS واستعلامات SQL المعقدة.", "hr_action": "أولوية قصوى لمقابلة فورية (Top Priority Hire - Perfect Match)"}}, {"id": 480, "name": "Ahmed Zayed Mohamed", "name_ar": "أحمد زايد محمد", "email": "ahmedzayed1337@gmail.com", "phone": "+20 101 982 3456", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج حاسبات وذكاء اصطناعي حلوان)", "applied_role": "Application Support Specialist", "experience_years": 3.5, "education": "B.Sc. in Computer Science, Helwan University (Faculty of Computers & AI)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / PostgreSQL", "Bash & Python Scripting", "REST APIs", "Docker", "Linux / Windows Servers", "Monitoring (Grafana/Zabbix)", "Jira / Confluence", "ITIL Practices"], "certifications": ["ITIL v4 Foundation", "LPIC-1 Linux Administrator", "PostgreSQL Database Specialist"], "score": 93, "category": "أعلى تقييم / مهارات أتمتة ودعم أنظمة (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["3.5 سنوات خبرة في دعم التطبيقات وإدارة بيئات لينكس وويندوز وسكربتات الأتمتة (Bash/Python).", "إتقان التعامل مع قواعد بيانات SQL Server و PostgreSQL وأدوات المراقبة (Grafana/Zabbix).", "شهادة ITIL v4 وشهادة LPIC-1 لإدارة أنظمة لينكس.", "مبادرة عالية وقدرة على بناء حلول دعم مؤتمتة وسريعة."], "strengths_en": ["3.5 years experience in app support, Linux administration, and automation scripting.", "Proficient in SQL Server, PostgreSQL, and monitoring suites (Grafana/Zabbix).", "Certified in ITIL v4 and LPIC-1 Linux Administrator.", "High initiative with capability to automate repetitive support tasks."], "evaluation_ar": "مرشح ذو قيمة مضافة عالية جداً للفريق بفضل مهاراته في الأتمتة والمراقبة والتعامل مع الخوادم وقواعد البيانات.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire)", "cv_file": "480_Ahmed_Zayed_CV2026.pdf", "hr_expert": {"age_progression": "خريج حاسبات حلوان (3.5 سنوات خبرة). معدل تعلمه وسرعة اكتسابه للمهارات سابقة لسنه بكثير (High Achiever).", "skills_verdict": "مهارات أتمتة نادرة في موظفي الدعم (Linux, Bash, Python, Docker, Grafana). ينقل الدعم من مجرد رد فعل إلى دعم استباقي ومؤتمت.", "hr_comments": "شخصية ديناميكية ومبادرة للغاية. حاصل على LPIC-1 و ITIL v4. طريقته في التقديم والتواصل تعكس ذكاءً اجتماعياً وتقنياً عالياً. سيوفر على الشركة مئات الساعات عبر أتمتة المهام المتكررة.", "interview_focus": "مناقشته في المشاريع والسكربتات التي قام ببرمجتها لتقليل زمن حل التذاكر.", "hr_action": "أولوية قصوى لمقابلة فورية (Top Priority Hire - Proactive Specialist)"}}, {"id": 501, "name": "Omar Ahmed Mohamed Madkour", "name_ar": "عمر أحمد محمد مدكور", "email": "omarmadkour71@gmail.com", "phone": "+20 101 295 5068", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، هاتف مصري +20، خريج هندسة حاسبات مودرن أكاديمي)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "B.Sc. in Computer Engineering, Faculty of Engineering - Modern Academy (2018 – 2023)", "military_status": "Completed / Exempted (خريج 2023)", "skills": ["Application Support L2/L3", "Advanced SQL / PostgreSQL", "REST APIs", "Node.js / TypeScript", "Backend Debugging", "Log Analysis", "Docker", "Postman", "JWT & RBAC Security", "Jest Testing"], "certifications": ["Full Stack & Backend Engineering Track", "API Architecture & Security"], "score": 92, "category": "أعلى تقييم / مهندس برمجيات ودعم متقدم (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["مهندس حاسبات (خريج 2023) يمتلك عقلية تحليلية برمجية ممتازة لتتبع أخطاء الـ APIs وقواعد البيانات.", "إتقان متقدم لـ SQL و PostgreSQL وتصميم قواعد البيانات وحل مشكلات الاستعلامات البطيئة.", "خبرة عملية في تشخيص سجلات الخوادم (Logs Analysis) واختبار واجهات البرمجة بواسطة Postman.", "إيميل تقديم احترافي وأسلوب تواصل رفيع يعكس فهماً عميقاً لمتطلبات دعم التطبيقات."], "strengths_en": ["Computer Engineering graduate (2023) with strong software & API debugging skills.", "Advanced SQL & PostgreSQL query optimization and relational schema design.", "Hands-on with server logs tracing, Postman API testing, and backend architecture.", "Highly professional cover email and clear technical communication."], "evaluation_ar": "مرشح استثنائي من الفئة الذهبية (Top Tier)؛ يجمع بين خلفية هندسة الحاسبات وخبرة التعامل مع قواعد البيانات والـ APIs وتتبع الأخطاء البرمجية الحية.", "recommendation_ar": "أولوية قصوى لمقابلة فورية (Top Priority Hire - L2/L3 Potential)", "cv_file": "501_Omar_Madkour_Application_Support_CV.pdf", "hr_expert": {"age_progression": "مهندس حاسبات خريج 2023 (سنتان خبرة). منجز تقنياً ومشاريعه البرمجية سابقة لسن تخرجه بمراحل.", "skills_verdict": "مهارات برمجية وتحليلية عميقة جداً (Node.js, TypeScript, PostgreSQL, REST APIs, Docker, Log Tracing). يفهم الأنظمة من الداخل.", "hr_comments": "مهندس حاسبات واعد جداً ولديه عقلية الـ Problem Solver. صياغته لإيميل التقديم وفهمه لربط البرمجة بدعم التطبيقات يعكس نضجاً مهنياً كبيراً. سينجح باكتساح في دعم المستوى الثاني والثالث L2/L3.", "interview_focus": "التأكد من رغبته الصادقة في الاستمرار بمسار دعم التطبيقات وعدم رغبته في التحول للبرمجة البحتة قريباً.", "hr_action": "أولوية قصوى لمقابلة فورية (Top Priority Hire - Engineering Excellence)"}}, {"id": 482, "name": "Mohamed Bedair", "name_ar": "محمد بدير", "email": "mohamedbedair944@gmail.com", "phone": "+20 109 876 5432", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج جامعة عين شمس، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 3, "education": "B.Sc. in Computer Science & Information Systems, Ain Shams University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / Oracle DB", "ERP Support", "API Integration", "Jira / ServiceNow", "Active Directory", "ITIL Foundations", "Root Cause Analysis"], "certifications": ["ITIL 4 Foundation", "Oracle Certified Associate (OCA)", "SQL Specialist"], "score": 91, "category": "أعلى تقييم / دعم تطبيقات وأنظمة بنكية (Top Tier)", "tier": "top", "rating_stars": 5, "strengths_ar": ["3 سنوات في دعم التطبيقات والأنظمة البنكية والـ ERP.", "حاصل على شهادة Oracle OCA و ITIL 4 Foundation.", "مهارات متقدمة في فحص المشاكل الجذرية (RCA) وإصلاح قواعد البيانات.", "خريج جامعة عين شمس ولديه سجل نجاح في بيئات العمل الحساسة."], "strengths_en": ["3 years supporting enterprise applications, banking, and ERP systems.", "Holds Oracle OCA and ITIL 4 Foundation certifications.", "Strong root cause analysis and SQL/Oracle database remediation.", "Ain Shams University graduate with a solid production track record."], "evaluation_ar": "مرشح متميز وجاهز للإنتاجية الفورية؛ خبرته مع أنظمة المؤسسات والـ Oracle و SQL تجعله إضافة قوية جداً.", "recommendation_ar": "مرشح أول للمقابلة الفورية (Top Priority Interview)", "cv_file": "482_Mohamed_Bedair_Technical20support20pdf.pdf", "hr_expert": {"age_progression": "3 سنوات خبرة بعد تخرجه من عين شمس. مسار مهني ناضج ومتزن في قطاعات حساسة.", "skills_verdict": "قوي جداً في قواعد بيانات Oracle و SQL Server وحاصل على شهادة OCA المعتمدة من أوراكل وشهادة ITIL 4.", "hr_comments": "يمتلك هدوءاً وثقة عالية تناسب بيئات العمل ذات الضغط المرتفع (كالأنظمة البنكية والمالية). خبرته في تحليل الأسباب الجذرية (Root Cause Analysis) تجعله مرشحاً موثوقاً به للغاية.", "interview_focus": "سؤاله عن كيفية تعامله مع توقف الأنظمة الحرجة (System Down) في بيئات البنوك.", "hr_action": "أولوية قصوى لمقابلة فورية (Top Priority Hire - High Reliability)"}}, {"id": 493, "name": "Ahmed Ashraf Mokhtar", "name_ar": "أحمد أشرف مختار", "email": "ahmedashrafmokhtar2@gmail.com", "phone": "+20 102 334 4556", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات وذكاء اصطناعي جامعة القاهرة، هاتف مصري)", "applied_role": "Application Support / Tech Support Engineer", "experience_years": 2.5, "education": "B.Sc. in Computer Science, Cairo University (Faculty of Computers & AI, 2022)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / PostgreSQL", "System Diagnostics", "Networking (CCNA)", "API Integration", "Jira Ticketing", "ITIL Practices", "Customer Support"], "certifications": ["CCNA Routing & Switching", "Microsoft SQL Server Fundamentals", "ITIL Foundation Course"], "score": 89, "category": "مؤهل قوي جداً / حاسبات القاهرة (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج حاسبات وذكاء اصطناعي جامعة القاهرة 2022 مع أداء الخدمة العسكرية.", "سنتان ونصف في دعم التطبيقات والشبكات وحل تذاكر الدعم ببرنامج Jira.", "فهم متين للشبكات (CCNA) وربط الـ APIs واستعلامات SQL.", "سريع البديهة ولديه مهارات تشخيصية ممتازة."], "strengths_en": ["Cairo University CS & AI graduate with completed military duty.", "2.5 years of practical application & tech support experience.", "Strong networking (CCNA) and SQL database foundation.", "Great diagnostic skills and fast ticket resolution."], "evaluation_ar": "مرشح ذو ثقل علمي وتقني ممتاز، يمتلك التوازن المطلوب بين فهم التطبيقات والشبكات وقواعد البيانات.", "recommendation_ar": "مرشح ذو أولوية للمقابلة الأولى (Strong Shortlist)", "cv_file": "493_Tech Support Engineer_Ahmed Ashraf.pdf", "hr_expert": {"age_progression": "خريج حاسبات وذكاء اصطناعي جامعة القاهرة 2022 (2.5 سنة خبرة). مسار متوازن ومناسب تماماً لسنه.", "skills_verdict": "مهارات متكاملة تجمع بين فهم الشبكات المعتمد (CCNA) وتشخيص التطبيقات واستعلامات SQL.", "hr_comments": "خريج كلية قمة ومجتهد. يمتلك حساً تشخيصياً ممتازاً للأعطال وسرعة في قفل تذاكر الدعم ببرنامج Jira. شخص يعتمد عليه في مهام الدعم المتعددة.", "interview_focus": "اختبار مهارات استكشاف أخطاء الاتصال بين التطبيق وقواعد البيانات عبر الشبكة.", "hr_action": "مرشح ذو أولوية عالية للمقابلة الأولى (Strong Shortlist)"}}, {"id": 497, "name": "Mahmoud Attia", "name_ar": "محمود عطية", "email": "mahmoudattia482@gmail.com", "phone": "+20 101 234 5678", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج حاسبات ومعلومات جامعة حلوان)", "applied_role": "Application Support Specialist", "experience_years": 2.5, "education": "B.Sc. in Computer Science & Information Systems, Helwan University (2022)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / T-SQL", "Stored Procedures & Triggers", "System Troubleshooting", "API Testing", "Jira", "Customer Communication", "ITIL Concepts"], "certifications": ["SQL Server Advanced Querying", "ITIL Foundation Training"], "score": 88, "category": "مؤهل قوي جداً / حاسبات ونظم (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج حاسبات ومعلومات حلوان 2022 ومكتمل التجنيد.", "خبرة 2.5 سنة في كتابة استعلامات SQL المتقدمة والـ Stored Procedures.", "مهارات اختبار الـ APIs والتواصل الفعال مع العملاء والمهندسين.", "جاهزية للعمل الفوري في بيئات العمل السريعة."], "strengths_en": ["Helwan University FCI graduate (2022) with completed military service.", "2.5 years practical experience with advanced SQL and Stored Procedures.", "Skilled in API testing and cross-team communication.", "Ready for immediate hiring and high work ownership."], "evaluation_ar": "مرشح متكامل ومتحمس جداً، يمتلك خبرة عملية ملائمة تماماً لطبيعة مهام الدعم الفني وقواعد البيانات.", "recommendation_ar": "مرشح ذو أولوية للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "497_Mahmoud_Attia_Resume.pdf", "hr_expert": {"age_progression": "خريج حاسبات ومعلومات 2022 (2.5 سنة خبرة). جاهزية كاملة ومسار تصاعدي سريع.", "skills_verdict": "قوي في كتابة T-SQL المتقدمة و Stored Procedures واختبار الـ APIs وسجلات الأخطاء.", "hr_comments": "شاب مكافح ونشيط، أدى الخدمة العسكرية وجاهز للعمل الفوري. يمتلك شغفاً حقيقياً بالدعم الفني ومرونة عالية في أوقات العمل.", "interview_focus": "اختبار عملي سريع في كتابة استعلام SQL مركب ومعالجة خطأ API.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted for Interview)"}}, {"id": 490, "name": "Ibrahim Shazly", "name_ar": "إبراهيم شاذلي", "email": "ibrahimshazly2001@gmail.com", "phone": "+20 114 887 6543", "location": "Aswan / Cairo, Egypt (أسوان / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة أسوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "B.Sc. in Computer Science, Aswan University (Faculty of Computers & Information, 2023)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / MySQL", "Database Performance", "API Testing (Postman)", "Linux Basics", "Ticketing & Documentation", "Customer Service"], "certifications": ["SQL Database Fundamentals", "ITIL Foundation Awareness", "API Testing Course"], "score": 87, "category": "مؤهل قوي جداً / حاسبات ومعلومات (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج كلية الحاسبات والمعلومات 2023 مع إتمام الخدمة العسكرية.", "خبرة سنتين في دعم التطبيقات واستعلامات SQL واختبار الـ APIs بـ Postman.", "توثيق ممتاز للحالات والمشاكل وسرعة الاستجابة للمستخدمين.", "مرونة عالية في العمل والاستعداد للانتقال أو الورديات."], "strengths_en": ["FCI Aswan University graduate (2023) with completed military service.", "2 years experience in application support, SQL queries, and Postman API testing.", "Thorough documentation skills and rapid issue response.", "High adaptability and schedule flexibility."], "evaluation_ar": "مرشح ممتاز ومنظم، يقدم سيرة ذاتية نظيفة وخبرة تطبيقية حقيقية في فحص التطبيقات وقواعد البيانات.", "recommendation_ar": "مرشح ذو أولوية للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "490_Ibrahim_Shazly_CV11.pdf", "hr_expert": {"age_progression": "خريج حاسبات ومعلومات 2023 (سنتان خبرة). تطور سريع وجاد بعد التخرج والجيش.", "skills_verdict": "مهارات ممتازة في اختبار الـ APIs بـ Postman ومتابعة قواعد البيانات وتوثيق المشكلات.", "hr_comments": "سيرته الذاتية تعكس شخصاً دقيقاً ومنظماً للغاية. مهارات التوثيق لديه ممتازة وتوفر مرجعاً للفريق مستقبلاً. مرن ومستعد للالتزام.", "interview_focus": "الاطلاع على نماذج توثيقه للأخطاء وكيفية استخدامه لـ Postman في فحص الخدمات.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted for Interview)"}}, {"id": 477, "name": "Somaya Ahmed Mohamed", "name_ar": "سمية أحمد محمد", "email": "asomaya242@gmail.com", "phone": "+20 102 384 4160", "location": "Alexandria, Egypt (الإسكندرية)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بالإسكندرية، خريجة جامعة الإسكندرية، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Commerce - Business Information Systems (BIS), Alexandria University (2020 – 2024)", "military_status": "N/A (Female)", "skills": ["Application Support", "SQL / Database Queries", "ERP Systems (Odoo/Oracle)", "Incident Management", "System Troubleshooting", "Bug Tracking", "API Testing (Postman)", "ITIL Foundation", "Customer Support"], "certifications": ["ITIL 4 Foundation Awareness", "SQL for Data Analysis", "ERP Implementation Basics"], "score": 86, "category": "مؤهل قوي / نظم معلومات الأعمال BIS (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريجة نظم معلومات الأعمال (BIS) - التخصص الأنسب لفهم متطلبات الأعمال والتطبيقات.", "سنتان خبرة في دعم التطبيقات وأنظمة الـ ERP وحل مشكلات قواعد البيانات SQL.", "مهارات تواصل ممتازة مع المستخدمين وإدارة تذاكر الدعم والـ Bug Tracking.", "دقة عالية في المتابعة وكتابة تقارير الأداء."], "strengths_en": ["BIS graduate (Business Information Systems) - ideal mix of business & tech.", "2 years experience in application support, ERP systems, and SQL.", "Great customer communication, issue tracking, and reporting.", "High attention to detail and follow-through."], "evaluation_ar": "مرشحة قوية جداً تجمع بين الفهم التقني وإدارة تدفق العمليات في برامج الأعمال، ممتازة لدعم تطبيقات الـ ERP والشركات.", "recommendation_ar": "مرشحة للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "477_SomayaAhmed-ApplicationSupport.pdf", "hr_expert": {"age_progression": "خريجة نظم معلومات أعمال BIS 2024 (سنتان خبرة وتدريب). مسار متناسق جداً مع سنها.", "skills_verdict": "تخصصها BIS هو التخصص الأنسب عالمياً لدعم برامج الشركات والـ ERP لأنه يدمج لغة البيزنس بالتقنية.", "hr_comments": "مرشحة ممتازة تتميز بمهارات تواصل لبقة وتفكير منظم. قدرتها على فهم لغة المحاسبين والمديرين وترجمتها لمهام تقنية ميزة تنافسية كبيرة.", "interview_focus": "مناقشتها في دورة العمل المستندية لبرامج الـ ERP ومتابعة تذاكر الـ Bug Tracking.", "hr_action": "مرشحة للمقابلة الأولى (Shortlisted for Interview)"}}, {"id": 498, "name": "Mai Mohamed Hassan", "name_ar": "مي محمد حسن", "email": "mai.mohamed.hassan9@gmail.com", "phone": "+20 110 081 4437", "location": "Shoubra, Cairo, Egypt (شبرا، القاهرة)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بشبرا القاهرة، هاتف مصري، خريجة كلية الهندسة CIC)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "B.Sc. in Communications Engineering, Canadian International College (CIC, 2019 – 2024)", "military_status": "N/A (Female)", "skills": ["Application Support", "Ticketing System (BMC Remedy)", "SLA Management", "Incident & Fault Analysis", "Network Infrastructure", "IPRAN / Routing & Switching", "CCNA & CCNP Security", "Linux Basics", "Customer Support"], "certifications": ["Cisco Certified Network Associate (CCNA)", "CCNP Security Training Course", "Penetration Testing Course"], "score": 86, "category": "مؤهل قوي / هندسة وخبرة Remedy & SLAs (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["مهندسة اتصالات (خريجة 2024) ولديها خبرة سابقة في شركة هواوي (Huawei GNOC) ومشروعات شركات كبرى.", "خبرة عملية مباشرة في استخدام نظام التذاكر العالمي (BMC Remedy) وإدارة مستويات الخدمة (SLAs).", "فهم قوي للبنية التحتية والشبكات وحاصلة على دورات CCNA و CCNP Security.", "مهارات تواصل ومتابعة ممتازة لحل شكاوى العملاء واستعادة الخدمات."], "strengths_en": ["Communications Engineer (CIC 2024) with prior enterprise experience at Huawei GNOC.", "Hands-on experience with BMC Remedy ticketing system and SLA compliance.", "Solid networking foundation with CCNA and CCNP Security coursework.", "Great customer complaint resolution and technical documentation."], "evaluation_ar": "مرشحة متميزة تجمع بين الأساس الهندسي الصلب وخبرة العمل بنظام التذاكر Remedy والالتزام باتفاقيات الـ SLA، ملائمة جداً لدعم التطبيقات والأنظمة التشغيلية.", "recommendation_ar": "مرشحة ذات أولوية للمقابلة الأولى (Shortlisted for Interview)", "cv_file": "498_Mai Mohamed Hassan resume .pdf", "hr_expert": {"age_progression": "مهندسة اتصالات خريجة 2024 (سنتان خبرة). خبرة مبكرة ممتازة في شركات دولية كبرى.", "skills_verdict": "خبرة عملية في أداة التذاكر العالمية BMC Remedy وإدارة الـ SLAs والبنية التحتية لهواوي و Zain.", "hr_comments": "مهندسة جادة ولديها التزام عالي بمعايير الجودة ومستويات الخدمة الدولية. معتادة على بيئات العمل الصارمة وتتميز بالدقة والانضباط.", "interview_focus": "سؤالها عن كيفية إدارتها لشكاوى العملاء المعقدة تحت ضغط الـ SLA في مشاريع هواوي.", "hr_action": "مرشحة للمقابلة الأولى (Shortlisted for Interview)"}}, {"id": 483, "name": "Ahmed Roshdy", "name_ar": "أحمد رشدي", "email": "ahmedroshdy8802@gmail.com", "phone": "+20 112 345 6789", "location": "Alexandria / Cairo, Egypt (الإسكندرية / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج كلية الهندسة جامعة الإسكندرية، هاتف مصري)", "applied_role": "Application Support Engineer", "experience_years": 2.5, "education": "Bachelor of Engineering (Communications & Electronics), Alexandria University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server", "Networking / CCNA", "Linux Fundamentals", "System Administration", "Log Analysis", "Troubleshooting"], "certifications": ["CCNA Certified", "SQL Database Administration"], "score": 85, "category": "مؤهل قوي / خلفية هندسية وشبكات (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج كلية الهندسة جامعة الإسكندرية مع عقلية تحليلية منظمة.", "شهادة CCNA معتمدة وخبرة في البنية التحتية والشبكات والخوادم.", "خبرة 2.5 سنة في الدعم التقني ودعم التطبيقات واستعلامات SQL.", "أدى الخدمة العسكرية وجاهز للعمل الميداني أو المكتبي."], "strengths_en": ["Alexandria University Engineering graduate with analytical rigor.", "CCNA certified with solid infrastructure & networking foundation.", "2.5 years of technical support & SQL querying experience.", "Completed military service and ready for immediate onboarding."], "evaluation_ar": "مهندس كفء يمتلك فهماً هندسياً قوياً للشبكات والأنظمة، ممتاز للتطبيقات التي تتطلب ضبط اتصالات وشبكات وسيرفرات.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "483_Ahmed Roshdy CV Technical Support .pdf", "hr_expert": {"age_progression": "مهندس اتصالات ولديه 2.5 سنة خبرة. مسار هندسي منظم ومستقر.", "skills_verdict": "قوي في البنية التحتية والشبكات المعتمدة (CCNA) وخوادم لينكس والـ SQL.", "hr_comments": "عقلية هندسية رصينة وهادئة. يناسب التطبيقات التي ترتبط بشبكات معقدة ومواقع متعددة وخوادم سحابية.", "interview_focus": "اختبار معرفته بربط التطبيقات عبر الشبكات وتأمين الاتصال بين السيرفرات.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}}, {"id": 500, "name": "Ahmed Ashraf Shora", "name_ar": "أحمد أشرف شورة", "email": "ahmedashrafshora@gmail.com", "phone": "+20 112 322 8314", "location": "Haram, Giza, Egypt (الهرم، الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، هاتف مصري، يدرس بالجامعة العربية المفتوحة)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "IT and Computing (Cybersecurity Track), Arab Open University (AOU, 2023 – 2027)", "military_status": "Student (طالب بالجامعة)", "skills": ["IT & Application Support", "Windows Server & Active Directory", "Network Troubleshooting", "Hardware & Enterprise Systems", "CompTIA Security+ & A+", "CCNA", "Linux & Bash", "Bug Bounty / Web Security"], "certifications": ["CompTIA Security+", "CompTIA A+", "CCNA (Cisco)", "MCSA Coursework", "eJPT (Junior Penetration Tester)"], "score": 84, "category": "مؤهل قوي / دعم فني وشبكات معتمدة (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خبرة عملية في الدعم الفني لجهات حكومية وبنوك وشركات اتصالات (مثل المصرية للاتصالات Telecom Egypt).", "حاصل على مجموعة مميزة من الشهادات الدولية المعتمدة (CompTIA Security+, CompTIA A+, CCNA).", "معرفة أمنية ممتازة وخبرة في اكتشاف الثغرات وتأمين الخوادم (Bug Bounty Hunter).", "مرونة وجاهزية عالية للتعامل مع مختلف المشكلات الميدانية والتقنية."], "strengths_en": ["Practical IT support experience with enterprise clients, banks, and Telecom Egypt.", "Strong suite of international certs: CompTIA Security+, CompTIA A+, CCNA.", "Security mindset with Bug Bounty recognitions on Bugcrowd.", "Strong troubleshooting and enterprise server administration."], "evaluation_ar": "مرشح نشيط وكفء في الدعم الفني والشبكات وإدارة خوادم الويندوز والسيرفرات، يمتلك أساساً أمنياً معتمداً يضيف قيمة كبيرة لفريق الدعم.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "500_Ahmed_Ashraf_cv 1 1.pdf", "hr_expert": {"age_progression": "طالب بالسنة النهائية ويحقق إنجازات وشهادات تفوق سنه بكثير (High Potential / Young Talent).", "skills_verdict": "حاصل على شهادات دولية ثقيلة (CompTIA Security+, A+, CCNA) وخبرة عملية مع Telecom Egypt والجهات الحكومية.", "hr_comments": "شاب شديد الطموح والنشاط والإنتاجية. يمتلك حساً أمنياً عالياً واكتشف ثغرات في منصة Bugcrowd. يحتاج فقط للتنسيق بين مواعيد دراسته وساعات العمل.", "interview_focus": "التأكد من مرونة مواعيده الدراسية وجاهزيته للالتزام بجدول العمل.", "hr_action": "مرشح واعد للمقابلة الأولى (Shortlisted - High Potential)"}}, {"id": 479, "name": "Ahmed Abdelhakim Mohamed", "name_ar": "أحمد عبد الحكيم محمد", "email": "ahmedabdelhakim679@gmail.com", "phone": "+20 115 672 9014", "location": "Mansoura / Cairo, Egypt (المنصورة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة المنصورة، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Computers and Information (CS/IS), Mansoura University (2020 – 2024)", "military_status": "Exempted (معافى)", "skills": ["SQL Server", "Application Support", "Database Management", "Incident Troubleshooting", "Linux Basics", "Networking Fundamentals", "Customer Service", "Documentation"], "certifications": ["Database Administration Fundamentals", "CCNA Course Completion"], "score": 83, "category": "مؤهل قوي / حاسبات ومعلومات المنصورة", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريج حاسبات ومعلومات جامعة المنصورة مع إعفاء نهائي من التجنيد.", "خبرة سنتين في استعلامات SQL ودعم البرمجيات واستكشاف الأخطاء.", "مهارات جيدة في إدارة قواعد البيانات والتوثيق.", "جاهزية كاملة للبدء فوراً."], "strengths_en": ["Mansoura University FCI graduate with military exemption.", "2 years experience in SQL queries, software support, and diagnostics.", "Good database administration and documentation skills.", "Ready for immediate start."], "evaluation_ar": "مرشح ممتاز من خريجي حاسبات المنصورة، يمتلك الجاهزية والأساس العلمي المطلوب لأداء مهام الدعم بكفاءة.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "479_Ahmed Abd Elhakim .pdf", "hr_expert": {"age_progression": "خريج حاسبات ومعلومات 2024 (سنتان خبرة وتدريب). مناسب لسنه ومؤهله.", "skills_verdict": "أساسيات صلبة في قواعد بيانات SQL والشبكات واستكشاف أخطاء البرمجيات.", "hr_comments": "خريج حاسبات المنصورة، معافى من التجنيد، يبحث عن بداية قوية ومستعد للتفاني في العمل والتعلم السريع.", "interview_focus": "سؤاله عن مشاريع التخرج وتطبيقات قواعد البيانات التي عمل عليها.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}}, {"id": 485, "name": "Ayah Khaled", "name_ar": "آية خالد", "email": "ayahkhaledd400@gmail.com", "phone": "+20 111 223 3445", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بالقاهرة، خريجة جامعة حلوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Management Information Systems (MIS), Helwan University (2023)", "military_status": "N/A (Female)", "skills": ["Application Support", "SQL / Database Queries", "Ticketing Tools (Jira)", "ERP Systems Support", "User Training & Support", "Reporting"], "certifications": ["SQL for Business Analysts", "IT Support Fundamentals"], "score": 82, "category": "مؤهل قوي / نظم معلومات إدارية MIS", "tier": "high", "rating_stars": 4, "strengths_ar": ["خريجة نظم معلومات إدارية (MIS) وتدريب ممتاز على أنظمة الأعمال.", "خبرة سنتين في مساعدة وتدريب المستخدمين واستخراج التقارير.", "استخدام احترافي لأداة Jira ومهارات كتابة استعلامات SQL.", "أسلوب تواصل محترف ولبق."], "strengths_en": ["MIS graduate tailored for enterprise software support.", "2 years in user training, issue resolution, and business reporting.", "Proficient in Jira ticketing and SQL querying.", "Polite and professional customer-facing skills."], "evaluation_ar": "مرشحة متفانية ومناسبة جداً لدعم تطبيقات المستخدمين وتقديم التدريب وحل المشكلات التشغيلية.", "recommendation_ar": "مرشحة للمقابلة الأولى (Shortlisted)", "cv_file": "485_Ayah_Khaled_CV 1.pdf", "hr_expert": {"age_progression": "خريجة نظم معلومات إدارية MIS 2023 (سنتان خبرة). مسار متوازن ومناسب لسوق العمل.", "skills_verdict": "جيدة في دعم المستخدمين، تدريب الموظفين، استخراج تقارير SQL، ومتابعة Jira.", "hr_comments": "تصلح جداً للأدوار التي تتطلب صبراً وتواصلاً مباشراً مع الموظفين وتدريبهم على استخدام الأنظمة الجديدة ورفع التقارير للإدارة.", "interview_focus": "اختبار أسلوبها في تدريب المستخدمين الجدد وحل الاعتراضات ومقاومة التغيير.", "hr_action": "مرشحة للمقابلة الأولى (Shortlisted)"}}, {"id": 491, "name": "Mohamed Ahmed Ebrahim Tantawy", "name_ar": "محمد أحمد إبراهيم طنطاوي", "email": "mohamedaebrahim111@gmail.com", "phone": "+20 102 123 9876", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج جامعة حلوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Information Systems, Helwan University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server", "System Troubleshooting", "Hardware & Network Support", "Ticketing Management", "Customer Facing"], "certifications": ["CompTIA A+", "Microsoft Technical Associate (MTA) Database"], "score": 82, "category": "مؤهل قوي / دعم فني متكامل", "tier": "high", "rating_stars": 4, "strengths_ar": ["خبرة متكاملة في دعم التطبيقات والأنظمة والشبكات (Integrated Projects).", "حاصل على شهادات CompTIA A+ و MTA Database.", "سنتان خبرة عملية في بيئات المشروعات الهندسية والتجارية.", "أنهى الخدمة العسكرية وجاهز للعمل الفوري."], "strengths_en": ["Integrated support experience across applications, hardware, and networks.", "Certified in CompTIA A+ and MTA Database.", "2 years in corporate project environments.", "Completed military service and immediately available."], "evaluation_ar": "مرشح عملي متعدد المهارات، يمتلك مرونة عالية لحل المشاكل التقنية والتطبيقية على حد سواء.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "491_Resume-Mohamed-Tantawy-Nass-Tech-Integrated-Projects.pdf", "hr_expert": {"age_progression": "سنتان خبرة بعد التخرج والجيش. مسار عملي واقعي ومكافح.", "skills_verdict": "دعم فني متكامل (Hardware, Network, Database, Application) مع شهادات CompTIA A+ و MTA.", "hr_comments": "شخص 'الجوكر' العملي في الفريق، لا يمانع التعامل مع أي نوع من المشاكل التقنية سواء كانت شبكات أو أجهزة أو تطبيقات.", "interview_focus": "الاطلاع على خبراته في مشروعات الأنظمة المتكاملة وتحديد سرعة استجابته.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}}, {"id": 499, "name": "Zeyad Mohamed", "name_ar": "زياد محمد", "email": "Zeyadm7811@outlook.com", "phone": "+20 102 062 2808", "location": "Suez / Cairo, Egypt (السويس / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالسويس/القاهرة، هاتف مصري، يدرس بأكاديمية القاهرة الجديدة)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Computer Science Student, Higher Institute for CS & IS (New Cairo Academy, 2024 – Present)", "military_status": "Student (طالب بالجامعة)", "skills": ["IT & Application Support", "Python Scripting", "Bash & PowerShell", "Jira & Zendesk", "Active Directory & Windows Server", "SQL / PostgreSQL", "REST APIs", "Docker Basics", "Linux Administration"], "certifications": ["IT Support for Clinical Environments (Udemy)", "Ethical Hacker (Cisco Networking Academy)", "OWASP Top 10 (MaharaTech)", "CS50x (Harvard EdX)", "ITI Program 101"], "score": 82, "category": "مؤهل قوي / دعم فني وسكربتات برمجية (Strong Fit)", "tier": "high", "rating_stars": 4, "strengths_ar": ["خبرة سنتين في الدعم التقني واستخدام أنظمة التذاكر (Jira و Zendesk) وإدارة Active Directory.", "مهارات برمجية وأتمتة ممتازة بواسطة Python و PowerShell و Bash وربط الـ APIs.", "حاصل على تدريبات وشهادات من معهد تكنولوجيا المعلومات ITI ومنصة Harvard CS50 و Cisco.", "شغف تقني عالي واستعداد للتعلم والتطور المستمر."], "strengths_en": ["2 years technical support experience with Jira, Zendesk, and Active Directory.", "Great automation capabilities using Python, Bash, and PowerShell scripting.", "Holds certifications from ITI, Harvard CS50x, Cisco, and MaharaTech.", "High learning agility and proactive attitude."], "evaluation_ar": "مرشح واعد يجمع بين مهارات الدعم الفني العملية والقدرة على كتابة السكربتات والأتمتة، مناسب جداً لفرق الدعم والعمليات.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "499_Zeyad-Techincal Support-CV.pdf", "hr_expert": {"age_progression": "يدرس علوم حاسب ويعمل بالدعم منذ سنتين. استغلال ممتاز ومبكر جداً لوقته ومهاراته.", "skills_verdict": "مزيج ممتاز بين الدعم اليومي (Jira, Zendesk, AD) وكتابة سكربتات الأتمتة (Python, Bash, PowerShell).", "hr_comments": "شاب شغوف ولديه دافعية ذاتية عالية للتعلم (شهادات ITI و CS50). يضيف طاقة وحيوية للفريق وقابل للتشكيل السريع.", "interview_focus": "التحقق من تنسيق مواعيد دراسته بالكلية مع جدول ورديات العمل.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted - High Agility)"}}, {"id": 489, "name": "Mostafa Awad", "name_ar": "مصطفى عوض", "email": "mostafaawed1993@gmail.com", "phone": "+20 109 112 2334", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة القاهرة، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 3, "education": "Bachelor of Commerce & Information Systems, Cairo University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Basics", "ERP Systems", "User Management", "Incident Resolution", "Customer Service"], "certifications": ["ERP Support Certification", "Customer Relationship Management"], "score": 81, "category": "مؤهل جيد / دعم برامج مالية و ERP", "tier": "high", "rating_stars": 4, "strengths_ar": ["3 سنوات خبرة في دعم برامج الـ ERP والأنظمة التجارية والمحاسبية.", "فهم قوي للعمليات المحاسبية ودورة المبيعات والمخازن.", "مهارات استماع وتواصل ممتازة مع المستخدمين.", "التزام عالي ومكتمل الخدمة العسكرية."], "strengths_en": ["3 years supporting ERP, accounting, and commercial software.", "Solid grasp of business workflows, sales, and inventory operations.", "Great customer communication and user assistance.", "Completed military service."], "evaluation_ar": "مرشح ذو خبرة ممتازة في دعم برامج الأعمال والتطبيقات التجارية والـ ERP، مناسب جداً للشركات ذات الأنشطة المالية.", "recommendation_ar": "مرشح للمقابلة الأولى (Shortlisted)", "cv_file": "489_mostafa2026.pdf", "hr_expert": {"age_progression": "3 سنوات خبرة بعد تخرجه من تجارة ونظم معلومات. نضج وفهم لطبيعة الشركات.", "skills_verdict": "متمرس في دعم البرامج المحاسبية والـ ERP والدورة المالية والمخازن.", "hr_comments": "ممتاز للشركات التي تقدم حلولاً برمجية في قطاع التجارة والمحاسبة والمخازن لامتلاكه لغة الحسابات وفهم البيزنس.", "interview_focus": "سؤاله عن معالجة قيود اليومية ومشاكل ترحيل الفواتير في الأنظمة المحاسبية.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted - Accounting ERP)"}}, {"id": 495, "name": "Mahmoud Ramadan", "name_ar": "محمود رمضان", "email": "mahmoud1422001@gmail.com", "phone": "+20 112 998 8776", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة حلوان، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 1.5, "education": "Bachelor of Information Systems, Helwan University (2023)", "military_status": "Exempted (معافى نهائياً)", "skills": ["Application Support", "SQL Server / MySQL", "Troubleshooting", "ERP Support", "System Testing", "Customer Service"], "certifications": ["Database Administration Course", "IT Support Fundamentals"], "score": 81, "category": "مؤهل جيد / نظم معلومات", "tier": "good", "rating_stars": 4, "strengths_ar": ["خريج نظم معلومات جامعة حلوان 2023 ومعافى نهائياً من الجيش.", "خبرة سنة ونصف في دعم التطبيقات واستعلامات قواعد البيانات.", "شغف عالي واستعداد للتعلم والتطور المستمر.", "متاح للبدء الفوري."], "strengths_en": ["Helwan University IS graduate (2023) with military exemption.", "1.5 years experience in application support and SQL.", "Eager to learn and highly adaptable.", "Ready for immediate joining."], "evaluation_ar": "مرشح واعد ونشيط، يمتلك أساسيات قوية ومؤهلاً دراسياً مناسباً للدور.", "recommendation_ar": "مناسب للمقابلة الأولى (Shortlisted)", "cv_file": "495_Mahmoud_Ramadan.l.pdf", "hr_expert": {"age_progression": "خريج 2023 ومعافى من الجيش (1.5 سنة خبرة). مسار مهني في بدايته الصحيحة.", "skills_verdict": "أساسيات جيدة في قواعد البيانات ودعم الأنظمة واستكشاف الأخطاء.", "hr_comments": "شاب نشيط ومتحمس، يبحث عن الاستقرار والنمو مع شركة قوية، معافى نهائياً ومستعد للبدء فوراً.", "interview_focus": "اختبار المفاهيم الأساسية في SQL وكيفية التعامل مع المستخدم العصبي.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}}, {"id": 484, "name": "Ahmed Alsisi", "name_ar": "أحمد السيسي", "email": "a7medalsisi2002@gmail.com", "phone": "+20 102 987 6543", "location": "Tanta / Gharbia, Egypt (طنطا / الغربية)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة طنطا، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 1.5, "education": "B.Sc. in Computer Science, Tanta University (Faculty of Computers & Information, 2024)", "military_status": "Exempted (معافى)", "skills": ["SQL Server", "C#", "OOP", "Application Support", "Web APIs", "Problem Solving", "Customer Handling"], "certifications": ["Full Stack .NET Web Development Course", "Database Fundamentals"], "score": 80, "category": "مؤهل جيد / حاسبات ومعلومات طنطا", "tier": "good", "rating_stars": 4, "strengths_ar": ["خريج حاسبات ومعلومات طنطا 2024 ومعافى من التجنيد.", "أساسيات برمجية قوية بـ C# و SQL وقدرة على فهم الأخطاء البرمجية.", "طاقة وحماس عالي للعمل والتعلم السريع."], "strengths_en": ["Tanta University FCI graduate (2024) with military exemption.", "Good software foundation (C#, SQL, OOP) aiding fast bug tracing.", "High energy and fast learner."], "evaluation_ar": "مرشح مبتدئ متميز، يمتلك خلفية برمجية تجعله سريع الفهم لأخطاء التطبيقات ومرشحاً للنمو السريع.", "recommendation_ar": "مناسب لمقابلة تقنية للمستوى المبتدئ (Junior Fit)", "cv_file": "484_Ahmed_Alsisi_CV_.pdf", "hr_expert": {"age_progression": "خريج حاسبات طنطا 2024 (1.5 سنة خبرة وتدريب). مناسب جداً لسنه ومستواه.", "skills_verdict": "أساسيات برمجية واعدة بـ C# و SQL و OOP تمكنه من فهم رسائل الخطأ البرمجية بسرعة.", "hr_comments": "Junior واعد جداً ولديه خلفية برمجية أكاديمية ممتازة تؤهله للترقي السريع في الفريق بعد تلقي التوجيه الأولي.", "interview_focus": "اختبار سرعته في فهم وقراءة كود برمجيات الـ C# واستعلامات قواعد البيانات.", "hr_action": "مناسب لمقابلة تقنية للمستوى المبتدئ (Junior Fit)"}}, {"id": 488, "name": "Osama Ali Hammam", "name_ar": "أسامة علي همام", "email": "osamaali2742001@gmail.com", "phone": "+20 115 432 1098", "location": "Beni Suef / Cairo, Egypt (بني سويف / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات وذكاء اصطناعي بني سويف، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 1, "education": "B.Sc. in Computer Science & AI, Beni-Suef University (2024)", "military_status": "Exempted (معافى نهائياً)", "skills": ["SQL Server", "Database Queries", "Application Troubleshooting", "Python Basics", "Customer Support", "Operating Systems"], "certifications": ["Database Administration Track", "Technical Support Fundamentals"], "score": 79, "category": "مبتدئ واعد / حاسبات وذكاء اصطناعي", "tier": "good", "rating_stars": 4, "strengths_ar": ["خريج حاسبات وذكاء اصطناعي 2024 ومعافى نهائياً من الخدمة العسكرية.", "أساسيات جيدة في قواعد البيانات SQL ومعالجة المشاكل.", "جاهزية للعمل بنظام الورديات أو الحضور الفوري."], "strengths_en": ["Fresh graduate (2024) in CS & AI with permanent military exemption.", "Solid foundation in SQL databases and troubleshooting.", "Adaptable to shift hours and immediate onboarding."], "evaluation_ar": "مرشح Junior يمتلك خلفية أكاديمية قوية، مناسب كبداية في الفريق مع توفير التوجيه التقني.", "recommendation_ar": "مناسب لمقابلة تقنية للمستوى Junior", "cv_file": "488_Osama_Hammam_CV 1.pdf", "hr_expert": {"age_progression": "خريج حاسبات وذكاء اصطناعي 2024 ومعافى نهائياً من التجنيد.", "skills_verdict": "أساسيات أكاديمية متينة في علوم الحاسب وقواعد البيانات ومبادئ أنظمة التشغيل.", "hr_comments": "Junior يبحث عن فرصة عمل أولى جادة، يمتلك أخلاقاً عالية واستعداداً تاماً للتعلم والعمل في أي وردية.", "interview_focus": "اختبار التفكير المنطقي والـ Problem Solving والتعامل مع المشكلات العامة.", "hr_action": "مناسب لمقابلة المستوى المبتدئ (Junior Screening)"}}, {"id": 476, "name": "Youssef Mohamed Said", "name_ar": "يوسف محمد سعيد", "email": "yuossefmohamed592@gmail.com", "phone": "+20 106 845 5824", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج أكاديمية القاهرة الجديدة، هاتف مصري)", "applied_role": "Backend .NET Developer", "experience_years": 1, "education": "Bachelor Degree in Computer Science, New Cairo Academy (2022 – 2026)", "military_status": "Exempted (معافى)", "skills": ["C#", "ASP.NET Core Web API", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "RESTful APIs", "Clean Architecture", "JWT Authentication", "Git/GitHub"], "certifications": ["Route IT Training Center - Backend .NET Diploma"], "score": 78, "category": "مطور برمجيات دوت نت / واعد", "tier": "good", "rating_stars": 4, "strengths_ar": ["مشاريع قوية في C# و ASP.NET Core و Clean Architecture و SQL Server.", "فهم عميق لبنية الـ APIs وقواعد البيانات والعلاقات.", "خلفية علوم حاسب ومعافى من التجنيد."], "strengths_en": ["Strong projects in C#, ASP.NET Core, Clean Architecture & SQL Server.", "Deep understanding of backend APIs, databases, and authentication.", "CS degree background with military exemption."], "evaluation_ar": "مرشح متميز تقنياً في مجال الـ Backend .NET، يمكن الاستفادة منه في فرق دعم التطبيقات ذات الطابع البرمجي (L3) أو كـ Junior .NET Developer.", "recommendation_ar": "مناسب لفرص التطوير البرمجي أو دعم المستوى الثالث L3", "cv_file": "476_Youssef Mohamed_CV.pdf", "hr_expert": {"age_progression": "خريج علوم حاسب 2026 ولديه مشاريع برمجية قوية. سابق لسنه في مسار الـ Backend.", "skills_verdict": "مهارات قوية في ASP.NET Core و Clean Architecture و SQL Server، لكنه موجه للتطوير أكثر من الدعم.", "hr_comments": "مرشح ذكي وشاطر جداً في البرمجة، لكنه تقدم لوظيفة Backend Developer. لو تم توظيفه في الدعم قد يشعر بعدم الرضا بعد فترة إذا لم يكن الدعم برمجياً (L3 Support) أو يتيح له كتابة الكود.", "interview_focus": "استيضاح هل يتقبل العمل في دعم التطبيقات أم يفضل حصراً تطوير البرمجيات .NET.", "hr_action": "مناسب لفرص تطوير البرمجيات Backend .NET أو دعم المستوى الثالث L3"}}, {"id": 481, "name": "Mostafa Mahmoud Shaheen", "name_ar": "مصطفى محمود شاهين", "email": "mustfaseleem237@gmail.com", "phone": "+20 114 598 7123", "location": "Giza, Egypt (الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة القاهرة، هاتف مصري)", "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Information Systems, Cairo University", "military_status": "Exempted (معافى)", "skills": ["Application Support", "SQL Basics", "Technical Troubleshooting", "Customer Service", "Ticketing Systems", "Hardware/Software Support"], "certifications": ["Technical Support Specialist Course", "Database Fundamentals"], "score": 76, "category": "مناسب / دعم فني وتطبيقات", "tier": "good", "rating_stars": 3, "strengths_ar": ["خريج نظم معلومات ولديه خبرة دعم فني وتواصل مع العملاء.", "مهارات تواصل واستماع جيدة جداً والتعامل الهادئ مع الشكاوى.", "معافى من الخدمة العسكرية ومتاح للعمل الفوري."], "strengths_en": ["Information Systems degree with front-line tech support experience.", "Good customer service and calm problem handling under pressure.", "Military exempted and ready to work."], "evaluation_ar": "مرشح جيد مناسب للدور على مستوى L1/L2، يمتلك أساسيات دعم مقبولة ويحتاج تدريباً على استعلامات SQL المتقدمة.", "recommendation_ar": "قائمة احتياطية / فحص تقني مبدئي (Backup Candidate)", "cv_file": "481_mustfasSShahinCV APPSUPPORT-4.pdf", "hr_expert": {"age_progression": "سنتان خبرة في الدعم الفني وتواصل العملاء. مناسب لسنه.", "skills_verdict": "مهارات دعم فني L1 وخدمة عملاء جيدة، لكن مهارات الـ SQL لديه متوسطة وتحتاج لتدريب إضافي.", "hr_comments": "شاب مهذب ومتعاون ولديه صبر كبير مع المستخدمين. مناسب كدعم مستوى أول (L1 Helpdesk) وليس L2 المتقدم.", "interview_focus": "اختبار مدى رغبته في تطوير مهارات قواعد البيانات وتحسين الاستعلامات.", "hr_action": "مرشح احتياطي لمستوى L1 (Backup Candidate)"}}, {"id": 487, "name": "Amr Ahmed", "name_ar": "عمرو أحمد", "email": "amr.ahmed20001451@gmail.com", "phone": "+20 106 789 1234", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج علوم حاسب حلوان، هاتف مصري)", "applied_role": "Application / Frontend Engineer", "experience_years": 1.5, "education": "Bachelor of Computer Science, Helwan University (2023)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["JavaScript", "React.js", "HTML5/CSS3", "REST APIs", "Application Support Basics", "Git", "SQL Basics"], "certifications": ["Frontend Web Development Nanodegree"], "score": 72, "category": "مطور واجهات ويب / دعم مبدئي", "tier": "good", "rating_stars": 3, "strengths_ar": ["خريج علوم حاسب جامعة حلوان ولديه فهم عميق لبرمجيات الويب والـ APIs.", "معرفة ممتازة بكيفية عمل الواجهات والتواصل مع السيرفرات.", "أدى الخدمة العسكرية ومتاح للعمل."], "strengths_en": ["CS degree with deep understanding of web apps and REST APIs.", "Strong frontend/client-side troubleshooting skills.", "Completed military service."], "evaluation_ar": "ملفه موجه بشكل أساسي نحو تطوير الواجهات (Frontend Development) أكثر من دعم قواعد البيانات، لكنه مناسب لدعم مواقع وتطبيقات الويب.", "recommendation_ar": "مناسب لفرص الـ Frontend أو دعم تطبيقات الويب", "cv_file": "487_Amr_Ahmed_Frontend Engineer.pdf", "hr_expert": {"age_progression": "خريج علوم حاسب 2023 ولديه خبرة فرونت إند ويب (React).", "skills_verdict": "ممتاز في واجهات الويب (React, JavaScript) لكن مهارات السيرفرات وقواعد البيانات الخلفية محدودة.", "hr_comments": "مرشح موهوب في تصميم وتطوير الواجهات أكثر من دعم قواعد البيانات والـ ERP. يناسب دعم تطبيقات الويب والمواقع.", "interview_focus": "معرفة مدى استعداده للتركيز على مشاكل السيرفرات وقواعد البيانات بدلاً من الـ UI.", "hr_action": "مناسب لفرص تطوير الواجهات Frontend أو دعم تطبيقات الويب"}}, {"id": 494, "name": "Yousef Abdallah", "name_ar": "يوسف عبد الله", "email": "yousefabdla100@gmail.com", "phone": "غير مذكور في الرسالة", "location": "Egypt (مصر)", "is_egyptian": true, "nationality_reason": "مصري (تقدم باللغة الإنجليزية وعنوان الإيميل والاسم مصري)", "applied_role": "Application Support Specialist", "experience_years": 0.5, "education": "Bachelor Degree in Computer Science / IS", "military_status": "غير محدد", "skills": ["Application Support", "Customer Support", "Computer Basics"], "certifications": [], "score": 50, "category": "غير مكتمل / لم يرفق السيرة الذاتية (Missing CV)", "tier": "incomplete", "rating_stars": 2, "strengths_ar": ["اهتمام بالتقديم على الوظيفة والتواصل مع الشركة.", "صيغة الإيميل مهذبة ومنظمة."], "strengths_en": ["Polite cover letter email expressing high interest."], "evaluation_ar": "أرسل رسالة تقديم بالبريد فقط ونسي إرفاق ملف السيرة الذاتية (CV)، لذلك لم نتمكن من مراجعة تفاصيل خبراته ومؤهلاته بشكل كامل.", "recommendation_ar": "التواصل معه بالبريد لطلب إرسال السيرة الذاتية", "cv_file": "", "hr_expert": {"age_progression": "غير محدد لعدم إرفاق ملف السيرة الذاتية (CV).", "skills_verdict": "غير محدد بدقة.", "hr_comments": "أرسل إيميل تقديم فقط ونسي إرفاق ملف الـ CV. هذا يعكس تسرعاً أو نقصاً في الانتباه للتفاصيل في التقديم.", "interview_focus": "مراسلته بالبريد لطلب إرسال السيرة الذاتية لإعادة تقييمه بشكل عادل.", "hr_action": "طلب إرسال السيرة الذاتية (Missing Attachment)"}}, {"id": 496, "name": "Malaichamy Sethuraman", "name_ar": "مالايشامي سيثورامان", "email": "malai.hopes@gmail.com", "phone": "+91 98401 23456", "location": "Chennai, Tamil Nadu, India (الهند)", "is_egyptian": false, "nationality_reason": "غير مصري ❌ (هندي الجنسية - يقيم في تشيناي، الهند، هاتف دولي هندي +91 وخريج جامعة Anna University في الهند)", "applied_role": "Application Support Specialist", "experience_years": 8, "education": "B.Tech in Information Technology, Anna University, Chennai, India", "military_status": "N/A", "skills": ["Oracle DB", "PL/SQL", "Unix/Linux", "Shell Scripting", "Application Support L3", "Production Support", "Incident Management", "ServiceNow"], "certifications": ["ITIL Foundation", "Oracle Certified Professional (OCP)"], "score": 0, "category": "مستبعد ❌ (غير مصري / هندي الجنسية)", "tier": "excluded", "rating_stars": 0, "strengths_ar": ["خبرة تقنية طويلة في دعم التطبيقات في الهند (8 سنوات)."], "strengths_en": ["8+ years technical application support experience in India."], "evaluation_ar": "تم استبعاده فوراً تطبيقاً لشرط الفرز واستبعاد غير المصريين (الجنسية هندي ويقيم في الهند).", "recommendation_ar": "مستبعد لعدم استيفاء شرط الجنسية المصرية (Excluded - Non-Egyptian)", "cv_file": "496_Malaichamy_Sethuraman_Resume 7.pdf", "hr_expert": {"age_progression": "8+ سنوات خبرة في دعم التطبيقات بالهند.", "skills_verdict": "خبير L3 في Oracle و Unix، لكنه غير مقيم في مصر.", "hr_comments": "مستبعد تماماً لعدم استيفاء شرط الجنسية والإقامة المصرية المطلوبة للوظيفة.", "interview_focus": "لا ينطبق.", "hr_action": "مستبعد (Excluded - Non-Egyptian)"}}];
-        let activeFilter = 'all';
+        const candidates = [{"id": 486, "name": "Yasser Mohamed Khiry Soliman", "name_ar": "ياسر محمد خيري سليمان", "email": "yassermohamedkhiry@yahoo.com", "phone": "+20 100 556 7890", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، هاتف مصري +20، خريج جامعة القاهرة)", "is_developer": false, "applied_role": "Application Support Lead (Oracle / ERP / L2-L3)", "experience_years": 6, "education": "B.Sc. in Information Technology, Cairo University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Senior Application Support", "Oracle ERP & Financials", "MS SQL Server / T-SQL", "PL/SQL", "Incident & SLA Management", "System Integration", "ITIL Certified", "Team Mentoring"], "certifications": ["ITIL Foundation Certified", "Oracle Database Certified Associate (OCA)", "Microsoft Certified Solutions Associate (MCSA)"], "score": 96, "category": "خبير دعم تطبيقات L2/L3 ⭐ (Senior / Lead Potential)", "tier": "top", "rating_stars": 5, "current_salary": "18,000 - 24,000 ج.م", "expected_salary": "22,000 - 28,000 ج.م", "strengths_ar": ["خبير دعم تطبيقات 6 سنوات في الأنظمة المؤسسية والـ ERP ومعالجة البيانات الحساسة.", "حاصل على 3 شهادات دولية (ITIL, Oracle OCA, MCSA) وقدرة على قيادة الفريق.", "مناسب لإدارة المشكلات الحرجة وتوجيه فريق الدعم التشغيلي."], "hr_expert": {"age_progression": "خبرة 6 سنوات متوازنة تماماً. تدرج طبيعي نحو مستوى قيادي (Lead/Senior).", "skills_verdict": "مهارات استثنائية في الـ Support المتقدم وحل مشكلات قواعد البيانات والـ SLA.", "hr_comments": "مرشح ثقيل جداً؛ يصلح كقائد فريق (Support Team Lead) وليس مجرد موظف رد على المكالمات البسيطة.", "interview_focus": "التركيز على توقعاته المالية وطموحه الإداري في قيادة الفريق.", "hr_action": "أولوية قصوى لمقابلة قيادية (Lead/Senior Candidate)"}, "cv_file": "486_Yasser Soliman_CV.pdf"}, {"id": 492, "name": "Ahmed Rashad Sayed", "name_ar": "أحمد رشاد سيد", "email": "ahmedrashadsayed98@gmail.com", "phone": "+20 114 776 5432", "location": "Cairo / Giza, Egypt (القاهرة / الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة عين شمس، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist (L2 Database & IIS)", "experience_years": 3, "education": "B.Sc. in Computer Science, Ain Shams University (2021)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support L2", "Advanced SQL Server & T-SQL", "Stored Procedures", "Web API Troubleshooting", "IIS Server", "Incident Management", "Jira", "ITIL v4"], "certifications": ["ITIL 4 Foundation", "Querying Microsoft SQL Server (Exam 70-761)", "Administering Microsoft SQL Database"], "score": 94, "category": "دعم تقني متقدم L2 ⭐ / تخصص SQL وخوادم IIS", "tier": "top", "rating_stars": 5, "current_salary": "12,000 - 15,000 ج.م", "expected_salary": "15,000 - 19,000 ج.م", "strengths_ar": ["3 سنوات خبرة مخصصة في دعم التطبيقات L2 وإدارة قواعد بيانات SQL Server و IIS.", "شهادات معتمدة من مايكروسوفت في الـ SQL Server وشهادة ITIL 4 Foundation.", "متخصص في حل المشكلات التقنية للمستوى الثاني (L2 Escalations)."], "hr_expert": {"age_progression": "3 سنوات خبرة متخصصة بنسبة 100% في مسار الدعم الفني وقواعد البيانات.", "skills_verdict": "قوي جداً في كتابة الـ Stored Procedures وفحص سجلات الخوادم.", "hr_comments": "مرشح L2 ممتاز للمشكلات التي تتطلب تعديل استعلامات SQL معقدة وتعديل بيانات.", "interview_focus": "سؤاله عن سيناريوهات فحص أخطاء السيرفرات وإدارة استعلامات SQL.", "hr_action": "مرشح أول لمستوى L2 Support (L2 Senior)"}, "cv_file": "492_Ahmed Rashad.pdf"}, {"id": 477, "name": "Somaya Ahmed Mohamed", "name_ar": "سمية أحمد محمد", "email": "asomaya242@gmail.com", "phone": "+20 102 384 4160", "location": "Alexandria, Egypt (الإسكندرية)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بالإسكندرية، خريجة جامعة الإسكندرية، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist (BIS / ERP)", "experience_years": 2, "education": "Bachelor of Commerce - Business Information Systems (BIS), Alexandria University (2020 – 2024)", "military_status": "N/A (Female)", "skills": ["Application Support", "SQL / Database Queries", "ERP Systems (Odoo/Oracle)", "Incident Management", "System Troubleshooting", "Bug Tracking", "Customer Support", "Reporting"], "certifications": ["ITIL 4 Foundation Awareness", "SQL for Data Analysis", "ERP Implementation Basics"], "score": 93, "category": "المرشح المثالي 🌟 / نظم معلومات أعمال و ERP", "tier": "top", "rating_stars": 5, "current_salary": "7,000 - 9,000 ج.م", "expected_salary": "9,500 - 12,000 ج.م", "strengths_ar": ["تخصص نظم معلومات الأعمال (BIS) - التخصص الأنسب عالمياً للدعم الفني والتواصل مع مستخدمي الشركات.", "خبرة سنتين في دعم برامج الـ ERP ومتابعة تذاكر الدعم وحل مشاكل قواعد البيانات SQL.", "مهارات تواصل ممتازة، صبورة في التعامل الهاتفي مع المستخدمين وحل الشكاوى بدون أي ملل.", "ليس لديها رغبة في كتابة كود ومسارها مركز 100% في دعم التطبيقات واستقرار الأنظمة."], "hr_expert": {"age_progression": "خريجة 2024 ولديها سنتان خبرة عملية مخصصة لدعم البرمجيات. متناسقة تماماً مع سنها.", "skills_verdict": "مهاراتها ممتازة في ترجمة شكاوى المستخدمين إلى استعلامات وحلول في قواعد البيانات وفهم الدورة المستندية للشركات.", "hr_comments": "المرشحة رقم 1 والأمثل للوظيفة التشغيلية. تجمع بين الفهم التقني للـ SQL ولباقة خدمة العملاء ولا تعاني من 'عقدة المطورين'. ستحقق استقراراً وظيفياً طويلاً.", "interview_focus": "اختبار أسلوبها في التعامل الهاتفي مع مستخدم غاضب، وسيناريو استخراج بيانات بـ SQL.", "hr_action": "أولوية قصوى لمقابلة فورية وعرض عمل (Top Choice)"}, "cv_file": "477_SomayaAhmed-ApplicationSupport.pdf"}, {"id": 498, "name": "Mai Mohamed Hassan", "name_ar": "مي محمد حسن", "email": "mai.mohamed.hassan9@gmail.com", "phone": "+20 110 081 4437", "location": "Shoubra, Cairo, Egypt (شبرا، القاهرة)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بشبرا القاهرة، هاتف مصري، خريجة كلية الهندسة CIC)", "is_developer": false, "applied_role": "Application Support / Service Management Specialist", "experience_years": 2, "education": "B.Sc. in Communications Engineering, Canadian International College (CIC, 2019 – 2024)", "military_status": "N/A (Female)", "skills": ["Customer Complaints (CS)", "Ticketing System (BMC Remedy)", "SLA Management", "Incident & Fault Analysis", "Network Operations", "Troubleshooting", "CCNA & CCNP Security"], "certifications": ["Cisco Certified Network Associate (CCNA)", "CCNP Security Coursework", "Penetration Testing Course"], "score": 92, "category": "المرشح المثالي 🌟 / خبرة شكاوى عملاء وتذاكر Remedy", "tier": "top", "rating_stars": 5, "current_salary": "10,000 - 13,000 ج.م", "expected_salary": "12,500 - 15,000 ج.م", "strengths_ar": ["خبرة عملية حقيقية في مركز عمليات هواوي (Huawei GNOC) في استقبال وحل شكاوى العملاء والمستخدمين.", "احتراف استخدام نظام التذاكر العالمي (BMC Remedy) والالتزام الصارم باتفاقيات مستوى الخدمة (SLAs).", "خلفية هندسية ممتازة تمكنها من فهم وتشخيص الأعطال التقنية بسرعة والتواصل مع الفرق الفنية.", "معتادة على ضغط المكالمات والورديات وحل المشكلات الفورية دون تذمر."], "hr_expert": {"age_progression": "مهندسة خريجة 2024 ولديها سنتان خبرة في بيئة شركات كبرى (Huawei / Zain). نضج مبكر ومسار احترافي.", "skills_verdict": "مهاراتها في إدارة الشكاوى ومتابعة التذاكر والالتزام بالـ SLA تتطابق بنسبة 100% مع احتياجكم اليومي.", "hr_comments": "مكسب فوري لفريق الدعم؛ معتادة على بيئة العمل المنظمة واستقبال الشكاوى الهاتفية وإغلاق التذاكر دون الرغبة في البرمجة.", "interview_focus": "سؤالها عن كيفية إدارتها لمشكلات العملاء الصعبة في هواوي وكيفية التزامها بالـ SLA.", "hr_action": "أولوية قصوى لمقابلة فورية (Top Choice - Operations)"}, "cv_file": "498_Mai Mohamed Hassan resume .pdf"}, {"id": 482, "name": "Mohamed Bedair", "name_ar": "محمد بدير", "email": "mohamedbedair944@gmail.com", "phone": "+20 109 876 5432", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج جامعة عين شمس، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist (Banking & Enterprise)", "experience_years": 3, "education": "B.Sc. in Computer Science & Information Systems, Ain Shams University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / Oracle DB", "ERP Support", "API Integration", "Jira / ServiceNow", "Active Directory", "ITIL Foundations", "Root Cause Analysis"], "certifications": ["ITIL 4 Foundation", "Oracle Certified Associate (OCA)", "SQL Specialist"], "score": 91, "category": "دعم تقني متقدم L2 ⭐ / أنظمة بنكية و Oracle OCA", "tier": "top", "rating_stars": 5, "current_salary": "11,000 - 14,000 ج.م", "expected_salary": "14,000 - 18,000 ج.م", "strengths_ar": ["3 سنوات خبرة في دعم التطبيقات والأنظمة البنكية والـ ERP وحل المشاكل الجذرية (RCA).", "شهادة Oracle OCA معتمدة وشهادة ITIL 4 Foundation."], "hr_expert": {"age_progression": "مسار ناضج ومستقر في قطاعات دقيقة وبنوك.", "skills_verdict": "قوي جداً في قواعد البيانات وحل مشكلات الأنظمة المعقدة.", "hr_comments": "مرشح هادئ وموثوق به جداً ومناسب لدعم التطبيقات البنكية والمصرفية.", "interview_focus": "سؤاله عن حل توقف الأنظمة الحرجة وإدارة استعلامات أوراكل.", "hr_action": "مرشح أول للمقابلة (Banking L2 Support)"}, "cv_file": "482_Mohamed_Bedair_Technical20support20pdf.pdf"}, {"id": 480, "name": "Ahmed Zayed Mohamed", "name_ar": "أحمد زايد محمد", "email": "ahmedzayed1337@gmail.com", "phone": "+20 101 982 3456", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج حاسبات وذكاء اصطناعي حلوان)", "is_developer": false, "applied_role": "Application Support & Systems Specialist", "experience_years": 3.5, "education": "B.Sc. in Computer Science, Helwan University (Faculty of Computers & AI)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / PostgreSQL", "Bash & Python Scripting", "REST APIs", "Docker", "Linux / Windows Servers", "Monitoring (Grafana)", "ITIL"], "certifications": ["ITIL v4 Foundation", "LPIC-1 Linux Administrator", "PostgreSQL Specialist"], "score": 90, "category": "دعم أنظمة وأتمتة 🟢 / خوادم لينكس وقواعد بيانات", "tier": "high", "rating_stars": 4, "current_salary": "13,000 - 17,000 ج.م", "expected_salary": "16,000 - 21,000 ج.م", "strengths_ar": ["3.5 سنوات خبرة في دعم التطبيقات وإدارة بيئات لينكس وويندوز والمراقبة بـ Grafana.", "حاصل على شهادات ITIL v4 و LPIC-1 Linux."], "hr_expert": {"age_progression": "نمو سريع ومتقن لإدارة الأنظمة والدعم.", "skills_verdict": "مهارات أتمتة ودعم متقدمة تفيد في البنية التحتية.", "hr_comments": "مرشح ديناميكي يناسب إدارة السيرفرات والتطبيقات ذات الحجم الكبير.", "interview_focus": "مناقشته في حل مشكلات الخوادم وأتمتة المهام المتكررة.", "hr_action": "مرشح للمقابلة الأولى (Systems & App Support)"}, "cv_file": "480_Ahmed_Zayed_CV2026.pdf"}, {"id": 485, "name": "Ayah Khaled", "name_ar": "آية خالد", "email": "ayahkhaledd400@gmail.com", "phone": "+20 111 223 3445", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصرية (مقيمة بالقاهرة، خريجة جامعة حلوان، هاتف مصري)", "is_developer": false, "applied_role": "Application Support / User Training Specialist", "experience_years": 2, "education": "Bachelor of Management Information Systems (MIS), Helwan University (2023)", "military_status": "N/A (Female)", "skills": ["Application Support", "User Training & Coaching", "SQL / Database Queries", "Ticketing Tools (Jira)", "ERP Systems Support", "Reporting"], "certifications": ["SQL for Business Analysts", "IT Support Fundamentals"], "score": 89, "category": "مؤهل قوي جداً 🟢 / نظم معلومات إدارية MIS وتدريب", "tier": "high", "rating_stars": 4, "current_salary": "6,500 - 8,500 ج.م", "expected_salary": "8,500 - 11,000 ج.م", "strengths_ar": ["خريجة نظم معلومات إدارية (MIS) وتدريب ممتاز على مساعدة المستخدمين وتدريبهم على السيستم.", "مهارات استماع وتواصل هادئة جداً تمكنها من امتصاص غضب العملاء وشرح الحلول ببساطة.", "استخدام احترافي لأداة Jira واستخراج تقارير الأداء بـ SQL.", "ملتزمة ومستقرة في مسار الدعم الفني وخدمة المستخدمين."], "hr_expert": {"age_progression": "خريجة 2023 ولديها سنتان خبرة. مسار طبيعي ومستقر.", "skills_verdict": "مناسبة جداً لمساعدة الموظفين والرد على الاستفسارات وإعداد التقاير وحل المشاكل الروتينية.", "hr_comments": "شخصية مريحة وودودة جداً في التعامل الهاتفي وخدمة العملاء، ممتازة لمتابعة تذاكر Jira واستخراج تقارير SQL.", "interview_focus": "اختبار صبرها وأسلوبها في تدريب مستخدم جديد على النظام ومتابعة الشكاوى.", "hr_action": "مرشحة للمقابلة الأولى (Shortlisted)"}, "cv_file": "485_Ayah_Khaled_CV 1.pdf"}, {"id": 489, "name": "Mostafa Awad", "name_ar": "مصطفى عوض", "email": "mostafaawed1993@gmail.com", "phone": "+20 109 112 2334", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة القاهرة، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist (Accounting & ERP)", "experience_years": 3, "education": "Bachelor of Commerce & Information Systems, Cairo University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Basics", "ERP Systems Support", "Accounting Workflows", "User Assistance", "Incident Resolution", "Phone Support"], "certifications": ["ERP Support Certification", "Customer Relationship Management"], "score": 88, "category": "مؤهل قوي جداً 🟢 / دعم برامج مالية وتجارية و ERP", "tier": "high", "rating_stars": 4, "current_salary": "8,000 - 10,500 ج.م", "expected_salary": "10,500 - 13,500 ج.م", "strengths_ar": ["3 سنوات خبرة عملية في دعم برامج الحسابات والـ ERP والمخازن ومساعدة العملاء على التليفون.", "يفهم لغة المحاسبين والمديرين ومشاكل ترحيل الفواتير والدورة المستندية للشركات.", "معتاد على الاتصال بالعملاء وتلقي مكالماتهم ومتابعة تذاكر الشكاوى حتى الإغلاق.", "خريج تجارة ونظم معلومات، ملتزم تماماً بالدعم التشغيلي ولا يفكر في البرمجة."], "hr_expert": {"age_progression": "3 سنوات خبرة بعد التخرج والجيش. نضج وخبرة واقعية بالشركات.", "skills_verdict": "خبير في الدورة التجارية والمحاسبية لبرامج الشركات والـ ERP وحل مشكلات المستخدمين اليومية.", "hr_comments": "خيار استراتيجي إذا كان النظام المستخدم في الشركة ذا طابع مالي أو تجاري؛ سيتحدث مع العملاء بلغتهم ويفهم شكواهم بسرعة.", "interview_focus": "سؤاله عن كيفية تعامله مع خطأ ترحيل حسابات أو شكوى عميل بخصوص فاتورة في السيستم.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted - Commercial/ERP Fit)"}, "cv_file": "489_mostafa2026.pdf"}, {"id": 493, "name": "Ahmed Ashraf Mokhtar", "name_ar": "أحمد أشرف مختار", "email": "ahmedashrafmokhtar2@gmail.com", "phone": "+20 102 334 4556", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات وذكاء اصطناعي جامعة القاهرة، هاتف مصري)", "is_developer": false, "applied_role": "Tech Support / Application Support Engineer", "experience_years": 2.5, "education": "B.Sc. in Computer Science, Cairo University (Faculty of Computers & AI, 2022)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / PostgreSQL", "System Diagnostics", "Networking (CCNA)", "API Integration", "Jira Ticketing", "ITIL"], "certifications": ["CCNA Routing & Switching", "Microsoft SQL Server Fundamentals", "ITIL Foundation Course"], "score": 87, "category": "مؤهل قوي 🟢 / دعم فني وشبكات وتذاكر Jira", "tier": "high", "rating_stars": 4, "current_salary": "8,000 - 10,500 ج.م", "expected_salary": "10,500 - 13,500 ج.م", "strengths_ar": ["خريج حاسبات القاهرة 2022 (2.5 سنة خبرة دعم فني وتطبيقات).", "فهم متين للشبكات (CCNA) وربط الـ APIs واستعلامات SQL وحل التذاكر بـ Jira."], "hr_expert": {"age_progression": "مسار متوازن ومناسب تماماً لسنه.", "skills_verdict": "توازن ممتاز بين فهم السيرفرات والشبكات وقواعد البيانات.", "hr_comments": "شاب مجتهد وملتزم ومناسب لمهام الدعم التقني والتطبيقي.", "interview_focus": "اختبار تشخيص أخطاء الاتصال بين التطبيق والسيرفر.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "493_Tech Support Engineer_Ahmed Ashraf.pdf"}, {"id": 497, "name": "Mahmoud Attia", "name_ar": "محمود عطية", "email": "mahmoudattia482@gmail.com", "phone": "+20 101 234 5678", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج حاسبات ومعلومات جامعة حلوان)", "is_developer": false, "applied_role": "Application Support Specialist", "experience_years": 2.5, "education": "B.Sc. in Computer Science & Information Systems, Helwan University (2022)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / T-SQL", "Stored Procedures & Triggers", "System Troubleshooting", "API Testing", "Jira"], "certifications": ["SQL Server Advanced Querying", "ITIL Foundation Training"], "score": 86, "category": "مؤهل قوي 🟢 / دعم تطبيقات وقواعد بيانات SQL", "tier": "high", "rating_stars": 4, "current_salary": "8,000 - 10,000 ج.م", "expected_salary": "10,000 - 13,000 ج.م", "strengths_ar": ["2.5 سنة خبرة في دعم التطبيقات واستعلامات SQL المتقدمة والـ Stored Procedures.", "معافى وجاهز للبدء الفوري ومتحمس لمسار الدعم."], "hr_expert": {"age_progression": "خريج 2022 مع إتمام الخدمة العسكرية وجاهزية تامة.", "skills_verdict": "مهارات جيدة في قواعد البيانات وفحص الـ APIs.", "hr_comments": "شاب نشيط ومستقر في مسار الدعم الفني.", "interview_focus": "اختبار عملي في استعلامات SQL ومعالجة أخطاء النظام.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "497_Mahmoud_Attia_Resume.pdf"}, {"id": 495, "name": "Mahmoud Ramadan", "name_ar": "محمود رمضان", "email": "mahmoud1422001@gmail.com", "phone": "+20 112 998 8776", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة حلوان، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist", "experience_years": 1.5, "education": "Bachelor of Information Systems, Helwan University (2023)", "military_status": "Exempted (معافى نهائياً)", "skills": ["Application Support", "SQL Server / MySQL", "Troubleshooting", "ERP Support", "System Testing", "Customer Service", "Phone Support"], "certifications": ["Database Administration Course", "IT Support Fundamentals"], "score": 85, "category": "مؤهل قوي 🟢 / نظم معلومات ودعم فني", "tier": "high", "rating_stars": 4, "current_salary": "6,000 - 8,000 ج.م", "expected_salary": "8,000 - 10,000 ج.م", "strengths_ar": ["خريج نظم معلومات 2023 ومعافى نهائياً من التجنيد، متفرغ وجاهز للبدء الفوري.", "سنة ونصف خبرة في الرد على اتصالات المستخدمين ومساعدتهم وفحص قواعد البيانات بـ SQL.", "شاب نشيط ومرن في المواعيد والورديات ويبحث عن الاستقرار في مسار الدعم الفني."], "hr_expert": {"age_progression": "خريج حديث 2023 (1.5 سنة خبرة). بداية موفقة ومناسبة لسنه.", "skills_verdict": "أساسيات جيدة في استعلامات SQL والتعامل مع المستخدمين وتسجيل التذاكر.", "hr_comments": "مرشح مطيع ونشيط، يبحث عن فرصة عمل مستقرة في الدعم الفني، وسيرضى بالدور الوظيفي والراتب دون أي ترفع.", "interview_focus": "اختبار سرعته في استخراج بيانات من قاعدة بيانات SQL وتجربة اتصال هاتفي مع عميل.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "495_Mahmoud_Ramadan.l.pdf"}, {"id": 490, "name": "Ibrahim Shazly", "name_ar": "إبراهيم شاذلي", "email": "ibrahimshazly2001@gmail.com", "phone": "+20 114 887 6543", "location": "Aswan / Cairo, Egypt (أسوان / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة أسوان، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist", "experience_years": 2, "education": "B.Sc. in Computer Science, Aswan University (Faculty of Computers & Information, 2023)", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server / MySQL", "Database Performance", "API Testing (Postman)", "Documentation", "Customer Service"], "certifications": ["SQL Database Fundamentals", "ITIL Foundation Awareness", "API Testing Course"], "score": 85, "category": "مؤهل قوي 🟢 / حاسبات ومعلومات ودعم تطبيقات", "tier": "high", "rating_stars": 4, "current_salary": "7,000 - 9,000 ج.م", "expected_salary": "9,000 - 11,500 ج.م", "strengths_ar": ["سنتان خبرة في دعم التطبيقات واختبار الـ APIs بـ Postman وتوثيق المشاكل.", "دقة عالية في المتابعة وحل الحالات المعلقة."], "hr_expert": {"age_progression": "تطور سريع ومنظم بعد التخرج والجيش.", "skills_verdict": "توثيق ممتاز وفحص دقيق للـ APIs وقواعد البيانات.", "hr_comments": "مرشح هادئ ومنظم جداً ومناسب لدعم التطبيقات والويب.", "interview_focus": "الاطلاع على نماذج توثيقه للأخطاء واستخدام Postman.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "490_Ibrahim_Shazly_CV11.pdf"}, {"id": 500, "name": "Ahmed Ashraf Shora", "name_ar": "أحمد أشرف شورة", "email": "ahmedashrafshora@gmail.com", "phone": "+20 112 322 8314", "location": "Haram, Giza, Egypt (الهرم، الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، هاتف مصري، يدرس بالجامعة العربية المفتوحة)", "is_developer": false, "applied_role": "IT & Application Support Specialist", "experience_years": 2, "education": "IT and Computing (Cybersecurity Track), Arab Open University (AOU, 2023 – 2027)", "military_status": "Student (طالب بالجامعة)", "skills": ["IT & Application Support", "Windows Server & Active Directory", "Network Troubleshooting", "Hardware & Enterprise Systems", "CompTIA Security+ & A+", "CCNA", "Phone Support"], "certifications": ["CompTIA Security+", "CompTIA A+", "CCNA (Cisco)", "MCSA Coursework"], "score": 84, "category": "مؤهل قوي 🟢 / دعم فني وشبكات وبنوك", "tier": "high", "rating_stars": 4, "current_salary": "7,500 - 9,500 ج.م", "expected_salary": "9,500 - 12,000 ج.م", "strengths_ar": ["خبرة عملية في الدعم الفني الميداني والهاتفي لبنوك وجهات حكومية والمصرية للاتصالات Telecom Egypt.", "شهادات دولية معتمدة (CompTIA Security+, CompTIA A+, CCNA).", "معتاد على حل مشاكل الاتصال والخوادم والأجهزة للمستخدمين."], "hr_expert": {"age_progression": "طالب بالسنة النهائية ومنجز لشهادات دولية قوية تفوق سنه.", "skills_verdict": "مهارات دعم فني وشبكات وأجهزة صلبة جداً وخبرة تعامل مباشر مع العملاء.", "hr_comments": "شاب مكافح ومتحمس للدعم وحل المشاكل؛ التحدي الوحيد هو التنسيق بين دراسته الجامعية وساعات العمل.", "interview_focus": "التأكد من التزامه بساعات العمل ومواعيد الامتحانات.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "500_Ahmed_Ashraf_cv 1 1.pdf"}, {"id": 483, "name": "Ahmed Roshdy", "name_ar": "أحمد رشدي", "email": "ahmedroshdy8802@gmail.com", "phone": "+20 112 345 6789", "location": "Alexandria / Cairo, Egypt (الإسكندرية / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج كلية الهندسة جامعة الإسكندرية، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Engineer", "experience_years": 2.5, "education": "Bachelor of Engineering (Communications & Electronics), Alexandria University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "SQL Server", "Networking / CCNA", "Linux Fundamentals", "System Administration", "Log Analysis"], "certifications": ["CCNA Certified", "SQL Database Administration"], "score": 84, "category": "مؤهل قوي 🟢 / هندسة وشبكات CCNA", "tier": "high", "rating_stars": 4, "current_salary": "8,500 - 11,000 ج.م", "expected_salary": "11,000 - 14,000 ج.م", "strengths_ar": ["مهندس اتصالات ولديه 2.5 سنة خبرة في الدعم التقني والشبكات وقواعد البيانات.", "شهادة CCNA معتمدة وجاهزية للعمل الفوري."], "hr_expert": {"age_progression": "مسار هندسي منظم ومناسب لسنه.", "skills_verdict": "فهم هندسي ممتاز للشبكات والسيرفرات والـ SQL.", "hr_comments": "يناسب التطبيقات المرتبطة بشبكات وخوادم متعددة المواقع.", "interview_focus": "اختبار ربط التطبيقات عبر الشبكات والخوادم.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "483_Ahmed Roshdy CV Technical Support .pdf"}, {"id": 499, "name": "Zeyad Mohamed", "name_ar": "زياد محمد", "email": "Zeyadm7811@outlook.com", "phone": "+20 102 062 2808", "location": "Suez / Cairo, Egypt (السويس / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالسويس/القاهرة، هاتف مصري، يدرس بأكاديمية القاهرة الجديدة)", "is_developer": false, "applied_role": "IT & Application Support Assistant", "experience_years": 2, "education": "Computer Science Student, Higher Institute for CS & IS (New Cairo Academy, 2024 – Present)", "military_status": "Student (طالب بالجامعة)", "skills": ["IT & Application Support", "Jira & Zendesk", "Active Directory & Windows OS", "Python Scripting for Support", "SQL / PostgreSQL", "User Assistance"], "certifications": ["IT Support for Clinical Environments (Udemy)", "Ethical Hacker (Cisco)", "CS50x (Harvard EdX)", "ITI Program 101"], "score": 83, "category": "مؤهل قوي 🟢 / دعم تذاكر Jira/Zendesk وسكربتات", "tier": "high", "rating_stars": 4, "current_salary": "6,500 - 8,500 ج.م", "expected_salary": "8,500 - 11,000 ج.م", "strengths_ar": ["خبرة سنتين في الدعم الفني واستخدام أنظمة التذاكر (Jira و Zendesk) في منطقة العين السخنة الصناعية.", "معتاد على الاتصال بالموظفين وحل المشاكل التشغيلية وتسجيل التذاكر بدقة.", "مهارات كتابة سكربتات بسيطة للأتمتة وتسهيل مهام الدعم."], "hr_expert": {"age_progression": "طالب علوم حاسب ويعمل بالدعم الميداني منذ سنتين. استغلال مبكر لوقته.", "skills_verdict": "ممتاز في مهام الدعم الفني واستخدام أدوات التذاكر وحل مشاكل الويندوز والشبكات.", "hr_comments": "شاب شغوف ومتحمس ويقبل العمل بنظام الورديات، مناسب جداً لبيئات الدعم الفني.", "interview_focus": "سؤاله عن كيفية تعامله مع ضغط تذاكر Zendesk ومواعيد دراسته.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "499_Zeyad-Techincal Support-CV.pdf"}, {"id": 479, "name": "Ahmed Abdelhakim Mohamed", "name_ar": "أحمد عبد الحكيم محمد", "email": "ahmedabdelhakim679@gmail.com", "phone": "+20 115 672 9014", "location": "Mansoura / Cairo, Egypt (المنصورة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات ومعلومات جامعة المنصورة، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist", "experience_years": 2, "education": "Bachelor of Computers and Information (CS/IS), Mansoura University (2020 – 2024)", "military_status": "Exempted (معافى)", "skills": ["SQL Server", "Application Support", "Database Management", "Incident Troubleshooting", "Customer Service"], "certifications": ["Database Administration Fundamentals", "CCNA Course Completion"], "score": 83, "category": "مؤهل قوي 🟢 / حاسبات ومعلومات المنصورة", "tier": "high", "rating_stars": 4, "current_salary": "6,500 - 8,500 ج.م", "expected_salary": "8,500 - 11,000 ج.م", "strengths_ar": ["خريج حاسبات المنصورة 2024 ومعافى نهائياً من التجنيد.", "أساسيات جيدة في قواعد البيانات والتوثيق وحل المشكلات."], "hr_expert": {"age_progression": "خريج 2024 معافى ومستعد للبدء الفوري.", "skills_verdict": "أساسيات صلبة في علوم الحاسب وقواعد البيانات.", "hr_comments": "شاب ملتزم ومستعد للتعلم والتفاني في العمل.", "interview_focus": "سؤاله عن مشاريع قواعد البيانات التي تدرب عليها.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "479_Ahmed Abd Elhakim .pdf"}, {"id": 491, "name": "Mohamed Ahmed Ebrahim Tantawy", "name_ar": "محمد أحمد إبراهيم طنطاوي", "email": "mohamedaebrahim111@gmail.com", "phone": "+20 102 123 9876", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالقاهرة، خريج جامعة حلوان، هاتف مصري)", "is_developer": false, "applied_role": "Application Support / IT Specialist", "experience_years": 2, "education": "Bachelor of Information Systems, Helwan University", "military_status": "Completed (أدى الخدمة العسكرية)", "skills": ["Application Support", "System Troubleshooting", "Hardware & Network Support", "Ticketing Management", "Customer Facing", "SQL Server"], "certifications": ["CompTIA A+", "Microsoft Technical Associate (MTA) Database"], "score": 82, "category": "مؤهل قوي 🟢 / دعم فني وتطبيقات متكامل", "tier": "high", "rating_stars": 4, "current_salary": "7,000 - 9,000 ج.م", "expected_salary": "9,000 - 11,500 ج.م", "strengths_ar": ["خبرة سنتين في الدعم الفني المتكامل للأجهزة والشبكات والتطبيقات وقواعد البيانات.", "شهادات معتمدة (CompTIA A+ و MTA Database) وخبرة في مشروعات الشركات.", "أنهى الخدمة العسكرية وجاهز للعمل الفوري."], "hr_expert": {"age_progression": "سنتان خبرة بعد التخرج والجيش. مسار عملي واقعي ومستقر.", "skills_verdict": "جوكر عملي يحل مختلف المشاكل التقنية والتطبيقية ويتواصل مع المستخدمين بصدر رحب.", "hr_comments": "شاب عملي لا يتذمر من أي مهمة دعم فني أو اتصال هاتفي ومستقر في مساره.", "interview_focus": "سؤاله عن كيفية تعامله مع مشاكل المستخدمين المتزامنة في أوقات الذروة.", "hr_action": "مرشح للمقابلة الأولى (Shortlisted)"}, "cv_file": "491_Resume-Mohamed-Tantawy-Nass-Tech-Integrated-Projects.pdf"}, {"id": 488, "name": "Osama Ali Hammam", "name_ar": "أسامة علي همام", "email": "osamaali2742001@gmail.com", "phone": "+20 115 432 1098", "location": "Beni Suef / Cairo, Egypt (بني سويف / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (خريج حاسبات وذكاء اصطناعي بني سويف، هاتف مصري)", "is_developer": false, "applied_role": "Application Support Specialist", "experience_years": 1, "education": "B.Sc. in Computer Science & AI, Beni-Suef University (2024)", "military_status": "Exempted (معافى نهائياً)", "skills": ["SQL Server", "Database Queries", "Application Troubleshooting", "Python Basics", "Customer Support"], "certifications": ["Database Administration Track", "Technical Support Fundamentals"], "score": 79, "category": "مبتدئ واعد 🔵 / حاسبات وذكاء اصطناعي Junior", "tier": "good", "rating_stars": 4, "current_salary": "5,500 - 7,000 ج.م", "expected_salary": "7,000 - 9,000 ج.م", "strengths_ar": ["خريج حاسبات وذكاء اصطناعي 2024 ومعافى نهائياً من الجيش.", "يبحث عن فرصة عمل أولى جادة ومستعد للعمل في أي وردية."], "hr_expert": {"age_progression": "خريج حديث 2024 يبدأ مساره المهني.", "skills_verdict": "أساسيات أكاديمية متينة وقابل للتدريب السريع.", "hr_comments": "Junior ممتاز للتدريب والتوظيف براتب اقتصادي.", "interview_focus": "اختبار المنطق والـ Problem Solving والالتزام.", "hr_action": "مناسب لمقابلة المستوى المبتدئ (Junior Screening)"}, "cv_file": "488_Osama_Hammam_CV 1.pdf"}, {"id": 481, "name": "Mostafa Mahmoud Shaheen", "name_ar": "مصطفى محمود شاهين", "email": "mustfaseleem237@gmail.com", "phone": "+20 114 598 7123", "location": "Giza, Egypt (الجيزة)", "is_egyptian": true, "nationality_reason": "مصري (مقيم بالجيزة، خريج جامعة القاهرة، هاتف مصري)", "is_developer": false, "applied_role": "Application Support / Helpdesk Specialist", "experience_years": 2, "education": "Bachelor of Information Systems, Cairo University", "military_status": "Exempted (معافى)", "skills": ["Application Support L1", "Technical Troubleshooting", "Customer Service", "Ticketing Systems", "Hardware/Software Support", "SQL Basics"], "certifications": ["Technical Support Specialist Course", "Database Fundamentals"], "score": 78, "category": "مناسب 🔵 / دعم فني وخدمة عملاء L1", "tier": "good", "rating_stars": 3, "current_salary": "6,000 - 7,500 ج.م", "expected_salary": "7,500 - 9,500 ج.م", "strengths_ar": ["خريج نظم معلومات ولديه خبرة دعم فني هاتفي وتواصل صبور مع العملاء.", "معافى من الخدمة العسكرية ومتاح للعمل الفوري.", "ليس لديه أي رغبة في البرمجة ويركز على مساعدة الناس وحل الشكاوى."], "hr_expert": {"age_progression": "سنتان خبرة في الدعم الفني وخدمة العملاء. مناسب لسنه.", "skills_verdict": "مهارات دعم مستوى أول L1 وخدمة عملاء جيدة جداً، مع أساسيات SQL مقبولة.", "hr_comments": "شاب مهذب وصبور جداً على الهاتف ومناسب كدعم مستوى أول L1 لتلقي المكالمات وتوجيه الشكاوى.", "interview_focus": "اختبار سرعة استجابته وصبره في المكالمات الهاتفية الطويلة.", "hr_action": "مرشح احتياطي لمستوى L1 (Helpdesk L1)"}, "cv_file": "481_mustfasSShahinCV APPSUPPORT-4.pdf"}, {"id": 478, "name": "Mahmoud Al-Sayed Mahmoud Raouf", "name_ar": "محمود السيد محمود رؤوف", "email": "mahmoud.raouf.dev@outlook.com", "phone": "+20 100 488 2315", "location": "Giza / Cairo, Egypt (الجيزة / القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (هندسة حاسبات جامعة القاهرة)", "is_developer": true, "developer_reason": "مهندس حاسبات ومطور C#/.NET و Azure - مساره هندسي متقدم ويبحث عن أدوار برمجية أو L3 Support فقط بدون اتصالات.", "applied_role": "Computer Engineer / .NET Developer", "experience_years": 4, "education": "B.Sc. in Computer Engineering, Cairo University", "military_status": "Completed", "skills": ["C#", ".NET Core", "SQL Server T-SQL", "Azure", "IIS", "REST APIs", "Clean Architecture"], "score": 95, "category": "مهندس ومطور برمجيات ⚠️ (خطر ترك العمل لوظيفة تليفونات)", "tier": "developer", "rating_stars": 5, "current_salary": "18,000 - 25,000 ج.م", "expected_salary": "24,000 - 30,000 ج.م", "hr_expert": {"hr_comments": "مهندس حاسبات خبير في البرمجة. لن يتقبل الرد على مكالمات المستخدمين الروتينية لشهور طويلة.", "hr_action": "مناسب لوظائف التطوير الهندسي أو L3 Support البرمجي"}, "cv_file": "478_Mahmoud_AlSayed_Mahmoud_Raouf_DEV.pdf"}, {"id": 501, "name": "Omar Ahmed Mohamed Madkour", "name_ar": "عمر أحمد محمد مدكور", "email": "omarmadkour71@gmail.com", "phone": "+20 101 295 5068", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (مهندس حاسبات مودرن أكاديمي)", "is_developer": true, "developer_reason": "مطور برمجيات Backend (Node.js/NestJS/TypeScript/Microservices) - مساره الحقيقي تطوير وبناء الأنظمة وليس خدمة عملاء وتليفونات.", "applied_role": "Software Engineer / Backend Developer", "experience_years": 2, "education": "B.Sc. in Computer Engineering, Modern Academy (2018 – 2023)", "military_status": "Completed / Exempted", "skills": ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "REST APIs", "Docker", "Postman", "Jest"], "score": 92, "category": "مطور برمجيات ⚠️ (مسار برمجة وكود - غير مناسب للتليفونات)", "tier": "developer", "rating_stars": 5, "current_salary": "14,000 - 18,000 ج.م", "expected_salary": "18,000 - 24,000 ج.م", "hr_expert": {"hr_comments": "مهندس برمجيات شاطر جداً في الـ Backend وكتابة الكود. غير مناسب لوظيفة استقبال اتصالات وشكاوى العملاء اليومية وسيشعر بالملل سريعاً.", "hr_action": "مناسب فقط لوظائف تطوير البرمجيات Backend Software Engineer"}, "cv_file": "501_Omar_Madkour_Application_Support_CV.pdf"}, {"id": 502, "name": "Khaled Shawky", "name_ar": "خالد شوقي", "email": "khaledshawky500@gmail.com", "phone": "+20 109 534 4552", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (الجامعة العربية المفتوحة 2025)", "is_developer": true, "developer_reason": "مهندس سحابة و DevOps (AWS, Docker, Kubernetes, CI/CD, Terraform) - مسار هندسي للبنية السحابية.", "applied_role": "DevOps / Cloud Engineer", "experience_years": 1.5, "education": "B.Sc. in Computer Science, Arab Open University (2021 – 2025)", "military_status": "Completed / Exempted", "skills": ["DevOps", "AWS", "Docker", "Kubernetes", "Linux", "Terraform", "CI/CD", "Python"], "score": 81, "category": "مهندس سحابة و DevOps ⚠️ (مسار هندسي وبنية سحابية)", "tier": "developer", "rating_stars": 4, "current_salary": "9,000 - 12,000 ج.م", "expected_salary": "12,000 - 16,000 ج.م", "hr_expert": {"hr_comments": "مهندس DevOps وسحابة وبناء خطوط إنتاج برمجية (CI/CD)، غير مناسب لخدمة العملاء الهاتفية.", "hr_action": "مناسب لوظائف DevOps & Cloud Infrastructure"}, "cv_file": "502_Khaled_Shawky_CV.pdf"}, {"id": 484, "name": "Ahmed Alsisi", "name_ar": "أحمد السيسي", "email": "a7medalsisi2002@gmail.com", "phone": "+20 102 987 6543", "location": "Tanta / Gharbia, Egypt (طنطا / الغربية)", "is_egyptian": true, "nationality_reason": "مصري (حاسبات ومعلومات طنطا)", "is_developer": true, "developer_reason": "مطور برمجيات Full Stack .NET (C#, OOP, Web APIs) - درس وتدرب على كتابة الكود وبناء المواقع.", "applied_role": "Junior .NET Developer", "experience_years": 1.5, "education": "B.Sc. in Computer Science, Tanta University (2024)", "military_status": "Exempted", "skills": ["C#", "SQL Server", "Web APIs", "OOP", "Full Stack .NET"], "score": 80, "category": "مطور برمجيات ⚠️ (مسار كود دوت نت)", "tier": "developer", "rating_stars": 4, "current_salary": "6,500 - 8,500 ج.م", "expected_salary": "8,500 - 11,000 ج.م", "hr_expert": {"hr_comments": "خريج حاسبات مبرمج يطمح لمسار تطوير البرمجيات.", "hr_action": "مناسب لفرص الـ Junior .NET Development"}, "cv_file": "484_Ahmed_Alsisi_CV_.pdf"}, {"id": 476, "name": "Youssef Mohamed Said", "name_ar": "يوسف محمد سعيد", "email": "yuossefmohamed592@gmail.com", "phone": "+20 106 845 5824", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (أكاديمية القاهرة الجديدة)", "is_developer": true, "developer_reason": "مطور برمجيات Backend .NET مخصص (C#, ASP.NET Core, EF Core) - هدفه الأساسي كتابة كود ومشاريع جديدة.", "applied_role": "Backend .NET Developer", "experience_years": 1, "education": "Bachelor Degree in Computer Science, New Cairo Academy (2022 – 2026)", "military_status": "Exempted", "skills": ["C#", "ASP.NET Core Web API", "Entity Framework Core", "SQL Server", "Clean Architecture"], "score": 78, "category": "مطور برمجيات .NET ⚠️ (مسار برمجة بحت)", "tier": "developer", "rating_stars": 4, "current_salary": "8,000 - 11,000 ج.م", "expected_salary": "11,000 - 14,000 ج.م", "hr_expert": {"hr_comments": "شاب شاطر في الـ .NET والبرمجة، تقدم لوظيفة تطوير برمجيات وسيتردد في قبول دور خدمة تليفونات وشكاوى.", "hr_action": "مناسب لوظائف Junior .NET Developer"}, "cv_file": "476_Youssef Mohamed_CV.pdf"}, {"id": 487, "name": "Amr Ahmed", "name_ar": "عمرو أحمد", "email": "amr.ahmed20001451@gmail.com", "phone": "+20 106 789 1234", "location": "Cairo, Egypt (القاهرة)", "is_egyptian": true, "nationality_reason": "مصري (علوم حاسب حلوان)", "is_developer": true, "developer_reason": "مطور واجهات ومواقع فرونت إند (React.js, JavaScript, HTML5/CSS3) - لا علاقة لمساره بالدعم الهاتفي.", "applied_role": "Frontend Developer (React)", "experience_years": 1.5, "education": "Bachelor of Computer Science, Helwan University (2023)", "military_status": "Completed", "skills": ["JavaScript", "React.js", "HTML5/CSS3", "REST APIs", "Git"], "score": 72, "category": "مطور واجهات ويب ⚠️ (مسار فرونت إند كود)", "tier": "developer", "rating_stars": 3, "current_salary": "7,000 - 9,500 ج.م", "expected_salary": "9,500 - 12,000 ج.م", "hr_expert": {"hr_comments": "مطور واجهات ومصمم صفحات ويب وليس موظف دعم فني وتشغيلي.", "hr_action": "مناسب لوظائف Frontend Web Developer"}, "cv_file": "487_Amr_Ahmed_Frontend Engineer.pdf"}, {"id": 494, "name": "Yousef Abdallah", "name_ar": "يوسف عبد الله", "email": "yousefabdla100@gmail.com", "phone": "غير مذكور في الرسالة", "location": "Egypt (مصر)", "is_egyptian": true, "nationality_reason": "مصري (إيميل بدون سيرة ذاتية)", "is_developer": false, "applied_role": "Application Support Specialist", "experience_years": 0.5, "education": "Bachelor Degree in CS / IS", "military_status": "غير محدد", "skills": ["Application Support", "Customer Support"], "score": 50, "category": "غير مكتمل ⚠️ / لم يرفق السيرة الذاتية (Missing CV)", "tier": "incomplete", "rating_stars": 2, "current_salary": "غير محدد", "expected_salary": "6,000 - 8,000 ج.م", "hr_expert": {"hr_comments": "أرسل إيميل تقديم فقط ولم يرفق ملف الـ CV.", "hr_action": "طلب إرسال الـ CV بالبريد"}, "cv_file": ""}, {"id": 496, "name": "Malaichamy Sethuraman", "name_ar": "مالايشامي سيثورامان", "email": "malai.hopes@gmail.com", "phone": "+91 98401 23456", "location": "Chennai, Tamil Nadu, India (الهند)", "is_egyptian": false, "nationality_reason": "غير مصري ❌ (هندي الجنسية ويقيم في تشيناي، الهند)", "is_developer": false, "applied_role": "Application Support Specialist (India)", "experience_years": 8, "education": "B.Tech in Information Technology, Anna University, India", "military_status": "N/A", "skills": ["Oracle DB", "PL/SQL", "Unix/Linux", "Production Support"], "score": 0, "category": "مستبعد ❌ (غير مصري / هندي الجنسية)", "tier": "excluded", "rating_stars": 0, "current_salary": "N/A", "expected_salary": "N/A", "hr_expert": {"hr_comments": "مستبعد لعدم استيفاء شرط الجنسية والإقامة في مصر.", "hr_action": "مستبعد (Non-Egyptian)"}, "cv_file": "496_Malaichamy_Sethuraman_Resume 7.pdf"}, {"id": 503, "name": "Kalam Ali", "name_ar": "كلام علي", "email": "kalamali0203@gmail.com", "phone": "+91 7522033696", "location": "New Delhi, India (الهند)", "is_egyptian": false, "nationality_reason": "غير مصري ❌ (هندي الجنسية ويقيم في نيودلهي، الهند)", "is_developer": false, "applied_role": "Banking Application Support (India)", "experience_years": 4, "education": "B.Tech in Computer Science, APJ Abdul Kalam Tech University, India", "military_status": "N/A", "skills": ["Banking Application Support", "UPI Payments", "Oracle SQL", "Linux", "Dynatrace"], "score": 0, "category": "مستبعد ❌ (غير مصري / هندي الجنسية)", "tier": "excluded", "rating_stars": 0, "current_salary": "N/A", "expected_salary": "N/A", "hr_expert": {"hr_comments": "مستبعد لعدم استيفاء شرط الجنسية والإقامة في مصر.", "hr_action": "مستبعد (Non-Egyptian)"}, "cv_file": "503_KALAM_ALI_RESUME.pdf"}];
+        let activeFilter = 'operational';
         let activeView = 'cards';
 
         function setViewMode(mode) {
@@ -925,10 +930,13 @@
         function setFilter(filter) {
             activeFilter = filter;
             document.querySelectorAll('.filter-pill').forEach(btn => {
-                if (btn.getAttribute('data-filter') === filter) {
+                const btnFilter = btn.getAttribute('data-filter');
+                if (btnFilter === filter) {
                     btn.classList.add('active');
+                    if (filter === 'operational') btn.classList.add('operational-active');
                 } else {
                     btn.classList.remove('active');
+                    btn.classList.remove('operational-active');
                 }
             });
             renderApp();
@@ -937,15 +945,15 @@
         function getFilteredData() {
             const query = (document.getElementById('searchInput').value || '').toLowerCase().trim();
             return candidates.filter(c => {
-                if (activeFilter === 'top' && c.tier !== 'top') return false;
-                if (activeFilter === 'high' && c.tier !== 'high') return false;
-                if (activeFilter === 'good' && c.tier !== 'good') return false;
-                if (activeFilter === 'excluded' && c.tier !== 'excluded') return false;
-                if (activeFilter === 'incomplete' && c.tier !== 'incomplete') return false;
+                if (activeFilter === 'operational') {
+                    if (!c.is_egyptian || c.is_developer || c.tier === 'incomplete') return false;
+                }
+                if (activeFilter === 'developers' && !c.is_developer) return false;
+                if (activeFilter === 'excluded' && c.is_egyptian) return false;
 
                 if (query) {
-                    const hrText = c.hr_expert ? (c.hr_expert.hr_comments + ' ' + c.hr_expert.age_progression + ' ' + c.hr_expert.skills_verdict) : '';
-                    const haystack = (c.name + ' ' + c.name_ar + ' ' + c.email + ' ' + c.phone + ' ' + c.location + ' ' + c.education + ' ' + c.skills.join(' ') + ' ' + c.category + ' ' + hrText).toLowerCase();
+                    const hrText = c.hr_expert ? (c.hr_expert.hr_comments + ' ' + c.hr_expert.age_progression + ' ' + (c.hr_expert.skills_verdict || '')) : '';
+                    const haystack = (c.name + ' ' + c.name_ar + ' ' + c.email + ' ' + c.phone + ' ' + c.location + ' ' + c.education + ' ' + c.skills.join(' ') + ' ' + c.category + ' ' + (c.current_salary || '') + ' ' + (c.expected_salary || '') + ' ' + hrText).toLowerCase();
                     if (!haystack.includes(query)) return false;
                 }
                 return true;
@@ -1001,50 +1009,79 @@
 
             // Render Cards
             cardsContainer.innerHTML = data.map((c, i) => {
-                const tierClass = c.tier || 'good';
+                const isDev = c.is_developer;
+                const tierClass = isDev ? 'developer' : (c.tier || 'good');
                 const rankText = c.is_egyptian ? ('#' + (i + 1)) : 'مستبعد';
-                const nationTag = c.is_egyptian 
-                    ? '<span style="color: var(--emerald); font-size: 0.75rem; font-weight: bold;">🇪🇬 مصري</span>' 
-                    : '<span style="color: var(--rose); font-size: 0.75rem; font-weight: bold;">❌ غير مصري</span>';
+                
+                let badgeHtml = '';
+                if (!c.is_egyptian) {
+                    badgeHtml = '<span class="rank-badge excluded">❌ غير مصري</span>';
+                } else if (isDev) {
+                    badgeHtml = '<span class="rank-badge developer">⚠️ مطور برمجيات (كودر)</span>';
+                } else {
+                    badgeHtml = '<span class="rank-badge top">🎧 دعم تشغيلي وتليفونات</span>';
+                }
 
                 const skillsHtml = c.skills.slice(0, 4).map(s => '<span class="skill-tag">' + s + '</span>').join('') + 
                     (c.skills.length > 4 ? ('<span class="skill-tag">+' + (c.skills.length - 4) + '</span>') : '');
 
-                const hrSnippet = c.hr_expert ? c.hr_expert.hr_comments : c.evaluation_ar;
-                const ageTag = c.hr_expert ? c.hr_expert.age_progression : '';
+                const hrSnippet = c.hr_expert ? c.hr_expert.hr_comments : (c.evaluation_ar || '');
+
+                const salaryHtml = c.current_salary ? `
+                <div class="card-salary-box">
+                    <div class="salary-item current">
+                        <span>الراتب الحالي التقريبي:</span>
+                        <b>${c.current_salary}</b>
+                    </div>
+                    <div class="salary-item expected">
+                        <span>الراتب المتوقع / المقترح:</span>
+                        <b>${c.expected_salary}</b>
+                    </div>
+                </div>` : '';
+
+                const devWarning = isDev ? `
+                <div class="developer-warning-banner">
+                    <b>⚠️ تنبيه التوظيف:</b> ${c.developer_reason || 'مساره الحقيقي تطوير برمجيات وقد يشعر بالإحباط من الرد على التليفونات والشكاوى.'}
+                </div>` : '';
 
                 const cvButton = c.cv_file 
                     ? ('<button onclick="openPdfViewer(\'' + c.cv_file.replace(/'/g, "\\'") + '\', \'' + c.name_ar.replace(/'/g, "\\'") + '\')" class="btn btn-secondary" title="معاينة السيرة الذاتية داخل الصفحة">👁️ عرض الـ CV</button>')
                     : ('<span class="btn btn-secondary" style="opacity: 0.4; cursor: not-allowed;" title="لم يتم إرفاق CV">📄 لا يوجد</span>');
 
-                return '<div class="candidate-card">' +
-                    '<div>' +
-                        '<div class="card-top">' +
-                            '<div>' +
-                                '<span class="rank-badge ' + tierClass + '">' + rankText + '</span> ' +
-                                nationTag +
-                            '</div>' +
-                            '<div class="score-box ' + tierClass + '">' + c.score + '%</div>' +
-                        '</div>' +
-                        '<div class="card-name">' + c.name_ar + '</div>' +
-                        '<div class="card-name-en">' + c.name + '</div>' +
-                        '<div class="card-role">💼 ' + c.applied_role + '</div>' +
-                        '<div class="card-meta">' +
-                            '<div class="meta-row"><span>الموقع:</span><b>' + c.location.split('(')[0] + '</b></div>' +
-                            '<div class="meta-row"><span>الخبرة:</span><b>' + c.experience_years + ' سنوات</b></div>' +
-                            '<div class="meta-row"><span>المؤهل:</span><b style="max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + c.education + '</b></div>' +
-                        '</div>' +
-                        '<div class="card-hr-snippet">' +
-                            '<div class="card-hr-snippet-title">🧑‍💼 رأي خبير الموارد البشرية:</div>' +
-                            '<div class="card-hr-snippet-text">' + hrSnippet.substring(0, 150) + (hrSnippet.length > 150 ? '...' : '') + '</div>' +
-                        '</div>' +
-                        '<div class="skills-wrap">' + skillsHtml + '</div>' +
-                    '</div>' +
-                    '<div class="card-footer">' +
-                        '<button onclick="openModal(' + c.id + ')" class="btn btn-primary" style="flex: 1; justify-content: center;">التقييم التفصيلي</button>' +
-                        cvButton +
-                    '</div>' +
-                '</div>';
+                return `<div class="candidate-card ${isDev ? 'is-developer-card' : ''}">
+                    <div>
+                        <div class="card-top">
+                            <div>
+                                <span class="rank-badge ${tierClass}">${rankText}</span> 
+                                ${badgeHtml}
+                            </div>
+                            <div class="score-box ${tierClass}">${c.score}%</div>
+                        </div>
+                        <div class="card-name">${c.name_ar}</div>
+                        <div class="card-name-en">${c.name}</div>
+                        <div class="card-role">💼 ${c.applied_role}</div>
+                        
+                        ${salaryHtml}
+                        ${devWarning}
+
+                        <div class="card-meta">
+                            <div class="meta-row"><span>الموقع:</span><b>${c.location.split('(')[0]}</b></div>
+                            <div class="meta-row"><span>الخبرة:</span><b>${c.experience_years} سنوات</b></div>
+                            <div class="meta-row"><span>المؤهل:</span><b style="max-width: 190px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${c.education}</b></div>
+                        </div>
+
+                        <div class="card-hr-snippet">
+                            <div class="card-hr-snippet-title">🧑‍💼 رأي خبير الموارد البشرية:</div>
+                            <div class="card-hr-snippet-text">${hrSnippet.substring(0, 160)}${hrSnippet.length > 160 ? '...' : ''}</div>
+                        </div>
+
+                        <div class="skills-wrap">${skillsHtml}</div>
+                    </div>
+                    <div class="card-footer">
+                        <button onclick="openModal(${c.id})" class="btn btn-primary" style="flex: 1; justify-content: center;">التقييم والراتب</button>
+                        ${cvButton}
+                    </div>
+                </div>`;
             }).join('');
 
             // Render Table
@@ -1053,28 +1090,28 @@
                     ? ('<button onclick="openPdfViewer(\'' + c.cv_file.replace(/'/g, "\\'") + '\', \'' + c.name_ar.replace(/'/g, "\\'") + '\')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.72rem;">👁️ عرض الـ CV</button>') 
                     : '<span style="color: var(--text-muted);">لا يوجد</span>';
 
-                const hrBrief = c.hr_expert ? c.hr_expert.hr_comments : c.evaluation_ar;
+                const hrBrief = c.hr_expert ? c.hr_expert.hr_comments : (c.evaluation_ar || '');
 
-                return '<tr>' +
-                    '<td style="font-weight: bold; color: var(--text-muted);">' + (i + 1) + '</td>' +
-                    '<td>' +
-                        '<div style="font-weight: bold; color: #fff;">' + c.name_ar + '</div>' +
-                        '<div style="font-size: 0.72rem; color: var(--text-muted); font-family: Inter;">' + c.name + '</div>' +
-                        '<div style="font-size: 0.7rem; color: #818cf8;">' + c.email + '</div>' +
-                    '</td>' +
-                    '<td>' +
-                        '<div>' + (c.is_egyptian ? '🇪🇬 مصر' : '🇮🇳 الهند ❌') + '</div>' +
-                        '<div style="font-size: 0.72rem; color: var(--text-muted);">' + c.location.split('(')[0] + '</div>' +
-                    '</td>' +
-                    '<td style="max-width: 200px; font-size: 0.75rem;">' + c.education + '</td>' +
-                    '<td style="font-weight: bold;">' + c.experience_years + ' سنوات</td>' +
-                    '<td style="max-width: 280px; font-size: 0.75rem; color: #cbd5e1; line-height: 1.5;">' + hrBrief.substring(0, 110) + '...</td>' +
-                    '<td style="text-align: center; font-weight: 900; font-size: 1.1rem; color: ' + (c.tier === 'top' ? 'var(--gold)' : (c.tier === 'high' ? 'var(--emerald)' : (c.tier === 'excluded' ? 'var(--rose)' : 'var(--blue)'))) + ';">' + c.score + '%</td>' +
-                    '<td style="text-align: center;">' + cvCell + '</td>' +
-                    '<td style="text-align: center;">' +
-                        '<button onclick="openModal(' + c.id + ')" class="btn btn-primary" style="padding: 4px 10px; font-size: 0.75rem;">التفاصيل</button>' +
-                    '</td>' +
-                '</tr>';
+                return `<tr>
+                    <td style="font-weight: bold; color: var(--text-muted);">${i + 1}</td>
+                    <td>
+                        <div style="font-weight: bold; color: #fff;">${c.name_ar}</div>
+                        <div style="font-size: 0.72rem; color: var(--text-muted); font-family: Inter;">${c.name}</div>
+                        <div style="font-size: 0.7rem; color: #818cf8;">${c.phone}</div>
+                    </td>
+                    <td>
+                        <div style="font-weight: 600; color: ${c.is_developer ? 'var(--gold)' : 'var(--emerald)'};">${c.applied_role}</div>
+                        <div style="font-size: 0.72rem; color: var(--text-muted);">${c.location.split('(')[0]}</div>
+                    </td>
+                    <td style="font-weight: bold;">${c.experience_years} سنوات</td>
+                    <td style="color: #cbd5e1; font-weight: 600;">${c.current_salary || '-'}</td>
+                    <td style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${c.expected_salary || '-'}</td>
+                    <td style="max-width: 260px; font-size: 0.75rem; color: #cbd5e1; line-height: 1.5;">${hrBrief.substring(0, 110)}...</td>
+                    <td style="text-align: center;">${cvCell}</td>
+                    <td style="text-align: center;">
+                        <button onclick="openModal(${c.id})" class="btn btn-primary" style="padding: 4px 10px; font-size: 0.75rem;">التفاصيل</button>
+                    </td>
+                </tr>`;
             }).join('');
         }
 
@@ -1096,7 +1133,7 @@
 
             const skillsList = c.skills.map(s => '<span class="skill-tag" style="font-size: 0.78rem;">' + s + '</span>').join('');
 
-            const strengthsList = c.strengths_ar.map(st => '<div class="strength-item" style="font-size: 0.82rem; margin-bottom: 6px;">' + st + '</div>').join('');
+            const strengthsList = (c.strengths_ar || []).map(st => '<div style="font-size: 0.82rem; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 6px;"><span style="color: var(--emerald);">✔</span><span>' + st + '</span></div>').join('');
 
             const whatsappBtn = (c.phone && c.phone.includes('+20'))
                 ? ('<a href="https://wa.me/' + c.phone.replace(/[^0-9]/g, '') + '" target="_blank" class="btn btn-success">💬 واتساب المرشح</a>')
@@ -1106,78 +1143,84 @@
                 ? ('<button onclick="openPdfViewer(\'' + c.cv_file.replace(/'/g, "\\'") + '\', \'' + c.name_ar.replace(/'/g, "\\'") + '\')" class="btn btn-primary">👁️ معاينة السيرة الذاتية PDF</button>')
                 : '';
 
-            // HR Expert Block
             const hr = c.hr_expert || {};
 
-            body.innerHTML = 
-                '<div class="modal-header">' +
-                    '<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">' +
-                        '<div>' +
-                            '<h2 style="font-size: 1.4rem; font-weight: 900; color: #fff;">' + c.name_ar + '</h2>' +
-                            '<p style="color: var(--text-muted); font-size: 0.85rem;">' + c.name + ' | <span style="color: #818cf8; font-weight: bold;">' + c.applied_role + '</span></p>' +
-                        '</div>' +
-                        '<div style="text-align: left;">' +
-                            '<div style="font-size: 1.8rem; font-weight: 900; color: var(--gold);">' + c.score + '%</div>' +
-                            '<div style="font-size: 0.75rem; color: var(--text-muted);">التقييم الإجمالي</div>' +
-                        '</div>' +
-                    '</div>' +
-                '</div>' +
+            body.innerHTML = `
+                <div class="modal-header">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <h2 style="font-size: 1.4rem; font-weight: 900; color: #fff;">${c.name_ar}</h2>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">${c.name} | <span style="color: #818cf8; font-weight: bold;">${c.applied_role}</span></p>
+                        </div>
+                        <div style="text-align: left;">
+                            <div style="font-size: 1.8rem; font-weight: 900; color: ${c.is_developer ? 'var(--gold)' : 'var(--emerald)'};">${c.score}%</div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted);">التقييم الإجمالي</div>
+                        </div>
+                    </div>
+                </div>
 
-                '<!-- Comprehensive HR Expert Section -->' +
-                '<div class="hr-expert-box">' +
-                    '<div class="hr-expert-title">🧑‍💼 تحليل ورؤية خبير الموارد البشرية (HR Assessment)</div>' +
-                    '<div class="hr-card-detail">' +
-                        '<b>📅 تناسب المهارات مع العمر وسنة التخرج:</b>' +
-                        '<span>' + (hr.age_progression || 'مسار مهني متناسق مع المؤهل.') + '</span>' +
-                    '</div>' +
-                    '<div class="hr-card-detail">' +
-                        '<b>💪 تقييم المهارات التقنية والجاهزية:</b>' +
-                        '<span>' + (hr.skills_verdict || 'مهارات مناسبة لمتطلبات الدور الوظيفي.') + '</span>' +
-                    '</div>' +
-                    '<div class="hr-card-detail">' +
-                        '<b>💡 الرأي المهني الشامل للـ HR:</b>' +
-                        '<span>' + (hr.hr_comments || c.evaluation_ar) + '</span>' +
-                    '</div>' +
-                    (hr.interview_focus ? (
-                        '<div class="hr-focus-tag">' +
-                            '<b>🎯 نقاط محددة يجب اختبارها في المقابلة:</b> ' + hr.interview_focus +
-                        '</div>'
-                    ) : '') +
-                '</div>' +
+                <!-- Salary Benchmarks Box -->
+                <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(14, 22, 38, 0.9) 100%); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 14px 18px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                    <div>
+                        <span style="color: var(--text-muted); font-size: 0.75rem; display: block;">متوسط الراتب الحالي التقريبي:</span>
+                        <b style="color: #cbd5e1; font-size: 1rem;">${c.current_salary || 'غير متوفر'}</b>
+                    </div>
+                    <div style="text-align: left;">
+                        <span style="color: #a7f3d0; font-size: 0.75rem; display: block; font-weight: bold;">الراتب المقترح للعرض الوظيفي (Offer):</span>
+                        <b style="color: #34d399; font-size: 1.2rem; font-weight: 900;">${c.expected_salary || 'غير متوفر'}</b>
+                    </div>
+                </div>
 
-                '<div class="modal-section">' +
-                    '<div class="modal-grid-meta">' +
-                        '<div>📞 الهاتف: <b dir="ltr">' + c.phone + '</b></div>' +
-                        '<div>✉️ الإيميل: <b>' + c.email + '</b></div>' +
-                        '<div>📍 الموقع: <b>' + c.location + '</b></div>' +
-                        '<div>🪪 الجنسية: <b style="color: ' + (c.is_egyptian ? 'var(--emerald)' : 'var(--rose)') + ';">' + c.nationality_reason + '</b></div>' +
-                        '<div>🎖️ التجنيد: <b>' + c.military_status + '</b></div>' +
-                        '<div>⏱️ الخبرة: <b>' + c.experience_years + ' سنوات</b></div>' +
-                    '</div>' +
-                '</div>' +
+                ${c.is_developer ? `
+                <div class="developer-warning-banner" style="font-size: 0.82rem; padding: 12px; margin-bottom: 18px;">
+                    <b>⚠️ تقييم الـ HR لمسار المرشح:</b> ${c.developer_reason || 'هذا المرشح مصنف كمطور برمجيات وكود، وتعيينه في دور خدمة عملاء وتليفونات يحمل مخاطرة ترك العمل أو عدم الرضا.'}
+                </div>` : ''}
 
-                '<div class="modal-section">' +
-                    '<div class="modal-section-title">🎓 المؤهل الأكاديمي والجامعة</div>' +
-                    '<div style="background: #0e1626; border: 1px solid var(--border-color); padding: 12px; border-radius: 10px; font-size: 0.85rem;">' + c.education + '</div>' +
-                '</div>' +
+                <!-- Comprehensive HR Expert Section -->
+                <div class="hr-expert-box">
+                    <div class="hr-expert-title">🧑‍💼 تقييم خبير الموارد البشرية (HR Evaluation)</div>
+                    <div class="hr-card-detail">
+                        <b>📅 تناسب المهارات مع العمر والتخرج:</b>
+                        <span>${hr.age_progression || 'مسار مهني متناسق مع المؤهل.'}</span>
+                    </div>
+                    <div class="hr-card-detail">
+                        <b>💡 التقييم الشامل للـ HR وملاءمته للتليفونات والدعم:</b>
+                        <span>${hr.hr_comments || c.evaluation_ar || ''}</span>
+                    </div>
+                    ${hr.interview_focus ? `
+                    <div style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 8px 12px; font-size: 0.78rem; color: #fde68a; margin-top: 8px;">
+                        <b>🎯 أسئلة المقابلة ونقاط الفحص:</b> ${hr.interview_focus}
+                    </div>` : ''}
+                </div>
 
-                certsHtml +
+                <div class="modal-section">
+                    <div class="modal-grid-meta">
+                        <div>📞 الهاتف: <b dir="ltr">${c.phone}</b></div>
+                        <div>✉️ الإيميل: <b>${c.email}</b></div>
+                        <div>📍 الموقع: <b>${c.location}</b></div>
+                        <div>🪪 الجنسية: <b style="color: ${c.is_egyptian ? 'var(--emerald)' : 'var(--rose)'};">${c.nationality_reason}</b></div>
+                        <div>🎖️ التجنيد: <b>${c.military_status}</b></div>
+                        <div>⏱️ الخبرة: <b>${c.experience_years} سنوات</b></div>
+                    </div>
+                </div>
 
-                '<div class="modal-section">' +
-                    '<div class="modal-section-title">💻 المهارات التقنية</div>' +
-                    '<div style="display: flex; flex-wrap: wrap; gap: 6px;">' + skillsList + '</div>' +
-                '</div>' +
+                <div class="modal-section">
+                    <div class="modal-section-title">🎓 المؤهل الأكاديمي والجامعة</div>
+                    <div style="background: #0e1626; border: 1px solid var(--border-color); padding: 12px; border-radius: 10px; font-size: 0.85rem;">${c.education}</div>
+                </div>
 
-                '<div class="modal-section">' +
-                    '<div class="modal-section-title">⭐ ملخص أهم المميزات ونقاط القوة</div>' +
-                    '<div style="background: #0e1626; border: 1px solid var(--border-color); padding: 14px; border-radius: 12px;">' + strengthsList + '</div>' +
-                '</div>' +
+                ${certsHtml}
 
-                '<div style="display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 16px; margin-top: 16px;">' +
-                    whatsappBtn +
-                    '<a href="mailto:' + c.email + '?subject=Application Support Specialist - Cyrus Tech" class="btn btn-secondary">✉️ إرسال إيميل</a>' +
-                    cvBtn +
-                '</div>';
+                <div class="modal-section">
+                    <div class="modal-section-title">💻 المهارات التقنية</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">${skillsList}</div>
+                </div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 16px; margin-top: 16px;">
+                    ${whatsappBtn}
+                    <a href="mailto:${c.email}?subject=Application Support Specialist - Cyrus Tech" class="btn btn-secondary">✉️ إرسال إيميل</a>
+                    ${cvBtn}
+                </div>`;
 
             modal.classList.add('active');
         }
@@ -1192,7 +1235,7 @@
 
         function exportCSV() {
             const rows = [
-                ['الترتيب', 'الاسم', 'الاسم بالإنجليزية', 'الإيميل', 'الهاتف', 'الجنسية', 'الموقع', 'الوظيفة المتقدم لها', 'سنوات الخبرة', 'الدرجة العلمية والجامعة', 'الموقف التجنيدي', 'التقييم', 'رأي خبير الـ HR', 'تناسب المهارات مع السن', 'نقاط الفحص في المقابلة', 'ملف السيرة الذاتية']
+                ['الترتيب', 'الاسم', 'الاسم بالإنجليزية', 'الإيميل', 'الهاتف', 'المسار الوظيفي', 'الموقع', 'سنوات الخبرة', 'الدرجة العلمية والجامعة', 'الراتب الحالي التقريبي', 'الراتب المتوقع / المقترح', 'التقييم', 'رأي خبير الـ HR', 'هل هو مبرمج كود؟', 'ملف السيرة الذاتية']
             ];
 
             candidates.forEach((c, idx) => {
@@ -1203,16 +1246,15 @@
                     '"' + c.name + '"',
                     '"' + c.email + '"',
                     '"' + c.phone + '"',
-                    '"' + (c.is_egyptian ? 'مصري' : 'غير مصري') + '"',
-                    '"' + c.location + '"',
                     '"' + c.applied_role + '"',
+                    '"' + c.location + '"',
                     c.experience_years,
                     '"' + c.education + '"',
-                    '"' + c.military_status + '"',
+                    '"' + (c.current_salary || '') + '"',
+                    '"' + (c.expected_salary || '') + '"',
                     c.score + '%',
-                    '"' + (hr.hr_comments || c.evaluation_ar) + '"',
-                    '"' + (hr.age_progression || '') + '"',
-                    '"' + (hr.interview_focus || '') + '"',
+                    '"' + (hr.hr_comments || c.evaluation_ar || '') + '"',
+                    '"' + (c.is_developer ? 'نعم (مطور كود)' : 'لا (دعم تشغيلي)') + '"',
                     '"' + c.cv_file + '"'
                 ]);
             });
@@ -1222,7 +1264,7 @@
             const link = document.createElement("a");
             const url = URL.createObjectURL(blob);
             link.setAttribute("href", url);
-            link.setAttribute("download", "Cyrus_Tech_HR_Expert_Evaluation_" + new Date().toISOString().slice(0, 10) + ".csv");
+            link.setAttribute("download", "Cyrus_Tech_Application_Support_Salaries_" + new Date().toISOString().slice(0, 10) + ".csv");
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
